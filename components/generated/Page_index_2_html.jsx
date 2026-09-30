@@ -13,7 +13,7 @@ export default function Page_index_2_html() {
         <span className={"bar down-bar"}></span>
         <div className={"animation-preloader"}>
           <div className={"spinner"}>
-            <img src={"/assets/images/loader.gif"} alt={""} />
+            <img src={"/assets/images/asas-alenjaz-loader-160.gif"} srcSet={"/assets/images/asas-alenjaz-loader-160.gif 1x, /assets/images/asas-alenjaz-loader-480.gif 3x"} width={160} height={160} alt={"Loading"} />
           </div>
           <div className={"txt-loading"}><span data-text-preloader={"A"} className={"letters-loading"}>A</span><span data-text-preloader={"S"} className={"letters-loading"}>S</span><span data-text-preloader={"A"} className={"letters-loading"}>A</span><span data-text-preloader={"S"} className={"letters-loading"}>S</span>
           </div>

@@ -225,3 +225,20 @@ button:not(:disabled):active {
 @media not all and (hover: hover) {
   .nav-submenu .nav-submenu__item .nav-submenu__link:hover { margin-inline-start: 0; }
 }
+
+/* Preloader: square ASAS service loop GIF, centred and uncropped
+   (template slid a 260×340 image sideways). */
+.loading-screen .animation-preloader .spinner {
+  animation: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.loading-screen .animation-preloader .spinner img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
+@media (max-width: 575px) {
+  .loading-screen .animation-preloader .spinner img { width: 120px; height: 120px; }
+}
