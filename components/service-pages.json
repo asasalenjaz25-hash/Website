@@ -1,0 +1,13 @@
+[
+  { "title": "Plumbing Service", "href": "/services/plumbing-service", "img": "/assets/images/thumbs/home-img8.jpg" },
+  { "title": "Laundry Service", "href": "/services/laundry-service", "img": "/assets/images/thumbs/home-img9.jpg" },
+  { "title": "Repair Service", "href": "/services/repair-service", "img": "/assets/images/thumbs/home-img10.jpg" },
+  { "title": "Cleaning Service One", "href": "/services/cleaning-service", "img": "/assets/images/thumbs/home-img1.jpg" },
+  { "title": "Air Conditioning Service", "href": "/services/air-conditioning-service", "img": "/assets/images/thumbs/home-img11.jpg" },
+  { "title": "Cleaning Service Two", "href": "/services/cleaning-service-two", "img": "/assets/images/thumbs/home-img2.jpg" },
+  { "title": "Air Conditioning", "href": "/services/air-conditioning", "img": "/assets/images/thumbs/home-img3.jpg" },
+  { "title": "Handyman", "href": "/services/handyman", "img": "/assets/images/thumbs/home-img4.jpg" },
+  { "title": "Computer & Mobile Repair", "href": "/services/computer-mobile-repair", "img": "/assets/images/thumbs/home-img5.jpg" },
+  { "title": "Roofing Services", "href": "/services/roofing-services", "img": "/assets/images/thumbs/home-img6.jpg" },
+  { "title": "Electrical Service", "href": "/services/electrical-service", "img": "/assets/images/thumbs/home-img7.jpg" }
+]

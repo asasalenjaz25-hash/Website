@@ -1,0 +1,74 @@
+/* Small additions to the template markup on the About, FAQ, Contact and
+   Request a Quote pages. Layout, images and animation all come from the theme. */
+
+/* Accent text on dark or blue backgrounds is gold, never blue (contrast). */
+.goldAccent {
+  color: var(--asas-gold) !important;
+}
+
+.onDarkText {
+  max-width: 36rem;
+}
+
+.onDarkLink:hover,
+.onDarkLink:focus-visible {
+  color: var(--asas-gold) !important;
+}
+.onDarkLink:focus-visible {
+  outline-color: var(--asas-gold);
+}
+
+/* The template's check lists float their items; contain them. */
+.clearfix {
+  display: flow-root;
+}
+
+.stepText {
+  max-width: 19rem;
+  margin-inline: auto;
+}
+
+/* Contact info cards: let long values (email, address) wrap on phones. */
+.infoText {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.contactNames {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: hsl(var(--body));
+}
+@media (max-width: 575px) {
+  .infoText a,
+  .infoText p {
+    font-size: 1.125rem !important;
+  }
+}
+
+.formIntro {
+  margin-bottom: 24px;
+}
+.formIntro a,
+.answer a {
+  color: var(--asas-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 150ms var(--ease-out, ease-out);
+}
+.formIntro a:hover,
+.answer a:hover {
+  color: var(--asas-navy);
+}
+
+/* FAQ call button: at least 44px tall, icon and number aligned. */
+.callPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+}
+.callPill:hover {
+  color: #ffffff;
+}

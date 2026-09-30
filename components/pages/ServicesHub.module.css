@@ -1,0 +1,50 @@
+/* Small additions to the template's service.html markup (main.css + brand.css do the rest). */
+
+/* Breadcrumb title: template's 4rem mobile size is too wide at 375px. */
+@media (max-width: 575px) {
+  .crumbTitle {
+    font-size: 2.75rem !important;
+    line-height: 1.1 !important;
+    overflow-wrap: break-word;
+  }
+}
+
+/* 11 tabs instead of the template's 4: tighter vertical rhythm on desktop. */
+@media (min-width: 1200px) {
+  .tabLink {
+    padding-block: 18px !important;
+  }
+  .tabItem {
+    margin-block-end: 16px !important;
+  }
+}
+
+/* Accent text on the dark photo gradient is gold, not blue. */
+.onDark:hover,
+.onDark:focus-visible {
+  color: var(--asas-gold) !important;
+}
+.onDark {
+  min-height: 44px;
+  transition: color 200ms var(--ease-out);
+}
+
+/* Approval line under the intro */
+.approvals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 0;
+  margin: 16px 0 0;
+  list-style: none;
+}
+.approvals li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--asas-navy);
+}
+.approvals i {
+  color: var(--asas-blue);
+}

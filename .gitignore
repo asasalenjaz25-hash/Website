@@ -1,0 +1,55 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Next.js build output
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+
+# Environment variables (keep secrets out of git)
+.env*
+!.env.example
+
+# Logs and debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+
+# Deployment
+.vercel
+
+# Files regenerated automatically
+# - written by `next dev` on every start
+/AGENTS.md
+/CLAUDE.md
+# - written by scripts/convert.mjs
+/pages.generated.json
+
+# Temporary scripts left by local tooling
+.tmp-*
+
+# Client source material (confidential, 11 MB; the site content is extracted into content.md)
+/ASAS ALENJAZ PROFILE.2026.pdf
+
+# Local tooling output
+/graphify-out/

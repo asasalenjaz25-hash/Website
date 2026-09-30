@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ASAS Brand Colour &amp; Theme Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #06245E; --blue: #184FB4; --blue-hover: #123F91; --tint: #EDF2FD;
+    --gold: #F2B300; --amber: #B45309;
+    --ink: #0A1A3A; --body: #46546A; --muted: #5A6A80;
+    --surface: #F4F7FC; --border: #DCE3EE; --deep: #041634; --white: #FFFFFF;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Open Sans", sans-serif; color: var(--body); font-size: 10.5pt; line-height: 1.55; background: var(--white); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  h1, h2, h3, h4 { font-family: "Poppins", sans-serif; color: var(--ink); line-height: 1.2; }
+  .page { width: 210mm; height: 297mm; padding: 20mm 18mm 16mm; position: relative; page-break-after: always; overflow: hidden; }
+  .page:last-child { page-break-after: auto; }
+  .eyebrow { font-family: "Poppins"; font-size: 8pt; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--blue); margin-bottom: 3mm; }
+  h2 { font-size: 22pt; font-weight: 600; margin-bottom: 4mm; }
+  h3 { font-size: 12.5pt; font-weight: 600; margin: 7mm 0 2.5mm; }
+  p { margin-bottom: 2.5mm; max-width: 160mm; }
+  .lead { font-size: 11.5pt; color: var(--body); }
+  .foot { position: absolute; left: 18mm; right: 18mm; bottom: 9mm; display: flex; justify-content: space-between; font-size: 7.5pt; color: var(--muted); border-top: 1px solid var(--border); padding-top: 2.5mm; }
+  .rule { height: 3px; width: 18mm; background: var(--gold); margin: 0 0 6mm; }
+
+  /* Cover */
+  .cover { background: var(--navy); color: var(--white); padding: 0; }
+  .cover .top { background: var(--white); height: 118mm; display: flex; align-items: center; justify-content: center; }
+  .cover .top img { width: 120mm; }
+  .cover .band { height: 6mm; background: var(--gold); }
+  .cover .body { padding: 22mm 18mm; }
+  .cover h1 { color: var(--white); font-size: 34pt; font-weight: 600; margin-bottom: 5mm; }
+  .cover .sub { font-size: 13pt; color: #C9D3E6; max-width: 140mm; }
+  .cover .meta { position: absolute; left: 18mm; right: 18mm; bottom: 18mm; display: flex; gap: 14mm; font-size: 9pt; color: #AFBBD0; }
+  .cover .meta b { display: block; color: var(--white); font-family: "Poppins"; font-weight: 500; font-size: 10pt; }
+
+  /* Swatches */
+  .hero-swatches { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4mm; margin: 5mm 0 2mm; }
+  .sw { border-radius: 3mm; padding: 5mm; min-height: 38mm; display: flex; flex-direction: column; justify-content: flex-end; border: 1px solid transparent; }
+  .sw .n { font-family: "Poppins"; font-weight: 600; font-size: 12pt; }
+  .sw .h { font-size: 8.5pt; opacity: .9; font-family: "Open Sans"; }
+  .sw .r { font-size: 8pt; margin-top: 2mm; opacity: .85; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3.5mm; }
+  .chip { border: 1px solid var(--border); border-radius: 2.5mm; overflow: hidden; }
+  .chip .c { height: 13mm; }
+  .chip .t { padding: 2.5mm 3mm; font-size: 8pt; line-height: 1.4; }
+  .chip .t b { display: block; font-family: "Poppins"; font-weight: 600; font-size: 9pt; color: var(--ink); }
+  .scale { display: grid; grid-template-columns: repeat(10, 1fr); border-radius: 2mm; overflow: hidden; margin-top: 2mm; }
+  .scale div { height: 12mm; font-size: 6.5pt; display: flex; align-items: flex-end; padding: 1mm; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 2mm; }
+  th { text-align: left; font-family: "Poppins"; font-weight: 600; color: var(--ink); font-size: 8.5pt; padding: 2.2mm 2.5mm; background: var(--surface); border-bottom: 1px solid var(--border); }
+  td { padding: 2.2mm 2.5mm; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .dot { display: inline-block; width: 3.2mm; height: 3.2mm; border-radius: 50%; vertical-align: -0.5mm; margin-right: 1.5mm; border: 1px solid rgba(0,0,0,.08); }
+  .pass { color: #15803D; font-weight: 600; }
+  .note { color: var(--amber); font-weight: 600; }
+  code { font-family: ui-monospace, Menlo, monospace; font-size: 8pt; background: var(--surface); padding: .3mm 1.2mm; border-radius: 1mm; color: var(--ink); }
+
+  /* Proportion bar */
+  .ratio { display: flex; height: 13mm; border-radius: 2mm; overflow: hidden; margin: 3mm 0 2mm; font-family: "Poppins"; font-size: 8.5pt; font-weight: 500; }
+  .ratio div { display: flex; align-items: center; padding: 0 3mm; }
+
+  /* Component previews */
+  .frame { border: 1px solid var(--border); border-radius: 3mm; overflow: hidden; margin-top: 3mm; }
+  .topbar { background: var(--navy); color: #DCE4F2; font-size: 7.5pt; display: flex; justify-content: space-between; padding: 2mm 5mm; }
+  .topbar b { color: var(--gold); font-weight: 600; }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 3.5mm 5mm; background: var(--white); border-bottom: 1px solid var(--border); }
+  .nav img { height: 9mm; }
+  .nav ul { display: flex; gap: 5mm; list-style: none; font-family: "Poppins"; font-size: 8.5pt; font-weight: 500; color: var(--ink); }
+  .nav li.on { color: var(--blue); }
+  .btn { display: inline-flex; align-items: center; gap: 2mm; font-family: "Poppins"; font-weight: 600; font-size: 8.5pt; border-radius: 10mm; padding: 2.4mm 5mm; }
+  .btn-primary { background: var(--blue); color: var(--white); }
+  .btn-hover { background: var(--blue-hover); color: var(--white); }
+  .btn-gold { background: var(--gold); color: var(--navy); }
+  .btn-ghost { border: 1.5px solid var(--navy); color: var(--navy); }
+  .btn-light { background: var(--white); color: var(--navy); }
+  .hero-demo { background: var(--navy); color: #fff; padding: 9mm 7mm; display: grid; grid-template-columns: 1.3fr 1fr; gap: 6mm; }
+  .hero-demo h4 { color: #fff; font-size: 17pt; font-weight: 600; margin: 2mm 0 3mm; }
+  .hero-demo p { color: #C9D3E6; font-size: 8.5pt; }
+  .badge { display: inline-block; font-family: "Poppins"; font-size: 7pt; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 1mm 2.5mm; border-radius: 5mm; }
+  .card { background: var(--white); border: 1px solid var(--border); border-radius: 2.5mm; padding: 4mm; }
+  .card h5 { font-family: "Poppins"; color: var(--ink); font-size: 10pt; font-weight: 600; margin: 2mm 0 1.5mm; }
+  .card p { font-size: 8pt; margin: 0; }
+  .ico { width: 9mm; height: 9mm; border-radius: 2mm; background: var(--tint); color: var(--blue); display: flex; align-items: center; justify-content: center; font-weight: 700; font-family: "Poppins"; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; padding: 5mm; background: var(--surface); }
+  .footer-demo { background: var(--deep); padding: 6mm 7mm; display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 5mm; font-size: 8pt; color: #AFBBD0; }
+  .footer-demo b { display: block; color: #fff; font-family: "Poppins"; font-weight: 600; margin-bottom: 1.5mm; font-size: 9pt; }
+  .footer-demo img { display: block; height: 8mm; margin-bottom: 2mm; }
+  .footer-demo a { color: var(--gold); text-decoration: none; }
+
+  /* Type */
+  .type-row { display: grid; grid-template-columns: 34mm 1fr; gap: 5mm; align-items: baseline; padding: 2.5mm 0; border-bottom: 1px solid var(--border); }
+  .type-row .l { font-size: 8pt; color: var(--muted); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+  .panel { background: var(--surface); border-radius: 3mm; padding: 5mm; }
+  .panel h4 { font-size: 10.5pt; margin-bottom: 2mm; }
+  ul.clean { list-style: none; }
+  ul.clean li { padding: 1.2mm 0 1.2mm 5mm; position: relative; font-size: 9.5pt; }
+  ul.clean li::before { content: ""; position: absolute; left: 0; top: 3.1mm; width: 2mm; height: 2mm; border-radius: 50%; background: var(--blue); }
+  ul.dont li::before { background: #DC2626; }
+</style>
+</head>
+<body>
+
+<!-- 1. Cover -->
+<section class="page cover">
+  <div class="top"><img src="../public/assets/images/logo/asas-logo.png" alt="ASAS Alenjaz Technical Works L.L.C"></div>
+  <div class="band"></div>
+  <div class="body">
+    <div class="eyebrow" style="color:var(--gold)">Website theme proposal</div>
+    <h1>Brand Colour &amp; Theme Profile</h1>
+    <p class="sub">One colour system built from the ASAS logo. It replaces the five unrelated accent colours the website template uses today, so every page looks like the same company.</p>
+  </div>
+  <div class="meta">
+    <div><b>Prepared for</b>ASAS Alenjaz Technical Works L.L.C</div>
+    <div><b>Date</b>30 September 2026</div>
+    <div><b>Status</b>For review, not yet applied</div>
+  </div>
+</section>
+
+<!-- 2. Foundation -->
+<section class="page">
+  <div class="eyebrow">01 · Foundation</div>
+  <h2>Where the colours come from</h2>
+  <div class="rule"></div>
+  <p class="lead">The logo is a single deep navy, <b style="color:var(--navy)">#06245E</b>, set in a wide, spaced sans-serif. The whole palette is built from that navy. Every blue shares its hue (220°), so the site reads as one brand instead of a template.</p>
+
+  <h3>Direction: Trust &amp; Authority</h3>
+  <p>A technical-works contractor is chosen for reliability. Navy says competence and dependability. One warm gold accent adds the energy and visibility a service business needs for calls to action, and it echoes the yellow safety tones of the trade. This matches the "Authority navy + trust gold" profile recommended for professional services.</p>
+
+  <h3>What this fixes</h3>
+  <div class="two">
+    <div class="panel">
+      <h4>Today</h4>
+      <p style="font-size:9pt">The template mixes <b>green</b>, <b>yellow</b>, <b>orange</b>, <b>red</b>, <b>bright blue</b> and a <b>purple</b>, in a different combination on each home template. Buttons are orange on one page and blue on the next.</p>
+      <div class="ratio" style="height:8mm">
+        <div style="flex:1;background:hsl(98,100%,32%)"></div><div style="flex:1;background:hsl(47,100%,50%)"></div><div style="flex:1;background:hsl(17,83%,54%)"></div><div style="flex:1;background:hsl(0,76%,47%)"></div><div style="flex:1;background:hsl(213,99%,44%)"></div><div style="flex:1;background:#301996"></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h4>Proposed</h4>
+      <p style="font-size:9pt">Two brand families: <b>navy/blue</b> for structure and actions, and <b>gold</b> as the single accent. Neutrals are tinted towards the navy so greys never look muddy next to the logo.</p>
+      <div class="ratio" style="height:8mm">
+        <div style="flex:3;background:var(--navy)"></div><div style="flex:2;background:var(--blue)"></div><div style="flex:1;background:var(--gold)"></div><div style="flex:2;background:var(--surface)"></div><div style="flex:2;background:var(--deep)"></div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Personality</h3>
+  <table>
+    <tr><th style="width:30%">We are</th><th>Expressed through</th></tr>
+    <tr><td>Dependable</td><td>Deep navy structure: header top bar, hero backgrounds, footer</td></tr>
+    <tr><td>Clear and professional</td><td>Generous white space, one action colour, high-contrast text</td></tr>
+    <tr><td>Responsive and ready</td><td>Gold for the moments that matter: "Get a Quote", emergency and offer highlights</td></tr>
+  </table>
+  <div class="foot"><span>ASAS · Brand Colour &amp; Theme Profile</span><span>2</span></div>
+</section>
+
+<!-- 3. Palette -->
+<section class="page">
+  <div class="eyebrow">02 · Palette</div>
+  <h2>The colour palette</h2>
+  <div class="rule"></div>
+
+  <h3 style="margin-top:0">Brand colours</h3>
+  <div class="hero-swatches">
+    <div class="sw" style="background:var(--navy);color:#fff">
+      <span class="n">ASAS Navy</span><span class="h">#06245E · RGB 6 36 94 · HSL 220 88% 20%</span>
+      <span class="r">Primary. Taken directly from the logo. Headings on dark, top bar, hero and section backgrounds.</span>
+    </div>
+    <div class="sw" style="background:var(--blue);color:#fff">
+      <span class="n">Action Blue</span><span class="h">#184FB4 · HSL 219 76% 40%</span>
+      <span class="r">Buttons, links, active menu item, icons.</span>
+    </div>
+    <div class="sw" style="background:var(--gold);color:var(--navy)">
+      <span class="n">Signal Gold</span><span class="h">#F2B300 · HSL 44 100% 47%</span>
+      <span class="r">The one accent: key CTAs, highlights, badges. Always with navy text.</span>
+    </div>
+  </div>
+
+  <h3>Supporting colours</h3>
+  <div class="grid4">
+    <div class="chip"><div class="c" style="background:var(--blue-hover)"></div><div class="t"><b>Blue Hover</b>#123F91<br>Hover / pressed state of Action Blue</div></div>
+    <div class="chip"><div class="c" style="background:var(--tint)"></div><div class="t"><b>Blue Tint</b>#EDF2FD<br>Icon wells, selected rows, soft buttons</div></div>
+    <div class="chip"><div class="c" style="background:var(--amber)"></div><div class="t"><b>Deep Amber</b>#B45309<br>Gold's text-safe partner on white (prices, offers)</div></div>
+    <div class="chip"><div class="c" style="background:var(--deep)"></div><div class="t"><b>Deep Navy</b>#041634<br>Footer and the darkest bands</div></div>
+  </div>
+
+  <h3>Neutrals (navy-tinted)</h3>
+  <div class="grid4">
+    <div class="chip"><div class="c" style="background:var(--ink)"></div><div class="t"><b>Ink</b>#0A1A3A<br>Headings and strong text</div></div>
+    <div class="chip"><div class="c" style="background:var(--body)"></div><div class="t"><b>Body</b>#46546A<br>Paragraph text</div></div>
+    <div class="chip"><div class="c" style="background:var(--muted)"></div><div class="t"><b>Muted</b>#5A6A80<br>Captions, meta, placeholders</div></div>
+    <div class="chip"><div class="c" style="background:var(--border)"></div><div class="t"><b>Border</b>#DCE3EE<br>Dividers, card and input borders</div></div>
+    <div class="chip"><div class="c" style="background:var(--surface)"></div><div class="t"><b>Surface</b>#F4F7FC<br>Alternate section background</div></div>
+    <div class="chip"><div class="c" style="background:#fff"></div><div class="t"><b>White</b>#FFFFFF<br>Page, cards, header</div></div>
+    <div class="chip"><div class="c" style="background:#16A34A"></div><div class="t"><b>Success</b>#16A34A<br>Form success, "in stock"</div></div>
+    <div class="chip"><div class="c" style="background:#DC2626"></div><div class="t"><b>Error</b>#DC2626<br>Form errors, alerts</div></div>
+  </div>
+
+  <h3>Blue scale (generated from one hue, as the theme already does)</h3>
+  <div class="scale">
+    <div style="background:hsl(219,76%,94%);color:var(--ink)">50</div>
+    <div style="background:hsl(219,76%,88%);color:var(--ink)">100</div>
+    <div style="background:hsl(219,76%,82%);color:var(--ink)">200</div>
+    <div style="background:hsl(219,76%,76%);color:var(--ink)">300</div>
+    <div style="background:hsl(219,76%,70%);color:var(--ink)">400</div>
+    <div style="background:hsl(219,76%,64%);color:var(--ink)">500</div>
+    <div style="background:var(--blue);color:#fff">600</div>
+    <div style="background:hsl(219,76%,36%);color:#fff">700</div>
+    <div style="background:hsl(219,76%,32%);color:#fff">800</div>
+    <div style="background:hsl(219,76%,28%);color:#fff">900</div>
+  </div>
+  <div class="foot"><span>ASAS · Brand Colour &amp; Theme Profile</span><span>3</span></div>
+</section>
+
+<!-- 4. Usage -->
+<section class="page">
+  <div class="eyebrow">03 · Usage</div>
+  <h2>How much, and where</h2>
+  <div class="rule"></div>
+  <p>Keep the balance close to 60 / 30 / 10: mostly light surfaces, navy for structure, gold used sparingly so it always draws the eye.</p>
+  <div class="ratio">
+    <div style="flex:60;background:var(--surface);color:var(--ink);border:1px solid var(--border)">60% White &amp; Surface</div>
+    <div style="flex:25;background:var(--navy);color:#fff">25% Navy</div>
+    <div style="flex:10;background:var(--blue);color:#fff">10% Blue</div>
+    <div style="flex:5;background:var(--gold);color:var(--navy)">5%</div>
+  </div>
+
+  <h3>Colour roles across the website</h3>
+  <table>
+    <tr><th style="width:32%">Element</th><th style="width:34%">Colour</th><th>Notes</th></tr>
+    <tr><td>Header top bar</td><td><span class="dot" style="background:var(--navy)"></span>Navy bg · white text</td><td>Replaces today's bright yellow bar. Icons in gold.</td></tr>
+    <tr><td>Main navigation</td><td><span class="dot" style="background:#fff"></span>White bg · Ink links</td><td>Hover and current page in Action Blue</td></tr>
+    <tr><td>Primary button</td><td><span class="dot" style="background:var(--blue)"></span>Action Blue · white text</td><td>Hover: Blue Hover #123F91</td></tr>
+    <tr><td>"Get a Quote" / key CTA</td><td><span class="dot" style="background:var(--gold)"></span>Gold · navy text</td><td>At most one gold button per screen</td></tr>
+    <tr><td>Secondary button</td><td><span class="dot" style="background:#fff;border-color:var(--navy)"></span>Navy outline</td><td>On dark: white button, navy text</td></tr>
+    <tr><td>Links in text</td><td><span class="dot" style="background:var(--blue)"></span>Action Blue, underlined on hover</td><td></td></tr>
+    <tr><td>Headings</td><td><span class="dot" style="background:var(--ink)"></span>Ink</td><td>White on navy sections</td></tr>
+    <tr><td>Body text</td><td><span class="dot" style="background:var(--body)"></span>Body</td><td>#C9D3E6 on navy, #AFBBD0 on footer</td></tr>
+    <tr><td>Hero / banner</td><td><span class="dot" style="background:var(--navy)"></span>Navy, or photo with navy overlay (70–80%)</td><td>Gold for the small badge above the heading</td></tr>
+    <tr><td>Alternating sections</td><td><span class="dot" style="background:var(--surface)"></span>White ↔ Surface</td><td>One navy band per page for stats or a CTA</td></tr>
+    <tr><td>Cards</td><td><span class="dot" style="background:#fff"></span>White · Border · Blue Tint icon well</td><td>Hover: border turns Action Blue</td></tr>
+    <tr><td>Stats / counters</td><td><span class="dot" style="background:var(--gold)"></span>Gold numbers on navy</td><td>Blue numbers on white</td></tr>
+    <tr><td>Footer</td><td><span class="dot" style="background:var(--deep)"></span>Deep Navy · #AFBBD0 text</td><td>White logo, gold links on hover</td></tr>
+    <tr><td>Form fields</td><td><span class="dot" style="background:var(--border)"></span>Border · focus ring Action Blue</td><td>Errors in #DC2626 with a message, never colour alone</td></tr>
+  </table>
+  <div class="foot"><span>ASAS · Brand Colour &amp; Theme Profile</span><span>4</span></div>
+</section>
+
+<!-- 5. Components -->
+<section class="page">
+  <div class="eyebrow">04 · Preview</div>
+  <h2>The theme in use</h2>
+  <div class="rule"></div>
+
+  <div class="frame">
+    <div class="topbar"><span>✉ email@company.com &nbsp;&nbsp; ☎ +000 000 0000 &nbsp;&nbsp; Mon–Sat 8:00–18:00</span><span><b>24/7 emergency service</b></span></div>
+    <div class="nav">
+      <img src="../public/assets/images/logo/asas-logo.png" alt="">
+      <ul><li class="on">Home</li><li>Pages</li><li>Services</li><li>Projects</li><li>News</li><li>Contacts</li></ul>
+      <span class="btn btn-gold">Get A Quote →</span>
+    </div>
+    <div class="hero-demo">
+      <div>
+        <span class="badge" style="background:rgba(242,179,0,.15);color:var(--gold)">Technical works company</span>
+        <h4>Reliable maintenance for homes &amp; businesses</h4>
+        <p>Electrical, plumbing, AC and fit-out works, delivered by certified technicians.</p>
+        <div style="display:flex;gap:3mm;margin-top:4mm"><span class="btn btn-gold">Book a Service →</span><span class="btn btn-light">Our Services</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3mm;align-content:center">
+        <div style="background:rgba(255,255,255,.06);border-radius:2mm;padding:4mm"><div style="font-family:Poppins;font-size:18pt;font-weight:600;color:var(--gold)">15+</div><div style="font-size:7.5pt;color:#C9D3E6">Years of experience</div></div>
+        <div style="background:rgba(255,255,255,.06);border-radius:2mm;padding:4mm"><div style="font-family:Poppins;font-size:18pt;font-weight:600;color:var(--gold)">2k+</div><div style="font-size:7.5pt;color:#C9D3E6">Projects completed</div></div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h5>Electrical Works</h5><p>Installation, repair and safety inspection.</p></div>
+      <div class="card" style="border-color:var(--blue)"><div class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg></div><h5>AC Maintenance</h5><p>Hover state: border turns Action Blue.</p></div>
+      <div class="card"><div class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s-6 6.3-6 11.3a6 6 0 0 0 12 0c0-5-6-11.3-6-11.3z"/></svg></div><h5>Plumbing</h5><p>Leak repair, pipework and fixtures.</p></div>
+    </div>
+    <div class="footer-demo">
+      <div><img src="../public/assets/images/logo/asas-logo-white.png" alt="">Technical works you can rely on.</div>
+      <div><b>Services</b>Electrical · Plumbing<br>AC · Fit-out</div>
+      <div><b>Contact</b>email@company.com<br><a>Get in touch →</a></div>
+    </div>
+  </div>
+
+  <h3>Buttons</h3>
+  <div style="display:flex;gap:3mm;flex-wrap:wrap;align-items:center">
+    <span class="btn btn-primary">Primary</span>
+    <span class="btn btn-hover">Primary · hover</span>
+    <span class="btn btn-gold">Key CTA</span>
+    <span class="btn btn-ghost">Secondary</span>
+    <span class="badge" style="background:var(--tint);color:var(--blue)">Badge</span>
+    <span class="badge" style="background:#FEF3C7;color:var(--amber)">Offer</span>
+  </div>
+  <p style="font-size:8pt;color:var(--muted);margin-top:3mm">Contact details and figures in this preview are sample text. The website keeps its existing Phosphor icon set.</p>
+  <div class="foot"><span>ASAS · Brand Colour &amp; Theme Profile</span><span>5</span></div>
+</section>
+
+<!-- 6. Type + accessibility -->
+<section class="page">
+  <div class="eyebrow">05 · Typography &amp; accessibility</div>
+  <h2>Type and contrast</h2>
+  <div class="rule"></div>
+  <p>The logo uses a clean, widely spaced sans-serif. <b>Poppins</b> for headings keeps that geometric, confident feel; <b>Open Sans</b> for body text is highly readable at small sizes. Both are free Google Fonts.</p>
+
+  <div class="type-row"><span class="l">H1 · Poppins 600 · 48–68px</span><span style="font-family:Poppins;font-weight:600;font-size:24pt;color:var(--ink)">Reliable technical works</span></div>
+  <div class="type-row"><span class="l">H2 · Poppins 600 · 28–46px</span><span style="font-family:Poppins;font-weight:600;font-size:17pt;color:var(--ink)">Our maintenance services</span></div>
+  <div class="type-row"><span class="l">H3 · Poppins 500 · 20–28px</span><span style="font-family:Poppins;font-weight:500;font-size:13pt;color:var(--ink)">Electrical installation</span></div>
+  <div class="type-row"><span class="l">Body · Open Sans 400 · 16px / 1.6</span><span style="font-size:10.5pt">Our certified technicians handle every job with care, on time and to code.</span></div>
+  <div class="type-row"><span class="l">Eyebrow · Poppins 600 · 13px caps</span><span style="font-family:Poppins;font-weight:600;font-size:8pt;letter-spacing:.18em;color:var(--blue)">ABOUT OUR COMPANY</span></div>
+
+  <h3>Contrast check (WCAG 2.2)</h3>
+  <table>
+    <tr><th>Text</th><th>On</th><th>Ratio</th><th>Result</th></tr>
+    <tr><td><span class="dot" style="background:var(--ink)"></span>Ink</td><td>White</td><td>17.2 : 1</td><td class="pass">AAA</td></tr>
+    <tr><td><span class="dot" style="background:var(--body)"></span>Body</td><td>White / Surface</td><td>7.7 / 7.2 : 1</td><td class="pass">AAA</td></tr>
+    <tr><td><span class="dot" style="background:var(--muted)"></span>Muted</td><td>White / Surface</td><td>5.5 / 5.1 : 1</td><td class="pass">AA</td></tr>
+    <tr><td><span class="dot" style="background:#fff"></span>White</td><td>Action Blue</td><td>7.5 : 1</td><td class="pass">AAA</td></tr>
+    <tr><td><span class="dot" style="background:#fff"></span>White</td><td>ASAS Navy</td><td>14.8 : 1</td><td class="pass">AAA</td></tr>
+    <tr><td><span class="dot" style="background:var(--navy)"></span>Navy</td><td>Signal Gold</td><td>7.9 : 1</td><td class="pass">AAA</td></tr>
+    <tr><td><span class="dot" style="background:var(--gold)"></span>Gold</td><td>Navy / Deep Navy</td><td>7.9 / 9.6 : 1</td><td class="pass">AAA</td></tr>
+    <tr><td><span class="dot" style="background:var(--blue)"></span>Action Blue</td><td>White / Blue Tint</td><td>7.5 / 6.7 : 1</td><td class="pass">AAA / AA</td></tr>
+    <tr><td><span class="dot" style="background:var(--amber)"></span>Deep Amber</td><td>White</td><td>5.0 : 1</td><td class="pass">AA</td></tr>
+    <tr><td><span class="dot" style="background:var(--gold)"></span>Gold</td><td>White</td><td>1.9 : 1</td><td class="note">Never use: gold text on white</td></tr>
+  </table>
+  <div class="foot"><span>ASAS · Brand Colour &amp; Theme Profile</span><span>6</span></div>
+</section>
+
+<!-- 7. Implementation -->
+<section class="page">
+  <div class="eyebrow">06 · Implementation</div>
+  <h2>How it will be applied</h2>
+  <div class="rule"></div>
+  <p>The template generates each colour's full 50–900 scale from three HSL values. Changing those values in one override stylesheet recolours the entire site, with no page-by-page edits.</p>
+
+  <table>
+    <tr><th>Theme variable</th><th>Used today for</th><th>New value</th></tr>
+    <tr><td><code>--main-eight</code></td><td>Bright blue: buttons, links, active menu</td><td><span class="dot" style="background:var(--blue)"></span>Action Blue · 219 76% 40%</td></tr>
+    <tr><td><code>--main</code></td><td>Green accents</td><td><span class="dot" style="background:var(--blue)"></span>Action Blue · 219 76% 40%</td></tr>
+    <tr><td><code>--main-six</code></td><td>Red accents</td><td><span class="dot" style="background:var(--blue)"></span>Action Blue · 219 76% 40%</td></tr>
+    <tr><td><code>--main-two</code></td><td>Yellow top bar and highlights</td><td><span class="dot" style="background:var(--gold)"></span>Signal Gold · 44 100% 47%</td></tr>
+    <tr><td><code>--main-four</code></td><td>Orange CTAs on some templates</td><td><span class="dot" style="background:var(--gold)"></span>Signal Gold · 44 100% 47%</td></tr>
+    <tr><td><code>--black</code> / heading</td><td>Headings</td><td><span class="dot" style="background:var(--ink)"></span>Ink · 220 71% 13%</td></tr>
+    <tr><td><code>--body</code></td><td>Paragraph text (neutral grey)</td><td><span class="dot" style="background:var(--body)"></span>Body · 217 20% 35%</td></tr>
+    <tr><td>Hard-coded colours</td><td>Purple #301996, orange #EB6029, several navies (#041B34, #0B163F, #0D1C5D…)</td><td>Mapped to ASAS Navy, Deep Navy or Action Blue</td></tr>
+    <tr><td>Fonts</td><td>Parkinsans (+4 others)</td><td>Poppins headings, Open Sans body</td></tr>
+  </table>
+
+  <div class="two" style="margin-top:6mm">
+    <div class="panel">
+      <h4>Do</h4>
+      <ul class="clean">
+        <li>Use one gold button per screen, for the main action</li>
+        <li>Put navy text on gold, never white</li>
+        <li>Use Action Blue for everything clickable</li>
+        <li>Put a navy overlay on hero photos so white text stays readable</li>
+        <li>Pair colour with text or an icon for status</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>Don't</h4>
+      <ul class="clean dont">
+        <li>Bring back orange, green, red or purple accents</li>
+        <li>Use gold for body text or small text on white</li>
+        <li>Stretch, recolour or add effects to the logo</li>
+        <li>Put the navy logo on dark backgrounds (use the white one)</li>
+        <li>Use pure black (#000) text</li>
+      </ul>
+    </div>
+  </div>
+  <p style="margin-top:6mm;font-size:9pt"><b>Next step:</b> on approval, the palette and fonts are applied through one override stylesheet and checked page by page (desktop and mobile) before hand-over.</p>
+  <div class="foot"><span>ASAS · Brand Colour &amp; Theme Profile</span><span>7</span></div>
+</section>
+
+</body>
+</html>

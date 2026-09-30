@@ -1,0 +1,227 @@
+/* ASAS brand theme (design-system/ASAS-theme-profile.pdf).
+   Loaded after main.css. The template builds every 50–900 shade from the
+   -h/-s/-l values below, so these few lines recolour the whole site.
+   Hard-coded template colours are handled in brand-overrides.css (generated). */
+
+:root {
+  /* Palette */
+  --asas-navy: #06245E;
+  --asas-blue: #184FB4;
+  --asas-blue-hover: #123F91;
+  --asas-gold: #F2B300;
+  --asas-deep: #041634;
+  --asas-ink: #0A1A3A;
+  --asas-surface: #F4F7FC;
+  --asas-border: #DCE3EE;
+
+  /* Theme accent families -> two brand families */
+  --main-h: 219; --main-s: 76%; --main-l: 40%;             /* was green  */
+  --main-six-h: 219; --main-six-s: 76%; --main-six-l: 40%; /* was red    */
+  --main-four-h: 219; --main-four-s: 76%; --main-four-l: 40%; /* was orange */
+  --main-eight-h: 219; --main-eight-s: 76%; --main-eight-l: 40%; /* was bright blue */
+  --main-two-h: 44; --main-two-s: 100%; --main-two-l: 47%; /* yellow -> Signal Gold */
+
+  /* Text */
+  --black: 220 71% 13%; /* Ink */
+  --body: 217 20% 35%;  /* Body */
+
+  /* Type: Poppins headings, Open Sans body */
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "Open Sans", sans-serif;
+  --rethink-font: "Poppins", sans-serif;
+  --rurbanist-font: "Poppins", sans-serif;
+  --oswald-font: "Poppins", sans-serif;
+  --nunito-font: "Open Sans", sans-serif;
+}
+
+/* Navy text on gold, never white (contrast 7.9:1 vs 1.9:1) */
+.bg-main-two-600.text-white,
+.bg-main-two-600 .text-white,
+.bg-main-two-600 .btn_text {
+  color: var(--asas-navy) !important;
+}
+
+/* Header top bar: navy with white text, gold icons */
+.header-top-two-bg {
+  background-color: var(--asas-navy) !important;
+}
+.header-top-two-bg .header-top-two-address,
+.header-top-two-bg .header-social li,
+.header-top-two-bg .header-social a {
+  color: #FFFFFF !important;
+}
+.header-top-two-bg .header-top-two-address span,
+.header-top-two-bg .header-social a:hover {
+  color: var(--asas-gold) !important;
+}
+
+/* Header "Get A Quote": the one gold CTA */
+.header-two-button .tw-primary-btn {
+  background-color: var(--asas-gold) !important;
+}
+.header-two-button .tw-primary-btn .btn_text {
+  color: var(--asas-navy) !important;
+}
+.header-two-button .tw-primary-btn:hover .btn_text {
+  color: var(--asas-navy) !important;
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--asas-blue);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* On navy/dark backgrounds, accent text and links use gold (blue fails contrast
+   there). footer-two-area is the one light footer, so it keeps blue. */
+footer:not(.footer-two-area) :is([class^="text-main-"], [class*=" text-main-"]),
+footer:not(.footer-two-area) a[class*="hover-text-main-"]:hover,
+.header-top-two-bg :is([class^="text-main-"], [class*=" text-main-"]) {
+  color: var(--asas-gold) !important;
+}
+
+/* ---------- Shared site chrome (SiteNav, SiteMobileMenu, SiteFooter) ---------- */
+
+/* Services dropdown: grouped (Fit-Out / MEP / Specialist) */
+.nav-submenu__group { display: block; padding-top: 6px; }
+.nav-submenu__label {
+  display: block;
+  padding: 8px 14px 4px;
+  font-family: var(--heading-font);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5A6A80;
+}
+.nav-menu--mobile .nav-submenu__label { color: #AFBBD0; }
+.nav-submenu__group > ul { padding: 0; }
+
+/* Mobile drawer: contact block under the menu */
+.mobile-menu__contact .mobile-menu__quote {
+  display: inline-flex;
+  justify-content: center;
+  padding: 14px 20px;
+  border-radius: 999px;
+  background: var(--asas-gold);
+  color: var(--asas-navy);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  min-height: 48px;
+  align-items: center;
+}
+.mobile-menu__contact .mobile-menu__line {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFFFFF;
+  min-height: 44px;
+  word-break: break-all;
+}
+.mobile-menu__contact .mobile-menu__line i { color: var(--asas-gold); }
+
+/* Footer */
+.site-footer__logo { width: 220px; max-width: 100%; }
+.site-footer__muted { color: #AFBBD0; line-height: 1.7; }
+.site-footer__label {
+  color: #FFFFFF;
+  font-family: var(--heading-font);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.site-footer__badge {
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  color: #FFFFFF;
+  font-size: 13px;
+}
+.site-footer__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  background: var(--asas-gold);
+  color: var(--asas-navy);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+.site-footer__cta:hover { background: #FFFFFF; color: var(--asas-navy); }
+.site-footer__contact li { display: flex; gap: 10px; align-items: flex-start; color: #FFFFFF; }
+.site-footer__contact li i { color: var(--asas-gold); margin-top: 4px; }
+.site-footer__contact a { word-break: break-word; }
+
+/* Mobile drawer: submenus open by tap (main.js slideToggle), never depend on :hover */
+.nav-menu--mobile .nav-submenu { transform: none !important; }
+.nav-menu--mobile .nav-menu__item.activePage > a,
+.nav-menu--mobile .nav-menu__item > a:hover,
+.nav-menu--mobile .nav-menu__item.active > a,
+.nav-menu--mobile .nav-submenu__item.activePage .nav-submenu__link,
+.nav-menu--mobile .nav-submenu__link:hover {
+  color: var(--asas-gold) !important;
+}
+
+/* ---------- Interaction polish (Emil Kowalski design-engineering rules) ---------- */
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Desktop dropdown: 0.4s scaleY(0) -> 200ms fade + slight scale from the trigger.
+   Nothing appears from nothing; exit is faster than enter. */
+@media (min-width: 1200px) {
+  .header .nav-submenu {
+    transform: translateY(6px) scale(0.97);
+    transform-origin: top left;
+    transition: opacity 150ms var(--ease-out), transform 150ms var(--ease-out), visibility 0s linear 150ms;
+  }
+  .header .has-submenu:hover > .nav-submenu,
+  .header .has-submenu:focus-within > .nav-submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out), visibility 0s;
+  }
+  /* Submenu link nudge: specific properties, quick */
+  .nav-submenu .nav-submenu__item .nav-submenu__link {
+    transition: color 150ms ease, margin-inline-start 200ms var(--ease-out);
+  }
+}
+
+/* Pressable things confirm the press */
+.tw-primary-btn,
+.site-footer__cta,
+.mobile-menu__quote,
+button:not(:disabled) {
+  transition-property: transform, background-color, color, border-color, box-shadow;
+  transition-duration: 160ms;
+  transition-timing-function: var(--ease-out);
+}
+.tw-primary-btn:active,
+.site-footer__cta:active,
+.mobile-menu__quote:active,
+button:not(:disabled):active {
+  transform: scale(0.97);
+}
+
+/* Hover-only flourishes stay off touch screens (tap would trigger them) */
+@media not all and (hover: hover) {
+  .nav-submenu .nav-submenu__item .nav-submenu__link:hover { margin-inline-start: 0; }
+}

@@ -1,0 +1,68 @@
+/* Small additions to the template's index-11 markup. Everything else is theme CSS. */
+
+.heroText {
+  max-width: 640px;
+  margin: 24px 0 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.heroButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Approvals trust strip, on the dark side of the banner gradient */
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+  color: #ffffff;
+  font-size: 0.9375rem;
+}
+
+.trustLabel {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  color: var(--asas-gold);
+}
+
+.trustItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trustItem i {
+  color: var(--asas-gold);
+  font-size: 1.125rem;
+}
+
+.projectMeta {
+  margin: 8px 0 0;
+  font-size: 0.9375rem;
+}
+
+/* Service links inside the repurposed pricing cards: 44px touch target */
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  transition: color 150ms var(--ease-out);
+}
+
+.roundBtn {
+  width: 44px;
+  height: 44px;
+}
+
+.breakAll {
+  overflow-wrap: anywhere;
+}

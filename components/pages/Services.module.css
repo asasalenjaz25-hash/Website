@@ -1,0 +1,256 @@
+/* Small additions for the Services hub and service detail pages.
+   Everything else comes from the template's main.css and brand.css. */
+
+/* Breadcrumb heading: the template's 4rem mobile size overflows on long
+   service names ("Villa Modifications & Service Blocks") at 375px. */
+.crumbTitle {
+  overflow-wrap: break-word;
+}
+@media (max-width: 991px) {
+  .crumbTitle {
+    font-size: 3.25rem !important;
+  }
+}
+@media (max-width: 575px) {
+  .crumbTitle {
+    font-size: 2.25rem !important;
+    line-height: 1.15 !important;
+  }
+}
+.crumbList {
+  flex-wrap: wrap;
+  row-gap: 4px;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 5vw, 3.5rem) !important;
+  overflow-wrap: break-word;
+}
+
+/* Approval chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--asas-border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--asas-ink);
+  font-weight: 600;
+  font-size: 15px;
+}
+.chip i {
+  color: var(--asas-blue);
+}
+
+/* Service cards */
+.groupLabel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.groupLabel::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--asas-border);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 28px);
+  text-align: start;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+.cardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  font-size: 32px;
+  line-height: 1;
+}
+.cardTitle a {
+  color: inherit;
+}
+.cardTitle a:hover {
+  color: var(--asas-blue);
+}
+.cardLink {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-weight: 600;
+  color: var(--asas-blue);
+}
+.cardLink:hover {
+  color: var(--asas-blue-hover);
+}
+
+/* Process step cards: keep the numbered circle centred at every width */
+.stepText {
+  max-width: 280px;
+  margin-inline: auto;
+}
+
+/* Service detail body (the template's wrapper had an image above the text) */
+.detailBody {
+  padding: 48px 40px;
+}
+@media (max-width: 575px) {
+  .detailBody {
+    padding: 28px 20px;
+  }
+}
+.scopeList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .scopeList {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+  }
+}
+.scopeList li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--asas-ink);
+}
+.scopeList li i {
+  color: var(--asas-blue);
+  font-size: 20px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.projectList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .projectList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.projectItem {
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: var(--asas-surface);
+  border-inline-start: 4px solid var(--asas-gold);
+}
+.projectItem strong {
+  display: block;
+  color: var(--asas-ink);
+  font-family: var(--heading-font);
+  font-weight: 600;
+}
+.projectItem span {
+  font-size: 15px;
+}
+
+/* Sidebar */
+.sideLink {
+  min-height: 48px;
+  gap: 12px;
+  text-align: start;
+}
+.sideLinkActive {
+  background: var(--asas-blue) !important;
+  color: #fff !important;
+}
+.contactLine {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  color: var(--asas-ink);
+  word-break: break-word;
+}
+.contactLine i {
+  color: var(--asas-blue);
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.contactLine:hover {
+  color: var(--asas-blue);
+}
+.quoteBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: var(--asas-gold);
+  color: var(--asas-navy);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+.quoteBtn:hover {
+  background: var(--asas-navy);
+  color: #fff;
+}
+
+/* CTA band (template cta-two layout without the cleaning-photo shapes) */
+.cta {
+  padding-block: 100px;
+  margin-inline: 40px;
+  border-radius: 20px;
+  background: var(--asas-surface);
+}
+@media (max-width: 767px) {
+  .cta {
+    padding-block: 64px;
+    margin-inline: 10px;
+  }
+}
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.ctaCall {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 2px solid var(--asas-navy);
+  color: var(--asas-navy);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.ctaCall:hover {
+  background: var(--asas-navy);
+  color: #fff;
+}

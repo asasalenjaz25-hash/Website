@@ -1,0 +1,85 @@
+/* Small additions to the template's service-details.html markup. */
+
+/* Breadcrumb title: "Planning & Architecture" at the template's 4rem overflows 375px. */
+.crumbTitle {
+  overflow-wrap: break-word;
+}
+@media (max-width: 991px) {
+  .crumbTitle {
+    font-size: 3.25rem !important;
+  }
+}
+@media (max-width: 575px) {
+  .crumbTitle {
+    font-size: 2.25rem !important;
+    line-height: 1.15 !important;
+  }
+}
+.crumbList {
+  flex-wrap: wrap;
+  row-gap: 4px;
+}
+
+/* "What's included" list + two photos: stack on small screens instead of three squeezed columns. */
+@media (max-width: 767px) {
+  .benefits {
+    flex-wrap: wrap;
+  }
+  .benefits > :first-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .benefits > :not(:first-child) {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+.benefits img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main column padding: the template's 36px start padding is tight at 375px. */
+@media (max-width: 575px) {
+  .body {
+    padding-inline: 20px !important;
+  }
+}
+
+/* Current service in the sidebar list */
+.current {
+  background: var(--asas-blue) !important;
+  color: #fff !important;
+}
+
+/* Sidebar contact box */
+.contactLines {
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+.contactLines a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 10px;
+  color: var(--asas-navy);
+  overflow-wrap: anywhere;
+  transition: color 200ms var(--ease-out);
+}
+.contactLines a:hover,
+.contactLines a:focus-visible {
+  color: var(--asas-blue);
+}
+.contactLines i {
+  color: var(--asas-blue);
+}
+
+/* Phone number over the blue photo overlay: stays white, underlines on hover */
+.onDark {
+  text-underline-offset: 3px;
+}
+.onDark:hover,
+.onDark:focus-visible {
+  text-decoration: underline;
+}

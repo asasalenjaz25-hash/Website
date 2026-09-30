@@ -1,0 +1,60 @@
+/* Electrical, Civil and Fit-Out service pages: the few rules the template
+   classes don't already cover. */
+
+/* Accent text on navy / dark sections: gold, never Action Blue (contrast). */
+.onDark {
+  color: var(--asas-gold) !important;
+}
+
+/* Hero eyebrow above the h1 */
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* White card that holds <QuoteForm /> in the electrical hero */
+.heroForm {
+  text-align: start;
+}
+
+/* Checklist used where a template form was replaced by a quote CTA */
+.ctaList {
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+.ctaList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+.ctaList i {
+  margin-top: 4px;
+  color: var(--asas-gold);
+}
+
+/* Phone / email links inside CTAs: comfortable touch target */
+.ctaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-thickness 150ms var(--ease-out);
+}
+/* White stays white on hover (gold on Action Blue is below 4.5:1) */
+.ctaLink:hover {
+  text-decoration-thickness: 2px;
+}

@@ -1,0 +1,402 @@
+[
+ {
+  "name": "fit-out",
+  "meaning": "Interior fit-out",
+  "phosphor": "ph:paint-roller-duotone"
+ },
+ {
+  "name": "mep",
+  "meaning": "MEP works (mechanical, electrical, plumbing) as a group",
+  "phosphor": "ph:gear-six-duotone"
+ },
+ {
+  "name": "civil",
+  "meaning": "Civil works, blockwork, partitions",
+  "phosphor": "ph:wall-duotone"
+ },
+ {
+  "name": "joinery",
+  "meaning": "Joinery",
+  "phosphor": "ph:hammer-duotone"
+ },
+ {
+  "name": "joinery-furniture",
+  "meaning": "Built-in joinery / furniture",
+  "phosphor": "ph:armchair-duotone"
+ },
+ {
+  "name": "electrical",
+  "meaning": "Electrical works",
+  "phosphor": "ph:lightning-duotone"
+ },
+ {
+  "name": "power-plug",
+  "meaning": "Power supply, final connections",
+  "phosphor": "ph:plug-duotone"
+ },
+ {
+  "name": "lighting",
+  "meaning": "Lighting",
+  "phosphor": "ph:lightbulb-duotone"
+ },
+ {
+  "name": "plumbing",
+  "meaning": "Plumbing, water supply",
+  "phosphor": "ph:drop-duotone"
+ },
+ {
+  "name": "drainage",
+  "meaning": "Drainage, pipework, HDPE",
+  "phosphor": "ph:pipe-duotone"
+ },
+ {
+  "name": "sanitary",
+  "meaning": "Sanitary ware, washrooms",
+  "phosphor": "ph:toilet-duotone"
+ },
+ {
+  "name": "pipework",
+  "meaning": "Pipework installation (e.g. HDPE)",
+  "phosphor": "ph:pipe-wrench-duotone"
+ },
+ {
+  "name": "hvac",
+  "meaning": "HVAC, air-conditioning",
+  "phosphor": "ph:fan-duotone"
+ },
+ {
+  "name": "ventilation",
+  "meaning": "Ventilation",
+  "phosphor": "ph:wind-duotone"
+ },
+ {
+  "name": "cooling",
+  "meaning": "Cooling",
+  "phosphor": "ph:snowflake-duotone"
+ },
+ {
+  "name": "temperature",
+  "meaning": "Temperature control",
+  "phosphor": "ph:thermometer-duotone"
+ },
+ {
+  "name": "fire-fighting",
+  "meaning": "Fire fighting systems",
+  "phosphor": "ph:fire-extinguisher-duotone"
+ },
+ {
+  "name": "fire",
+  "meaning": "Fire safety",
+  "phosphor": "ph:fire-duotone"
+ },
+ {
+  "name": "low-current",
+  "meaning": "Low current systems, cabling",
+  "phosphor": "ph:network-duotone"
+ },
+ {
+  "name": "planning",
+  "meaning": "Planning & architecture",
+  "phosphor": "ph:compass-tool-duotone"
+ },
+ {
+  "name": "design-drawing",
+  "meaning": "Design, drawings",
+  "phosphor": "ph:pencil-ruler-duotone"
+ },
+ {
+  "name": "measure",
+  "meaning": "Site measurement",
+  "phosphor": "ph:ruler-duotone"
+ },
+ {
+  "name": "villa",
+  "meaning": "Villa works",
+  "phosphor": "ph:house-line-duotone"
+ },
+ {
+  "name": "service-block",
+  "meaning": "Service blocks, extensions",
+  "phosphor": "ph:building-duotone"
+ },
+ {
+  "name": "ev-charger",
+  "meaning": "EV charger installation",
+  "phosphor": "ph:charging-station-duotone"
+ },
+ {
+  "name": "car",
+  "meaning": "Vehicles, car parks",
+  "phosphor": "ph:car-duotone"
+ },
+ {
+  "name": "approved",
+  "meaning": "Authority approval",
+  "phosphor": "ph:seal-check-duotone"
+ },
+ {
+  "name": "certificate",
+  "meaning": "Certification, licence",
+  "phosphor": "ph:certificate-duotone"
+ },
+ {
+  "name": "safety",
+  "meaning": "Safety, EHS",
+  "phosphor": "ph:shield-check-duotone"
+ },
+ {
+  "name": "environment",
+  "meaning": "Environment",
+  "phosphor": "ph:leaf-duotone"
+ },
+ {
+  "name": "hard-hat",
+  "meaning": "Site work, construction",
+  "phosphor": "ph:hard-hat-duotone"
+ },
+ {
+  "name": "team",
+  "meaning": "Team",
+  "phosphor": "ph:users-three-duotone"
+ },
+ {
+  "name": "engineer",
+  "meaning": "Engineer",
+  "phosphor": "ph:user-gear-duotone"
+ },
+ {
+  "name": "specification",
+  "meaning": "Specifications & standards",
+  "phosphor": "ph:clipboard-text-duotone"
+ },
+ {
+  "name": "checklist",
+  "meaning": "Scope, checklist",
+  "phosphor": "ph:list-checks-duotone"
+ },
+ {
+  "name": "schedule",
+  "meaning": "Time schedule, site visit booking",
+  "phosphor": "ph:calendar-check-duotone"
+ },
+ {
+  "name": "progress",
+  "meaning": "Progress reporting",
+  "phosphor": "ph:chart-line-up-duotone"
+ },
+ {
+  "name": "target",
+  "meaning": "Target achievement",
+  "phosphor": "ph:target-duotone"
+ },
+ {
+  "name": "cost-saving",
+  "meaning": "Cost saving",
+  "phosphor": "ph:coins-duotone"
+ },
+ {
+  "name": "technology",
+  "meaning": "Latest technology",
+  "phosphor": "ph:cpu-duotone"
+ },
+ {
+  "name": "one-contract",
+  "meaning": "One contract, partnership",
+  "phosphor": "ph:handshake-duotone"
+ },
+ {
+  "name": "coordination",
+  "meaning": "Trade coordination",
+  "phosphor": "ph:puzzle-piece-duotone"
+ },
+ {
+  "name": "quality",
+  "meaning": "Quality",
+  "phosphor": "ph:medal-duotone"
+ },
+ {
+  "name": "tools",
+  "meaning": "Installation, maintenance",
+  "phosphor": "ph:wrench-duotone"
+ },
+ {
+  "name": "toolbox",
+  "meaning": "Trades, tools",
+  "phosphor": "ph:toolbox-duotone"
+ },
+ {
+  "name": "inspection",
+  "meaning": "Site survey, inspection",
+  "phosphor": "ph:magnifying-glass-duotone"
+ },
+ {
+  "name": "document",
+  "meaning": "Drawings, quotation, documents",
+  "phosphor": "ph:file-text-duotone"
+ },
+ {
+  "name": "handover",
+  "meaning": "Handover",
+  "phosphor": "ph:key-duotone"
+ },
+ {
+  "name": "testing",
+  "meaning": "Testing, commissioning",
+  "phosphor": "ph:check-circle-duotone"
+ },
+ {
+  "name": "check-circle",
+  "meaning": "Included item",
+  "phosphor": "ph:check-circle-duotone"
+ },
+ {
+  "name": "check",
+  "meaning": "Tick",
+  "phosphor": "ph:check-duotone"
+ },
+ {
+  "name": "vision",
+  "meaning": "Vision",
+  "phosphor": "ph:eye-duotone"
+ },
+ {
+  "name": "mission",
+  "meaning": "Mission",
+  "phosphor": "ph:flag-duotone"
+ },
+ {
+  "name": "growth",
+  "meaning": "Continual improvement",
+  "phosphor": "ph:trend-up-duotone"
+ },
+ {
+  "name": "offices",
+  "meaning": "Offices & commercial buildings",
+  "phosphor": "ph:buildings-duotone"
+ },
+ {
+  "name": "residential-tower",
+  "meaning": "Residential towers",
+  "phosphor": "ph:building-apartment-duotone"
+ },
+ {
+  "name": "retail",
+  "meaning": "Retail & shops",
+  "phosphor": "ph:storefront-duotone"
+ },
+ {
+  "name": "restaurant",
+  "meaning": "Restaurants",
+  "phosphor": "ph:fork-knife-duotone"
+ },
+ {
+  "name": "cafe",
+  "meaning": "Cafés",
+  "phosphor": "ph:coffee-duotone"
+ },
+ {
+  "name": "warehouse",
+  "meaning": "Warehouses & logistics",
+  "phosphor": "ph:warehouse-duotone"
+ },
+ {
+  "name": "salon",
+  "meaning": "Salons & spas",
+  "phosphor": "ph:scissors-duotone"
+ },
+ {
+  "name": "laundry",
+  "meaning": "Laundries",
+  "phosphor": "ph:washing-machine-duotone"
+ },
+ {
+  "name": "education",
+  "meaning": "Education",
+  "phosphor": "ph:graduation-cap-duotone"
+ },
+ {
+  "name": "healthcare",
+  "meaning": "Healthcare, clinics",
+  "phosphor": "ph:first-aid-duotone"
+ },
+ {
+  "name": "port",
+  "meaning": "Port / marine",
+  "phosphor": "ph:boat-duotone"
+ },
+ {
+  "name": "truck",
+  "meaning": "Vehicle fleet, logistics",
+  "phosphor": "ph:truck-duotone"
+ },
+ {
+  "name": "location",
+  "meaning": "Address, location",
+  "phosphor": "ph:map-pin-duotone"
+ },
+ {
+  "name": "areas-served",
+  "meaning": "Emirates served",
+  "phosphor": "ph:map-trifold-duotone"
+ },
+ {
+  "name": "phone",
+  "meaning": "Phone",
+  "phosphor": "ph:phone-duotone"
+ },
+ {
+  "name": "phone-call",
+  "meaning": "Call us",
+  "phosphor": "ph:phone-call-duotone"
+ },
+ {
+  "name": "email",
+  "meaning": "Email",
+  "phosphor": "ph:envelope-simple-duotone"
+ },
+ {
+  "name": "whatsapp",
+  "meaning": "WhatsApp",
+  "phosphor": "ph:whatsapp-logo-duotone"
+ },
+ {
+  "name": "chat",
+  "meaning": "Enquiry, message",
+  "phosphor": "ph:chat-circle-dots-duotone"
+ },
+ {
+  "name": "question",
+  "meaning": "FAQ",
+  "phosphor": "ph:question-duotone"
+ },
+ {
+  "name": "quote",
+  "meaning": "Quotation mark (statements)",
+  "phosphor": "ph:quotes-duotone"
+ },
+ {
+  "name": "arrow-up-right",
+  "meaning": "Link arrow",
+  "phosphor": "ph:arrow-up-right-duotone"
+ },
+ {
+  "name": "arrow-right",
+  "meaning": "Next",
+  "phosphor": "ph:arrow-right-duotone"
+ },
+ {
+  "name": "play",
+  "meaning": "Play video",
+  "phosphor": "ph:play-duotone"
+ },
+ {
+  "name": "clock",
+  "meaning": "Time",
+  "phosphor": "ph:clock-duotone"
+ },
+ {
+  "name": "star",
+  "meaning": "Highlight (not ratings)",
+  "phosphor": "ph:star-duotone"
+ }
+]

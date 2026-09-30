@@ -1,0 +1,9 @@
+/* Tailwind v4 — utilities only.
+   Preflight is deliberately NOT imported so Tailwind cannot restyle any
+   existing theme element. The Repio stylesheets are served verbatim from
+   /public/assets/css and linked in app/layout.jsx, exactly as the original. */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@source "../app";
+@source "../components";

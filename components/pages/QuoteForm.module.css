@@ -1,0 +1,181 @@
+.form label,
+.legend {
+  display: block;
+  font-weight: 600;
+  color: var(--asas-ink, #0a1a3a);
+  margin-bottom: 8px;
+}
+
+.optional {
+  font-weight: 400;
+  color: #5a6a80;
+}
+
+.req {
+  color: #b42318;
+}
+
+/* Inputs carry the template classes (form-control, contact-two-form); this
+   only adds a visible focus ring, a comfortable touch height and the error state. */
+.input {
+  min-height: 52px;
+  font-size: 1rem;
+  border: 1px solid rgba(4, 27, 52, 0.16) !important;
+  box-shadow: none;
+  transition: border-color 200ms var(--ease-out, ease-out), box-shadow 200ms var(--ease-out, ease-out);
+}
+.input:focus,
+.input:focus-visible {
+  outline: none;
+  border-color: var(--asas-blue, #184fb4) !important;
+  box-shadow: 0 0 0 3px rgba(24, 79, 180, 0.22);
+}
+.input[aria-invalid="true"] {
+  border-color: #b42318 !important;
+}
+/* !important: the theme's .contact-form rule would make placeholders white. */
+.input::placeholder {
+  color: #6b7a90 !important;
+  opacity: 1;
+}
+textarea.input {
+  min-height: 148px;
+  resize: vertical;
+}
+
+.inputIcon {
+  color: #5a6a80;
+  pointer-events: none;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 20px;
+  min-width: 0;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  position: relative;
+  margin: 0;
+}
+.pill input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+}
+.pill span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 18px;
+  border: 1px solid var(--asas-border, #dce3ee);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--asas-ink, #0a1a3a);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 200ms var(--ease-out, ease-out), border-color 200ms var(--ease-out, ease-out), color 200ms var(--ease-out, ease-out);
+}
+.pill span:hover {
+  border-color: var(--asas-blue, #184fb4);
+}
+.pill input:checked + span {
+  background: var(--asas-blue, #184fb4);
+  border-color: var(--asas-blue, #184fb4);
+  color: #ffffff;
+}
+.pill input:focus-visible + span {
+  outline: 2px solid var(--asas-blue, #184fb4);
+  outline-offset: 2px;
+}
+.fieldset[aria-invalid="true"] .pill span {
+  border-color: #b42318;
+}
+
+.error {
+  display: block;
+  margin-top: 6px;
+  color: #b42318;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.summary {
+  border: 1px solid #b42318;
+  background: #fef3f2;
+  color: #7a271a;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+}
+.summary:focus {
+  outline: 2px solid #b42318;
+  outline-offset: 2px;
+}
+
+.actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.whatsapp {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 2px solid var(--asas-navy, #06245e);
+  background: #ffffff;
+  color: var(--asas-navy, #06245e);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 200ms var(--ease-out, ease-out), color 200ms var(--ease-out, ease-out);
+}
+.whatsapp:focus-visible {
+  outline: 2px solid var(--asas-blue, #184fb4);
+  outline-offset: 3px;
+}
+.whatsapp:hover {
+  background: var(--asas-navy, #06245e);
+  color: #ffffff;
+}
+.whatsapp i {
+  font-size: 20px;
+}
+
+.note {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: #5a6a80;
+}
+
+.status {
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: rgba(24, 79, 180, 0.08);
+  color: var(--asas-ink, #0a1a3a);
+}
+.status a {
+  color: var(--asas-blue, #184fb4);
+  font-weight: 600;
+  text-decoration: underline;
+}
