@@ -1,6 +1,8 @@
 import PageShell from "@/components/PageShell";
 import { COMPANY, QUOTE_HREF } from "@/components/site";
-import { PROJECTS, featuredProjects } from "@/components/projects";
+import { PROJECTS, featuredProjects, sectorCounts } from "@/components/projects";
+import FigureBanner from "@/components/hairline/FigureBanner";
+import { AreasChips, SectorStats } from "@/components/details/Details";
 import ProjectsFilter, { ProjectCard } from "./ProjectsFilter";
 import styles from "./ProjectsPage.module.css";
 
@@ -53,13 +55,17 @@ export default function ProjectsPage() {
           </div>
           <div className={"row"}>
             <div className={"col-xl-12"}>
-              <div className={"breadcrumb-thumb"}>
-                <img
-                  className={"tw-rounded-2xl"}
-                  src={"/assets/images/thumbs/breadcrumb-thumb.jpg"}
-                  alt={"ASAS Alenjaz team on a completed fit-out project in Dubai"}
-                />
-              </div>
+              <FigureBanner
+                figure="skyline"
+                label="Line drawing of a city block with one building for each sector ASAS has worked in"
+                facts={[
+                  { value: PROJECTS.length, label: "Projects in the company profile" },
+                  { value: Object.keys(sectorCounts()).length, label: "Sectors, from cafés to warehouses" },
+                  { value: COMPANY.areas.length, label: "Emirates we work in" },
+                ]}
+              >
+                <AreasChips />
+              </FigureBanner>
             </div>
           </div>
         </div>
@@ -138,6 +144,7 @@ export default function ProjectsPage() {
               </div>
             </div>
           </div>
+          <SectorStats className={styles.sectorStats} />
           <ProjectsFilter />
         </div>
       </section>

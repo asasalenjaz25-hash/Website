@@ -1,4 +1,5 @@
 import SiteNav from "@/components/SiteNav";
+import CartButton from "@/components/shop/CartButton";
 import { COMPANY, QUOTE_HREF } from "@/components/site";
 
 // The one site header (top bar + sticky nav), shared by every page.
@@ -49,6 +50,7 @@ export default function SiteHeader() {
               <SiteNav />
             </div>
             <div className="header-right d-flex align-items-center tw-gap-5">
+              <CartButton />
               <div className="header-two-button d-none d-sm-block">
                 <a href={QUOTE_HREF} className="tw-primary-btn d-inline-flex align-items-center justify-content-center lh-1 fw-semibold bg-main-eight-600 text-white tw-rounded-4xl position-relative z-1">
                   <span className="btn_inner position-relative z-1 w-100 text-center">

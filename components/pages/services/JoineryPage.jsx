@@ -7,12 +7,12 @@ import TextRing from "@/components/TextRing";
 import { COMPANY, SERVICES, QUOTE_HREF } from "@/components/site";
 import { SERVICE_CONTENT, PROCESS } from "@/components/service-content";
 import { PROJECTS } from "@/components/projects";
+import ServiceExtras from "@/components/details/ServiceExtras";
 
 const SLUG = "joinery";
 const service = SERVICES.find((s) => s.slug === SLUG);
 const content = SERVICE_CONTENT[SLUG];
 const PHONE = COMPANY.phones[0];
-const VIDEO_URL = "https://www.youtube.com/watch?v=Fvae8nxzVz4"; // template placeholder video
 const bySn = (sn) => PROJECTS.find((p) => p.sn === sn);
 
 // Trades that sit around the joinery on a fit-out (same Fit-Out group + the MEP
@@ -136,7 +136,7 @@ export default function JoineryPage() {
                   </div>
                   <div className={"d-flex align-items-center tw-gap-17 tw-ps-20"}>
                     <div>
-                      <img src={"/assets/images/thumbs/banner-img.png"} alt={"Finished joinery in an ASAS Alenjaz fit-out"} />
+                      <img src={"/assets/images/thumbs/about-four-thumb1.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "304 / 324", objectFit: "cover" }} alt={"Measuring timber for a joinery piece"} />
                     </div>
                     <div>
                       <div className={"banner-circle position-relative lh-1 d-inline-flex justify-content-center align-items-center rounded-circle z-1"}>
@@ -158,7 +158,7 @@ export default function JoineryPage() {
                 </div>
                 <div className={"banner-right"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
                   <div className={"banner-thumb tw-mb-8"}>
-                    <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/banner-thumb.jpg"} alt={"Custom counter joinery in a restaurant fitted by ASAS Alenjaz"} />
+                    <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/project-four-thumb3.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "624 / 717", objectFit: "cover" }} alt={"Joiner finishing a timber panel"} />
                   </div>
                   <div className={"banner-counter-wrap bg-black d-flex tw-gap-30 tw-rounded-lg tw-py-12 tw-px-10"}>
                     <div className={"banner-counter-wrapper"}>
@@ -191,17 +191,17 @@ export default function JoineryPage() {
           <div className={"row align-items-center"}>
             <div className={"col-xl-6 col-lg-9"}>
               <div className={"about-thumb position-relative z-1 w-100 d-inline-block"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/about-thumb1.jpg"} alt={"ASAS Alenjaz team installing joinery in an office fit-out"} />
+                <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/project-four-thumb2.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "564 / 700", objectFit: "cover" }} alt={"Carpenter cutting timber for fitted joinery"} />
                 <div className={"about-thumb-shape position-absolute end-0"}>
-                  <img src={"/assets/images/thumbs/about-thumb2.png"} alt={"Close-up of joinery finishing on site"} />
+                  <img src={"/assets/images/thumbs/project-four-thumb4.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "354 / 408", objectFit: "cover" }} alt={"Close-up of joinery being assembled"} />
                 </div>
                 <div className={"banner-circle about-circle bg-white position-relative lh-1 d-inline-flex justify-content-center align-items-center rounded-circle z-1"}>
                   <div className={"banner-circle-wrap"}>
                     <TextRing className="banner-rotate-content" label="JOINERY" />
-                    <a className={"open-popup"} href={VIDEO_URL} aria-label={"Play video"}>
+                    <a href={QUOTE_HREF} aria-label={"Request a quote for joinery"}>
                       <div className={"banner-circle-button about-circle-button position-absolute top-50 start-50 translate-middle lh-1 d-inline-flex justify-content-center align-items-center rounded-circle"}>
                         <span className={"d-inline-flex align-items-center lh-1 tw-text-8 fw-bold text-main-eight-600"}>
-                          <i className={"ph ph-play"}></i>
+                          <i className={"ph ph-arrow-up-right"}></i>
                         </span>
                       </div>
                     </a>
@@ -381,14 +381,14 @@ export default function JoineryPage() {
             ))}
             <div className={"col-xl-6 col-lg-10 col-md-10"}>
               <div className={"position-relative z-1 tw-mb-8"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"400"}>
-                <img className={"tw-rounded-md w-100"} src={"/assets/images/thumbs/service-bg.jpg"} alt={"ASAS Alenjaz team coordinating joinery with MEP works on a fit-out"} />
+                <img className={"tw-rounded-md w-100"} src={"/assets/images/thumbs/service-four-thumb1.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "644 / 499", objectFit: "cover" }} alt={"Timber flooring being laid in a fit-out"} />
                 <div className={"service-thumb-wrap position-absolute bg-main-eight-600 tw-rounded-lg bottom-0 end-0 tw-mb-205 tw-me-205 tw-py-9 tw-px-8"}>
                   <div className={"d-flex justify-content-between tw-mb-8"}>
                     <div>
-                      <img src={"/assets/images/thumbs/service-logo1.png"} alt={"DEWA approval logo"} />
+                      <span className="asas-wordmark">DEWA</span>
                     </div>
                     <div>
-                      <img src={"/assets/images/thumbs/service-logo2.png"} alt={"Dubai Municipality approval logo"} />
+                      <span className="asas-wordmark">Dubai Municipality</span>
                     </div>
                   </div>
                   <div className={"tw-mb-8"}>
@@ -448,7 +448,7 @@ export default function JoineryPage() {
             </div>
             <div className={"col-xl-4 col-lg-6"}>
               <div className={"expert-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
-                <img src={"/assets/images/thumbs/expert-thumb.png"} alt={"ASAS Alenjaz technician measuring a space for joinery"} />
+                <img src={"/assets/images/thumbs/testimonial-four-thumb.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "480 / 592", objectFit: "cover" }} alt={"Joiner in a workshop"} />
               </div>
             </div>
             <div className={"col-xl-4 col-lg-6"}>
@@ -516,13 +516,7 @@ export default function JoineryPage() {
           <div className={"row justify-content-center"}>
             <div className={"col-xl-12"}>
               <div className={"video-bg text-center position-relative"}>
-                <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/video-bg.jpg"} alt={"ASAS Alenjaz fit-out project walkthrough"} />
-                <div className={"video-button position-absolute start-50 translate-middle"}>
-                  <a className={"video-btn open-popup tw-w-28 tw-h-28 lh-1 d-inline-flex align-items-center justify-content-center rounded-circle text-white bg-main-eight-600 tw-text-8 position-relative z-1"} href={VIDEO_URL} data-fancybox={"gallery"} data-caption={""} aria-label={"Play video"}>
-                    <i className={"ph-bold ph-play"}></i>
-                    <span className={"ripple"}></span>
-                  </a>
-                </div>
+                <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/video-ten-bg.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "1720 / 702", objectFit: "cover" }} alt={"Flooring being laid during a fit-out"} />
               </div>
             </div>
           </div>
@@ -571,7 +565,7 @@ export default function JoineryPage() {
                         </div>
                       </div>
                     </a>
-                    <div className={"hover__reveal-bg bg-img"} data-background-image={["/assets/images/thumbs/project-thumb1.jpg", "/assets/images/thumbs/project-thumb4.jpg", "/assets/images/thumbs/project-thumb3.jpg", "/assets/images/thumbs/project-thumb2.jpg"][i]} role={"img"} aria-label={project.name + " fit-out photo"}></div>
+                    <div className={"hover__reveal-bg bg-img"} data-background-image={["/assets/images/thumbs/project-four-thumb1.jpg", "/assets/images/thumbs/project-four-thumb4.jpg", "/assets/images/thumbs/project-four-thumb3.jpg", "/assets/images/thumbs/project-four-thumb2.jpg"][i]} role={"img"} aria-label={project.name + " fit-out photo"}></div>
                   </div>
                 ))}
                 <span className={"active-bg"}></span>
@@ -618,7 +612,7 @@ export default function JoineryPage() {
             </div>
             <div className={"col-xl-4 d-none d-xl-block"}>
               <div className={"cta-thumb"} data-aos={"fade-down"} data-aos-duration={"1000"} data-aos-delay={"300"}>
-                <img src={"/assets/images/thumbs/cta-thumb.png"} alt={"ASAS Alenjaz technician ready for a site visit"} />
+                <img src={"/assets/images/thumbs/about-three-thumb3.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "590 / 723", objectFit: "cover" }} alt={"Technician in a hard hat ready for a site visit"} />
               </div>
             </div>
             <div className={"col-xl-3 col-lg-6"}>
@@ -751,32 +745,32 @@ export default function JoineryPage() {
                   <div className={"swiper-wrapper"}>
                     <div className={"brand-item swiper-slide"}>
                       <div className={"brand-thumb"}>
-                        <img src={"/assets/images/thumbs/brand-thumb1.png"} alt={"DEWA logo"} />
+                        <span className="asas-wordmark">DEWA</span>
                       </div>
                     </div>
                     <div className={"brand-item swiper-slide"}>
                       <div className={"brand-thumb"}>
-                        <img src={"/assets/images/thumbs/brand-thumb2.png"} alt={"Dubai Municipality logo"} />
+                        <span className="asas-wordmark">Dubai Municipality</span>
                       </div>
                     </div>
                     <div className={"brand-item swiper-slide"}>
                       <div className={"brand-thumb"}>
-                        <img src={"/assets/images/thumbs/brand-thumb3.png"} alt={"Civil Defence logo"} />
+                        <span className="asas-wordmark">Civil Defence</span>
                       </div>
                     </div>
                     <div className={"brand-item swiper-slide"}>
                       <div className={"brand-thumb"}>
-                        <img src={"/assets/images/thumbs/brand-thumb4.png"} alt={"Trakhees logo"} />
+                        <span className="asas-wordmark">Trakhees</span>
                       </div>
                     </div>
                     <div className={"brand-item swiper-slide"}>
                       <div className={"brand-thumb"}>
-                        <img src={"/assets/images/thumbs/brand-thumb5.png"} alt={"Atlas Copco logo"} />
+                        <span className="asas-wordmark">Atlas Copco</span>
                       </div>
                     </div>
                     <div className={"brand-item swiper-slide"}>
                       <div className={"brand-thumb"}>
-                        <img src={"/assets/images/thumbs/brand-thumb6.png"} alt={"Aramex logo"} />
+                        <span className="asas-wordmark">Aramex</span>
                       </div>
                     </div>
                   </div>
@@ -786,6 +780,8 @@ export default function JoineryPage() {
           </div>
         </div>
       </div>
+      <ServiceExtras slug="joinery" />
+
       <section className={"contact-area pb-120"}>
         <div className={"container tw-container-1750-px"}>
           <div className={"row"}>
@@ -794,7 +790,7 @@ export default function JoineryPage() {
                 <div className={"row align-items-center"}>
                   <div className={"col-xl-4 col-lg-6"}>
                     <div className={"contact-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                      <img className={"tw-rounded-xl w-100"} src={"/assets/images/thumbs/contact-thumb.jpg"} alt={"ASAS Alenjaz engineer reviewing joinery drawings with a client"} />
+                      <img className={"tw-rounded-xl w-100"} src={"/assets/images/thumbs/blog-four-thumb2.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "493 / 632", objectFit: "cover" }} alt={"Joiner working in a workshop"} />
                     </div>
                   </div>
                   <div className={"col-xl-4 col-lg-6"}>
@@ -817,9 +813,6 @@ export default function JoineryPage() {
                         <a className={"tw-text-2xl fw-bold text-heading d-block hover-text-main-eight-600"} href={"tel:" + PHONE.tel}>
                           {PHONE.label}
                         </a>
-                      </div>
-                      <div className={"contact-hand text-end z-n1"}>
-                        <img src={"/assets/images/thumbs/contact-hand.png"} alt={""} />
                       </div>
                     </div>
                   </div>

@@ -1,6 +1,9 @@
 import PageShell from "@/components/PageShell";
 import { COMPANY, QUOTE_HREF } from "@/components/site";
 import { SECTORS, sectorCounts } from "@/components/projects";
+import FigureBanner from "@/components/hairline/FigureBanner";
+import { AreasChips, ContactRail } from "@/components/details/Details";
+import { INSTALL_PRICES, formatAED } from "@/components/shop/catalog";
 import styles from "./InfoPages.module.css";
 
 // Built from components/generated/Page_faq_html.jsx (breadcrumb-area and
@@ -70,6 +73,64 @@ const FAQS = [
   },
 ];
 
+// Shop questions, answered from how the shop works (components/shop/catalog.js).
+const SHOP_FAQS = [
+  {
+    id: "six",
+    q: "Do your shop prices include VAT?",
+    a: <>No. Shop prices are in AED and exclude 5% VAT, which is added to your total at checkout.</>,
+  },
+  {
+    id: "seven",
+    q: "Can you install a unit I buy from your shop?",
+    a: (
+      <>
+        Yes. In your cart, tick &ldquo;Add installation by our team&rdquo; on the item. Installation is priced per unit, from{" "}
+        {formatAED(INSTALL_PRICES.split["1.5-ton"])} for a 1.5 ton split AC. <a href="/shop">Visit the shop</a>.
+      </>
+    ),
+  },
+  {
+    id: "eight",
+    q: "Can you install a unit I already own?",
+    a: (
+      <>
+        Yes. Choose &ldquo;Installation only&rdquo; in the shop&rsquo;s <a href="/shop#services">services section</a>, with your unit type
+        and capacity.
+      </>
+    ),
+  },
+  {
+    id: "nine",
+    q: "How do I pay for a shop order?",
+    a: <>By card, on a secure Stripe checkout page. Our team then calls you to confirm the site details and book your date.</>,
+  },
+];
+
+function Accordion({ id, items, offset = 0, firstOpen = false }) {
+  return (
+    <div className={"accordion"} id={id}>
+      {items.map((item, i) => {
+        const open = firstOpen && i === 0;
+        return (
+          <div className={"accordion-item faq-two-accordion-item"} key={item.id}>
+            <h3 className={"accordion-header"} id={`order_${item.id}`}>
+              <button className={`accordion-button${open ? "" : " collapsed"} faq-two-accordion-button tw-text-lg`} type={"button"} data-bs-toggle={"collapse"} data-bs-target={`#order__collapse_${item.id}`} aria-expanded={open ? "true" : "false"} aria-controls={`order__collapse_${item.id}`}>
+                {offset + i + 1}. {item.q}
+              </button>
+            </h3>
+            <div id={`order__collapse_${item.id}`} className={`accordion-collapse collapse${open ? " show" : ""}`} role={"region"} aria-labelledby={`order_${item.id}`} data-bs-parent={`#${id}`}>
+              <div className={"accordion-body faq-two-accordion-body"}>
+                <p className={`tw-text-base fw-medium ${styles.answer}`}>{item.a}</p>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function FaqPage() {
   const phone = COMPANY.phones[0];
   return (
@@ -106,16 +167,22 @@ export default function FaqPage() {
           </div>
           <div className={"row"}>
             <div className={"col-xl-12"}>
-              <div className={"breadcrumb-thumb"}>
-                <img className={"tw-rounded-2xl"} src={"/assets/images/thumbs/breadcrumb-thumb.jpg"} alt={"ASAS Alenjaz engineer answering a client's questions on site"} />
-              </div>
+              <FigureBanner
+                figure="hatches"
+                label="Line drawing of a floor of access hatches; the one you point at swings open"
+                facts={[
+                  { value: FAQS.length + SHOP_FAQS.length, label: "Questions answered below" },
+                  { value: COMPANY.founded, label: "In business since" },
+                  { value: COMPANY.approvals.length, label: "Authority approvals" },
+                ]}
+              />
             </div>
           </div>
         </div>
       </section>
       <section className={"faq-two-area py-120 faq-ip-area bg-white pt-0"}>
         <div className={"container"}>
-          <div className={"row align-items-center"}>
+          <div className={"row align-items-start"}>
             <div className={"col-xl-5 col-lg-8"}>
               <div className={"faq-two-left"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
                 <div className={"section-wrapper"}>
@@ -141,28 +208,16 @@ export default function FaqPage() {
                     </a>
                   </div>
                 </div>
+                <AreasChips className={styles.faqAreas} />
               </div>
             </div>
             <div className={"col-xl-7"}>
               <div className={"faq-two-wrapper tw-ms-10"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
-                <div className={"accordion"} id={"general_faqaccordion"}>
-                  {FAQS.map((item, i) => (
-                    <div className={"accordion-item faq-two-accordion-item"} key={item.id}>
-                      <h3 className={"accordion-header"} id={`order_${item.id}`}>
-                        <button className={`accordion-button${i === 0 ? "" : " collapsed"} faq-two-accordion-button tw-text-lg`} type={"button"} data-bs-toggle={"collapse"} data-bs-target={`#order__collapse_${item.id}`} aria-expanded={i === 0 ? "true" : "false"} aria-controls={`order__collapse_${item.id}`}>
-                          {i + 1}. {item.q}
-                        </button>
-                      </h3>
-                      <div id={`order__collapse_${item.id}`} className={`accordion-collapse collapse${i === 0 ? " show" : ""}`} role={"region"} aria-labelledby={`order_${item.id}`} data-bs-parent={"#general_faqaccordion"}>
-                        <div className={"accordion-body faq-two-accordion-body"}>
-                          <p className={`tw-text-base fw-medium ${styles.answer}`}>
-                            {item.a}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <h3 className={styles.faqGroup}>About ASAS</h3>
+                <Accordion id={"general_faqaccordion"} items={FAQS} firstOpen />
+                <h3 className={styles.faqGroup}>Shop &amp; payments</h3>
+                <Accordion id={"shop_faqaccordion"} items={SHOP_FAQS} offset={FAQS.length} />
+                <ContactRail className={styles.faqRail} title="Still have a question?" text="Call, WhatsApp or email us and an engineer will answer." />
               </div>
             </div>
           </div>

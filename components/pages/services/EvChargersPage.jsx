@@ -7,11 +7,11 @@ import PageShell from "@/components/PageShell";
 import { COMPANY, SERVICES, QUOTE_HREF } from "@/components/site";
 import { SERVICE_CONTENT, PROCESS } from "@/components/service-content";
 import { PROJECTS } from "@/components/projects";
+import ServiceExtras from "@/components/details/ServiceExtras";
 
 const SLUG = "ev-chargers";
 const service = SERVICES.find((s) => s.slug === SLUG);
 const content = SERVICE_CONTENT[SLUG];
-const VIDEO_URL = "https://www.youtube.com/watch?v=Fvae8nxzVz4"; // template placeholder video
 const bySn = (sn) => PROJECTS.find((p) => p.sn === sn);
 
 // The four real car-charger projects on the ASAS project list.
@@ -66,7 +66,7 @@ export default function EvChargersPage() {
             <div className={"swiper-wrapper"}>
               <div className={"swiper-slide"}>
                 <div className={"banner-nine-height"}>
-                  <div className={"banner-nine-bg bg-img"} data-background-image={"/assets/images/thumbs/banner-nine-bg1.jpg"} role={"img"} aria-label={"EV charger installed by ASAS Alenjaz at a residential community"}></div>
+                  <div className={"banner-nine-bg bg-img"} data-background-image={"/assets/images/thumbs/banner-seven-bg.jpg"} role={"img"} aria-label={"EV charger installed by ASAS Alenjaz at a residential community"}></div>
                   <div className={"container tw-container-1750-px"}>
                     <div className={"row"}>
                       <div className={"col-xl-6"}>
@@ -214,7 +214,7 @@ export default function EvChargersPage() {
           <div className={"row align-items-center"}>
             <div className={"col-xl-5 col-lg-5"}>
               <div className={"about-nine-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/about-nine-thumb1.jpg"} alt={"ASAS Alenjaz technician installing a wall-mounted EV charger"} />
+                <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/project-seven-thumb5.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "562 / 559", objectFit: "cover" }} alt={"Electrician wiring a power installation"} />
               </div>
             </div>
             <div className={"col-xl-7 col-lg-7"}>
@@ -327,7 +327,7 @@ export default function EvChargersPage() {
             </div>
             <div className={"col-xl-7 col-lg-7"}>
               <div className={"about-nine-thumb-two"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
-                <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/about-nine-thumb2.jpg"} alt={"Row of EV chargers in a residential community car park"} />
+                <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/contact-three-thumb.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "765 / 378", objectFit: "cover" }} alt={"Engineer planning an electrical installation"} />
               </div>
             </div>
           </div>
@@ -550,27 +550,27 @@ export default function EvChargersPage() {
                   <div className={"swiper-wrapper"}>
                     <div className={"brand-eight-item swiper-slide"}>
                       <div className={"brand-eight-thumb"}>
-                        <img src={"/assets/images/thumbs/brand-eight-thumb1.png"} alt={"DEWA logo"} />
+                        <span className="asas-wordmark">DEWA</span>
                       </div>
                     </div>
                     <div className={"brand-eight-item swiper-slide"}>
                       <div className={"brand-eight-thumb"}>
-                        <img src={"/assets/images/thumbs/brand-eight-thumb2.png"} alt={"Dubai Municipality logo"} />
+                        <span className="asas-wordmark">Dubai Municipality</span>
                       </div>
                     </div>
                     <div className={"brand-eight-item swiper-slide"}>
                       <div className={"brand-eight-thumb"}>
-                        <img src={"/assets/images/thumbs/brand-eight-thumb3.png"} alt={"Civil Defence logo"} />
+                        <span className="asas-wordmark">Civil Defence</span>
                       </div>
                     </div>
                     <div className={"brand-eight-item swiper-slide"}>
                       <div className={"brand-eight-thumb"}>
-                        <img src={"/assets/images/thumbs/brand-eight-thumb4.png"} alt={"Trakhees logo"} />
+                        <span className="asas-wordmark">Trakhees</span>
                       </div>
                     </div>
                     <div className={"brand-eight-item swiper-slide"}>
                       <div className={"brand-eight-thumb"}>
-                        <img src={"/assets/images/thumbs/brand-eight-thumb5.png"} alt={"Sustainable City logo"} />
+                        <span className="asas-wordmark">Sustainable City</span>
                       </div>
                     </div>
                   </div>
@@ -600,7 +600,7 @@ export default function EvChargersPage() {
                 <div className={"team-four-wrapper team-nine-wrapper" + (i % 2 === 1 ? " tw-mt-122" : "") + " tw-rounded-lg bg-white text-center tw-mb-8"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={String(200 + i * 100)}>
                   <div className={"team-four-thumb team-nine-thumb position-relative z-1 tw-mb-6"}>
                     <a className={"d-block"} href={"/about"} aria-label={"About our team: " + member.role}>
-                      <img className={"tw-rounded-lg w-100"} src={"/assets/images/thumbs/team-nine-thumb" + (i + 1) + ".png"} alt={["ASAS Alenjaz MEP engineer on site", "ASAS Alenjaz foreman on site", "ASAS Alenjaz technician at work", "ASAS Alenjaz helper at work"][i]} />
+                      <img className={"tw-rounded-lg w-100"} src={"/assets/images/thumbs/team-four-thumb" + (i + 1) + ".jpg"} style={{ width: "100%", height: "auto", aspectRatio: "1 / 1", objectFit: "cover" }} alt={["ASAS Alenjaz MEP engineer on site", "ASAS Alenjaz foreman on site", "ASAS Alenjaz technician at work", "ASAS Alenjaz helper at work"][i]} />
                     </a>
                   </div>
                   <div>
@@ -628,13 +628,7 @@ export default function EvChargersPage() {
           <div className={"row justify-content-center gx-0"}>
             <div className={"col-xl-12 gx-0"}>
               <div className={"video-bg video-nine-bg text-center position-relative"}>
-                <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/video-nine-bg.jpg"} alt={"EV charger installation walkthrough by ASAS Alenjaz"} />
-                <div className={"video-button video-nine-button position-absolute start-50 translate-middle"}>
-                  <a className={"video-btn open-popup tw-w-28 tw-h-28 lh-1 d-inline-flex align-items-center justify-content-center rounded-circle text-white bg-main-eight-600 tw-text-8 position-relative z-1"} href={VIDEO_URL} data-fancybox={"gallery"} data-caption={""} aria-label={"Play video"}>
-                    <i className={"ph-bold ph-play"}></i>
-                    <span className={"ripple"}></span>
-                  </a>
-                </div>
+                <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/banner-five-bg.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "1880 / 759", objectFit: "cover" }} alt={"Technician working on electrical equipment"} />
               </div>
             </div>
           </div>
@@ -660,7 +654,7 @@ export default function EvChargersPage() {
                 <div key={project.sn} className={"row project-nine-panel" + (i > 0 ? " mt-30" : "")}>
                   <div className={"col"}>
                     <div className={"project-nine-thumb position-relative z-1"}>
-                      <img className={"tw-rounded-2xl"} src={"/assets/images/thumbs/project-nine-thumb" + (i + 1) + ".jpg"} alt={"EV chargers at " + project.name + ", " + project.location} />
+                      <img className={"tw-rounded-2xl"} src={["/assets/images/thumbs/banner-seven-bg.jpg", "/assets/images/thumbs/banner-eleven-bg.jpg", "/assets/images/thumbs/banner-three-bg.jpg"][i % 3]} style={{ width: "100%", height: "auto", aspectRatio: "1715 / 472", objectFit: "cover" }} alt={"EV chargers at " + project.name + ", " + project.location} />
                       <div className={"project-nine-content position-absolute bottom-0 start-0 tw-mb-705 tw-ms-705 bg-white tw-rounded-xl tw-px-11 tw-pt-15 tw-pb-13"}>
                         <span className={"text-main-eight-600 tw-mb-4"}>
                           #EV charging · {project.location}
@@ -775,6 +769,8 @@ export default function EvChargersPage() {
           </div>
         </div>
       </section>
+      <ServiceExtras slug="ev-chargers" />
+
       <section className={"blog-nine-area tw-pb-22"}>
         <div className={"container"}>
           <div className={"row justify-content-center"}>
@@ -795,7 +791,7 @@ export default function EvChargersPage() {
                 <div className={"blog-nine-wrapper tw-mb-705"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={String(200 + i * 100)}>
                   <div className={"blog-nine-thumb position-relative z-1 overflow-hidden tw-rounded-xl"}>
                     <a className={"d-block"} href={item.href} aria-label={item.title}>
-                      <img className={"w-100"} src={"/assets/images/thumbs/blog-nine-thumb" + (i + 1) + ".jpg"} alt={["EV charger at a private villa in Al Rashidiya", "Villa service block in Al Rashidiya", "ASAS Alenjaz electrician at a distribution board"][i]} />
+                      <img className={"w-100"} src={"/assets/images/thumbs/project-seven-thumb" + (i + 1) + ".jpg"} style={{ width: "100%", height: "auto", aspectRatio: "424 / 509", objectFit: "cover" }} alt={["EV charger at a private villa in Al Rashidiya", "Villa service block in Al Rashidiya", "ASAS Alenjaz electrician at a distribution board"][i]} />
                     </a>
                     <div className={"blog-nine-date text-center tw-rounded-lg tw-p-5"}>
                       <p className={"h3 text-white"}>

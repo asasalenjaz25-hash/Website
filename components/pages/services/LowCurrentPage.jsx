@@ -8,6 +8,7 @@ import PageShell from "@/components/PageShell";
 import { COMPANY, SERVICES, QUOTE_HREF } from "@/components/site";
 import { SERVICE_CONTENT, PROCESS } from "@/components/service-content";
 import { PROJECTS } from "@/components/projects";
+import ServiceExtras from "@/components/details/ServiceExtras";
 
 const SLUG = "low-current";
 const service = SERVICES.find((s) => s.slug === SLUG);
@@ -799,6 +800,8 @@ export default function LowCurrentPage() {
           </div>
         </div>
       </section>
+      <ServiceExtras slug="low-current" />
+
       <section className={"blog-five-area pt-120 tw-pb-22 bg-main-four-50"}>
         <div className={"container"}>
           <div className={"row justify-content-center"}>

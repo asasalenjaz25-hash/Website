@@ -1,10 +1,10 @@
-import Page_cart_html from "@/components/generated/Page_cart_html";
+import CartPage from "@/components/pages/CartPage";
 
 export const metadata = {
-  title: "Repio - cleaning repair handyman Services  Multipurpose HTML Template",
-  description: "Repio - Services Multipurpose HTML Template, Office cleaning, Carpet cleaning, AC servicing, AC repair, General handyman, Electrical repair, Laptop repair, Desktop repair, Phone repair, Camera repair,  Bootstrap, Responsive HTML Template.",
+  title: "Your Cart · ASAS Alenjaz Shop",
+  robots: { index: false },
 };
 
 export default function Page() {
-  return <Page_cart_html />;
+  return <CartPage />;
 }

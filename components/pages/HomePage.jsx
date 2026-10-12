@@ -3,13 +3,18 @@ import QuoteForm from "@/components/pages/QuoteForm";
 import { COMPANY, SERVICES, QUOTE_HREF } from "@/components/site";
 import { SERVICE_CONTENT, PROCESS } from "@/components/service-content";
 import { featuredProjects } from "@/components/projects";
+import BuildSequence from "@/components/pages/home/BuildSequence";
+import ServiceMotionGrid from "@/components/pages/home/ServiceMotionGrid";
+import SectorTicker from "@/components/pages/home/SectorTicker";
+import { HomeSectors, HomeShopBand, HomeTrustBand } from "@/components/details/HomeExtras";
 import styles from "./HomePage.module.css";
 
 // Home page: the template's index-11 page (components/generated/Page_index_11_html.jsx)
 // with every section, image, marquee, counter and animation hook kept, and only
 // the words and links changed to ASAS content (content.md §3.1).
-// Repurposed: team-seven → in-house roles, pricing-seven → service groups (no prices),
+// Repurposed: team-seven → in-house roles, pricing-seven → animated service grid,
 // blog-seven → service highlights, contact form → <QuoteForm />.
+// Added: <BuildSequence /> (scroll-built room), <SectorTicker /> (sector marquee).
 // Template photos are placeholders; see design-system/image-manifest/home.md.
 
 const PHONE = COMPANY.phones[0];
@@ -55,14 +60,22 @@ const PROJECT_CARDS = ["one", "two", "three", "four", "five", "six"];
 const PROJECT_DELAYS = ["200", "300", "400", "200", "300", "400"];
 
 const bySlug = (slug) => SERVICES.find((s) => s.slug === slug);
-const inGroup = (group) => SERVICES.filter((s) => s.group === group);
 
-// pricing-seven cards, repurposed as the three service groups (content.md §3.6).
-const GROUPS = [
-  { title: "Fit-Out", note: "complete interiors", items: inGroup("Fit-Out") },
-  { title: "MEP", note: "every building service", items: inGroup("MEP"), active: true },
-  { title: "Specialist", note: "villas, design & EV", items: inGroup("Specialist") },
-];
+// Scroll-built room (BuildSequence): one step per trade, in site order.
+const BUILD_STEPS = [
+  { slug: "planning-architecture", text: "We measure the space, check authority requirements and turn your brief into buildable, approvable drawings.", link: "Planning & architecture" },
+  { slug: "civil", text: "Slabs, blockwork, partitions, plastering and the false ceiling: the shell every other trade is built into.", link: "Civil works" },
+  { slug: "joinery", text: "Doors, wall cabinets, shelving and counters, made to the approved design and fitted on site.", link: "Joinery" },
+  { slug: "electrical", text: "Conduits, wiring, lighting, switches and sockets, installed to DEWA requirements.", link: "Electrical works" },
+  { slug: "plumbing", text: "Water supply, drainage and sanitary fittings, pressure-tested before anything is closed up.", link: "Plumbing works" },
+  { slug: "hvac", text: "Ducting, fan coils and diffusers sized for the space, so every corner stays comfortable.", link: "HVAC works" },
+  { slug: "fire-fighting", text: "Sprinklers, detectors and extinguishers to Civil Defence requirements.", link: "Fire fighting systems" },
+  { slug: "low-current", text: "CCTV, data points, Wi-Fi and access control, coordinated with the electrical and interior works.", link: "Low current systems" },
+  { slug: "fit-out", title: "Finishes & handover", icon: "ph-key", text: "Paint, flooring and furniture go in, every system is tested and commissioned, and we hand over on schedule.", link: "Interior fit-out" },
+].map((st) => {
+  const svc = bySlug(st.slug);
+  return { slug: st.slug, title: st.title || svc.title, icon: st.icon || svc.icon, text: st.text, linkLabel: st.link };
+});
 
 // blog-seven cards, repurposed as service highlights.
 const HIGHLIGHTS = [
@@ -196,6 +209,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <BuildSequence steps={BUILD_STEPS} />
 
       <section className={"work-seven-area py-120"}>
         <div className={"container"}>
@@ -338,6 +353,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <HomeSectors />
+
       <section className={"counter-seven-area pt-120 position-relative z-1"}>
         <div className={"container"}>
           <div className={"row align-items-center justify-content-between"}>
@@ -395,11 +412,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* pricing-seven, repurposed: the 11 services in their three groups, no prices */}
+      {/* pricing-seven slot (its padding sits under the CTA card), now the animated service grid */}
       <section className={"pricing-seven-area tw-pb-22 position-relative z-1"}>
         <div className={"container"}>
           <div className={"row justify-content-center"}>
-            <div className={"col-xl-5"}>
+            <div className={"col-xl-6"}>
               <div className={"section-six-wrapper text-center"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
                 <div className={"section-seven-subtitle section-three-subtitle section-six-subtitle font-heading tw-text-base fw-medium tw-rounded-2xl fw-medium text-uppercase text-heading tw-mb-4 d-inline-block position-relative z-1"}>
                   Our services
@@ -410,53 +427,17 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className={"row"}>
-            {GROUPS.map((g, gi) => (
-              <div key={g.title} className={"col-xl-4 col-lg-6 col-md-6"}>
-                <div className={g.active ? "pricing-seven-wrapper active bg-main-four-600 tw-p-5 tw-pt-10 tw-rounded-2xl tw-mb-705" : "pricing-seven-wrapper bg-white tw-p-5 tw-pt-10 tw-rounded-2xl tw-mb-705"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={String(200 + gi * 100)}>
-                  <div className={"pricing-seven-top tw-p-4"}>
-                    <h3 className={`pricing-seven-title tw-mb-8 ${g.active ? "text-white" : "text-main-four-600"}`}>
-                      {g.title}
-                    </h3>
-                    <ul className={g.active ? "pricing-seven-list tw-mb-6" : "tw-mb-6"}>
-                      {g.items.map((s, si) => {
-                        const last = si === g.items.length - 1;
-                        return (
-                          <li key={s.slug} className={`d-flex align-items-center tw-gap-2 ${last ? "" : "tw-mb-2"} ${g.active ? "text-white" : ""}`}>
-                            <span className={"d-inline-block lh-1"}>
-                              <img src={"/assets/images/icons/asas/check-circle.svg"} width={20} height={20} alt={""} />
-                            </span>
-                            <a className={g.active ? `text-white ${styles.serviceLink}` : `text-heading hover-text-main-four-600 ${styles.serviceLink}`} href={`/services/${s.slug}`}>
-                              {s.title}
-                            </a>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                  <div className={"pricing-seven-wrap bg-white tw-rounded-lg"}>
-                    <div>
-                      <h4 className={"pricing-seven-price tw-text-3xl fw-medium tw-mb-5 text-heading"}>
-                        {g.items.length} services
-                        <span className={"tw-text-base"}>
-                          {" "}/ {g.note}
-                        </span>
-                      </h4>
-                    </div>
-                    <div>
-                      <PrimaryBtn href={QUOTE_HREF} label="Request a Quote" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ServiceMotionGrid />
         </div>
         <div>
           <img className={"position-absolute top-0 start-0 z-n1"} src={"/assets/images/shapes/cta-seven-shape1.png"} alt={""} />
           <img className={"position-absolute top-0 end-0 z-n1"} src={"/assets/images/shapes/cta-seven-shape2.png"} alt={""} />
         </div>
       </section>
+
+      <HomeShopBand />
+
+      <SectorTicker />
 
       <section className={"choose-seven-area py-120 position-relative z-1"}>
         <div className={"container"}>
@@ -597,6 +578,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <HomeTrustBand />
 
       <section className={"contact-seven-area py-120"}>
         <div className={"container"}>

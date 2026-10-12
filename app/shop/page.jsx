@@ -1,10 +1,11 @@
-import Page_shop_html from "@/components/generated/Page_shop_html";
+import ShopPage from "@/components/pages/ShopPage";
 
 export const metadata = {
-  title: "Repio - cleaning repair handyman Services  Multipurpose HTML Template",
-  description: "Repio - Services Multipurpose HTML Template, Office cleaning, Carpet cleaning, AC servicing, AC repair, General handyman, Electrical repair, Laptop repair, Desktop repair, Phone repair, Camera repair,  Bootstrap, Responsive HTML Template.",
+  title: "Shop ACs, Solar Water Heaters & AC Services in Dubai · ASAS Alenjaz",
+  description:
+    "Buy O General, Carrier and Super General split and ducted ACs and solar water heaters, with optional installation by our team. AC installation, servicing, deep cleaning, gas top-ups and annual maintenance plans. Pay securely online.",
 };
 
 export default function Page() {
-  return <Page_shop_html />;
+  return <ShopPage />;
 }

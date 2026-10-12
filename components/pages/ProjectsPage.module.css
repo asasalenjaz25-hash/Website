@@ -279,3 +279,8 @@
     transition: none;
   }
 }
+
+/* Sector counts above the filter */
+.sectorStats {
+  margin-bottom: 32px;
+}

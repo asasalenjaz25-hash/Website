@@ -1,6 +1,8 @@
 import PageShell from "@/components/PageShell";
 import { COMPANY, QUOTE_HREF } from "@/components/site";
 import QuoteForm from "./QuoteForm";
+import FigureBanner from "@/components/hairline/FigureBanner";
+import { AreasChips, NextSteps } from "@/components/details/Details";
 import styles from "./InfoPages.module.css";
 
 // Built from components/generated/Page_contact_html.jsx: breadcrumb-area and
@@ -51,9 +53,15 @@ export default function ContactPage() {
           </div>
           <div className={"row"}>
             <div className={"col-xl-12"}>
-              <div className={"breadcrumb-thumb"}>
-                <img className={"tw-rounded-2xl"} src={"/assets/images/thumbs/breadcrumb-thumb.jpg"} alt={"ASAS Alenjaz office at TADBEER Building, Deira, Dubai"} />
-              </div>
+              <FigureBanner
+                figure="pigeonholes"
+                label="Line drawing of a rack of pigeonholes; the message you point at slides out"
+                facts={[
+                  { value: COMPANY.phones.length, label: "Direct phone lines" },
+                  { value: COMPANY.engineers.length, label: "Engineers you can ask for by name" },
+                  { value: COMPANY.areas.length, label: "Emirates we work in" },
+                ]}
+              />
             </div>
           </div>
         </div>
@@ -128,7 +136,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-          <div className={"row align-items-center"}>
+          <div className={"row align-items-start"}>
             <div className={"col-xl-6"}>
               <div className={"contact-form contact-ip-form blog-details-contact-form"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
                 <h3 className={"text-heading tw-text-9 fw-normal tw-mb-8 tw-pe-4 "}>
@@ -152,6 +160,10 @@ export default function ContactPage() {
                   referrerPolicy={"no-referrer-when-downgrade"}
                   className={"w-100 h-100 tw-rounded-lg border-0"}
                 ></iframe>
+              </div>
+              <div className={styles.contactSide}>
+                <NextSteps title="After you send your details" />
+                <AreasChips />
               </div>
             </div>
           </div>

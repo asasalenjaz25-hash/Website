@@ -48,3 +48,25 @@
 .approvals i {
   color: var(--asas-blue);
 }
+
+/* Tab photo: on-brand stand-ins have other proportions; keep the template slot */
+.tabPhoto {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 809 / 438;
+  object-fit: cover;
+}
+
+/* Fills the right column under the tab card, beside the long trade list */
+.fill {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  .fill {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}

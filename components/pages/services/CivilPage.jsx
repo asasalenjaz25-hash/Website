@@ -4,6 +4,7 @@ import { SERVICE_CONTENT, PROCESS } from "@/components/service-content";
 import { PROJECTS } from "@/components/projects";
 import { TwBtn, CircleBtn } from "./ServiceBitsB";
 import styles from "./ServicePagesB.module.css";
+import ServiceExtras from "@/components/details/ServiceExtras";
 
 // Civil Works: the template's index-10 page (components/generated/Page_index_10_html.jsx)
 // with every section, image, hover list, counter and animation hook kept.
@@ -624,6 +625,8 @@ export default function CivilPage() {
             <img className={"testimonial-six-shape-2 position-absolute z-n1 top-0 end-0"} src={"/assets/images/shapes/testimonial-six-shape2.png"} alt={""} />
           </div>
         </section>
+        <ServiceExtras slug="civil" />
+
         <section className={"blog-six-area pt-120 tw-pb-22"}>
           <div className={"container"}>
             <div className={"row align-items-center tw-mb-12"}>

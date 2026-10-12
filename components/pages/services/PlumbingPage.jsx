@@ -4,6 +4,7 @@ import TextRing from "@/components/TextRing";
 import { COMPANY, SERVICES, QUOTE_HREF } from "@/components/site";
 import { SERVICE_CONTENT, PROCESS } from "@/components/service-content";
 import { PROJECTS } from "@/components/projects";
+import ServiceExtras from "@/components/details/ServiceExtras";
 
 // Plumbing Works, built on the template's plumbing home layout (index.html).
 // Every section, image, slider and animation hook is kept; only the words,
@@ -387,7 +388,7 @@ export default function PlumbingPage() {
                       {[...COMPANY.approvals, COMPANY.short].map((name, i) => (
                         <div key={name} className={"brand-eight-item swiper-slide"}>
                           <div className={"brand-eight-thumb"}>
-                            <img src={`/assets/images/thumbs/brand-eight-thumb${i + 1}.png`} alt={`${name} logo`} />
+                            <span className="asas-wordmark">{name}</span>
                           </div>
                         </div>
                       ))}
@@ -524,12 +525,6 @@ export default function PlumbingPage() {
             <div className={"container"}>
               <div className={"row align-items-center justify-content-center"}>
                 <div className={"col-xl-12"}>
-                  <div className={"video-button d-flex justify-content-center align-items-center"}>
-                    <a className={"video-btn video-eight-button open-popup tw-w-39 tw-h-39 lh-1 d-inline-flex align-items-center justify-content-center rounded-circle text-white bg-main-eight-600 tw-text-8 position-relative z-1"} href={"https://www.youtube.com/watch?v=Fvae8nxzVz4"} aria-label={"Play video"} data-fancybox={"gallery"} data-caption={""}>
-                      <i className={"ph-bold ph-play"}></i>
-                      <span className={"ripple"}></span>
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -780,6 +775,8 @@ export default function PlumbingPage() {
             </div>
           </div>
         </section>
+        <ServiceExtras slug="plumbing" />
+
         <section className={"contact-area contact-eight-area pb-120"}>
           <div className={"container-fluid"}>
             <div className={"row"}>

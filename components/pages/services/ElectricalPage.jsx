@@ -4,6 +4,7 @@ import { COMPANY, SERVICES, QUOTE_HREF } from "@/components/site";
 import { SERVICE_CONTENT, PROCESS } from "@/components/service-content";
 import { TwBtn } from "./ServiceBitsB";
 import styles from "./ServicePagesB.module.css";
+import ServiceExtras from "@/components/details/ServiceExtras";
 
 // Electrical Works: the template's index-8 page (components/generated/Page_index_8_html.jsx)
 // with every section, image, slider, marquee, counter and animation hook kept.
@@ -813,6 +814,8 @@ export default function ElectricalPage() {
             </div>
           </div>
         </section>
+        <ServiceExtras slug="electrical" />
+
         <section className={"blog-four-area pt-120 tw-pb-23"}>
           <div className={"container"}>
             <div className={"row justify-content-center"}>

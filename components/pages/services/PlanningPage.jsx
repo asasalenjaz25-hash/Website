@@ -7,6 +7,8 @@
 import PageShell from "@/components/PageShell";
 import { COMPANY, SERVICES, QUOTE_HREF } from "@/components/site";
 import { SERVICE_CONTENT, PROCESS } from "@/components/service-content";
+import FigureBanner from "@/components/hairline/FigureBanner";
+import ServiceExtras from "@/components/details/ServiceExtras";
 import s from "./Planning.module.css";
 
 const SLUG = "planning-architecture";
@@ -63,9 +65,15 @@ export default function PlanningPage() {
           </div>
           <div className={"row"}>
             <div className={"col-xl-12"}>
-              <div className={"breadcrumb-thumb"}>
-                <img className={"tw-rounded-2xl"} src={"/assets/images/thumbs/breadcrumb-thumb.jpg"} alt={"Architectural floor plans and fit-out drawings laid out on a desk"} />
-              </div>
+              <FigureBanner
+                figure="measure"
+                label="Line drawing of a room plan with a laser measure; the beam follows your pointer"
+                facts={[
+                  { value: "Site visit", label: "We measure the space first" },
+                  { value: COMPANY.approvals.length, label: "Authority approvals we design to" },
+                  { value: SERVICES.length, label: "Trades coordinated in one design" },
+                ]}
+              />
             </div>
           </div>
         </div>
@@ -77,7 +85,7 @@ export default function PlanningPage() {
             <div className={"col-xl-8"}>
               <div className={"service-details-wrapper"}>
                 <div className={"tw-mb-11"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                  <img className={"tw-rounded-2xl w-100"} src={"/assets/images/thumbs/service-details-thumb.jpg"} alt={"ASAS engineer reviewing a space-planning layout for a fit-out"} />
+                  <img className={"tw-rounded-2xl w-100"} src={"/assets/images/thumbs/service-four-thumb3.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "873 / 501", objectFit: "cover" }} alt={"Engineer in a hard hat reviewing plans on site"} />
                 </div>
                 <div className={`tw-ps-9 tw-pe-5 tw-pb-13 ${s.body}`}>
                   <div className={"tw-mb-10"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
@@ -119,10 +127,10 @@ export default function PlanningPage() {
                       </ul>
                     </div>
                     <div data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                      <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/service-details-img1.jpg"} alt={"Space-planning layout option for an office fit-out"} />
+                      <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/project-four-thumb1.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "243 / 240", objectFit: "cover" }} alt={"Measuring a space for a fit-out layout"} />
                     </div>
                     <div data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
-                      <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/service-details-img2.jpg"} alt={"MEP design coordinated on an architectural floor plan"} />
+                      <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/contact-three-thumb.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "243 / 240", objectFit: "cover" }} alt={"Engineer preparing drawings on a laptop"} />
                     </div>
                   </div>
                   <div className={"tw-mb-4"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
@@ -223,7 +231,7 @@ export default function PlanningPage() {
                   </div>
                 </div>
                 <div className={"service-details-sideber-thumb position-relative z-1"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"400"}>
-                  <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/service-details-sideber-thumb.jpg"} alt={"Finished fit-out interior planned and built by ASAS Alenjaz"} />
+                  <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/about-three-thumb2.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "425 / 270", objectFit: "cover" }} alt={"Engineer in a hard hat on a fit-out site"} />
                   <div className={"position-absolute start-0 bottom-0 tw-mb-705 tw-ms-705"}>
                     <div className={"tw-mb-8"}>
                       <h2 className={"text-white tw-text-6 fw-medium"}>
@@ -252,6 +260,8 @@ export default function PlanningPage() {
           </div>
         </div>
       </section>
+
+      <ServiceExtras slug={SLUG} />
     </PageShell>
   );
 }

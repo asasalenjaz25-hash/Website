@@ -50,14 +50,6 @@
   font-size: 0.9375rem;
 }
 
-/* Service links inside the repurposed pricing cards: 44px touch target */
-.serviceLink {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  transition: color 150ms var(--ease-out);
-}
-
 .roundBtn {
   width: 44px;
   height: 44px;

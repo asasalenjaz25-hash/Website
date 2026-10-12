@@ -5,6 +5,7 @@ const LINK = "text-white hover-text-main-eight-600 d-inline-flex align-items-cen
 const COMPANY_LINKS = [
   { label: "About Us", href: "/about" },
   { label: "Our Services", href: "/services" },
+  { label: "Shop", href: "/shop" },
   { label: "Projects", href: "/projects" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },

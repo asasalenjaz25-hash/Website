@@ -4,6 +4,7 @@ import QuoteForm from "@/components/pages/QuoteForm";
 import { COMPANY, SERVICES, QUOTE_HREF } from "@/components/site";
 import { SERVICE_CONTENT } from "@/components/service-content";
 import { PROJECTS } from "@/components/projects";
+import ServiceExtras from "@/components/details/ServiceExtras";
 
 // HVAC Works, built on the template's air-conditioning home layout
 // (index-5.html). Every section, image, slider, counter and animation hook is
@@ -500,7 +501,7 @@ export default function HvacPage() {
                       {[...COMPANY.approvals, COMPANY.short].map((name, i) => (
                         <div key={name} className={"brand-eight-item swiper-slide"}>
                           <div className={"brand-eight-thumb"}>
-                            <img src={`/assets/images/thumbs/brand-eight-thumb${i + 1}.png`} alt={`${name} logo`} />
+                            <span className="asas-wordmark">{name}</span>
                           </div>
                         </div>
                       ))}
@@ -597,13 +598,7 @@ export default function HvacPage() {
             <div className={"row justify-content-center"}>
               <div className={"col-xl-12"}>
                 <div className={"video-bg text-center position-relative"}>
-                  <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/video-bg.jpg"} alt={"ASAS HVAC team working on a fit-out site"} />
-                  <div className={"video-button position-absolute start-50 translate-middle"}>
-                    <a className={"video-btn video-eleven-btn open-popup tw-w-28 tw-h-28 lh-1 d-inline-flex align-items-center justify-content-center rounded-circle text-white bg-main-eight-600 tw-text-8 position-relative z-1"} href={"https://www.youtube.com/watch?v=Fvae8nxzVz4"} data-fancybox={"gallery"} data-caption={""} aria-label={"Play video"}>
-                      <i className={"ph-bold ph-play"}></i>
-                      <span className={"ripple"}></span>
-                    </a>
-                  </div>
+                  <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/banner-three-bg.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "1720 / 702", objectFit: "cover" }} alt={"Technicians installing AC outdoor units"} />
                 </div>
               </div>
             </div>
@@ -875,6 +870,8 @@ export default function HvacPage() {
             </div>
           </div>
         </section>
+        <ServiceExtras slug="hvac" />
+
         <section className={"contact-eleven-area py-120"}>
           <div className={"container"}>
             <div className={"position-relative z-1"}>

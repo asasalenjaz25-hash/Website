@@ -4,6 +4,7 @@ import QuoteForm from "@/components/pages/QuoteForm";
 import { COMPANY, SERVICES, QUOTE_HREF } from "@/components/site";
 import { SERVICE_CONTENT, PROCESS } from "@/components/service-content";
 import { PROJECTS } from "@/components/projects";
+import ServiceExtras from "@/components/details/ServiceExtras";
 
 // Fire Fighting Systems, built on the template's air-conditioning home layout
 // (index-7.html). Every section, image, slider, counter and animation hook is
@@ -770,6 +771,8 @@ export default function FireFightingPage() {
             </div>
           </div>
         </section>
+        <ServiceExtras slug="fire-fighting" />
+
         <section className={"contact-three-area py-120"}>
           <div className={"container"}>
             <div className={"position-relative z-1"}>

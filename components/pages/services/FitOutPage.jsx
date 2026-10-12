@@ -5,6 +5,7 @@ import { SERVICE_CONTENT } from "@/components/service-content";
 import { PROJECTS, sectorCounts } from "@/components/projects";
 import { TwBtn } from "./ServiceBitsB";
 import styles from "./ServicePagesB.module.css";
+import ServiceExtras from "@/components/details/ServiceExtras";
 
 // Interior Fit-Out (flagship): the template's index-3 page
 // (components/generated/Page_index_3_html.jsx) with every section, image, slider,
@@ -28,11 +29,11 @@ const HERO_AVATARS = [
 
 // Brand slider: client names from the project list (publishing approved, content.md §1.3).
 const CLIENT_LOGOS = [
-  { src: "/assets/images/thumbs/brand-eight-thumb1.png", alt: "Atlas Copco logo" },
-  { src: "/assets/images/thumbs/brand-eight-thumb2.png", alt: "Bactiguard logo" },
-  { src: "/assets/images/thumbs/brand-eight-thumb3.png", alt: "Jeeves logo" },
-  { src: "/assets/images/thumbs/brand-eight-thumb4.png", alt: "Aramex logo" },
-  { src: "/assets/images/thumbs/brand-eight-thumb5.png", alt: "Projecto Açaí logo" },
+  { name: "Atlas Copco" },
+  { name: "Bactiguard" },
+  { name: "Jeeves" },
+  { name: "Aramex" },
+  { name: "Projecto Açaí" },
 ];
 
 // Progress bars show real shares of the 95-project list instead of invented scores.
@@ -278,9 +279,9 @@ export default function FitOutPage() {
                   <div className={"brand-eight-active brand-ten-active swiper-container"}>
                     <div className={"swiper-wrapper"}>
                       {CLIENT_LOGOS.map((logo) => (
-                        <div className={"brand-eight-item brand-ten-item swiper-slide"} key={logo.src}>
+                        <div className={"brand-eight-item brand-ten-item swiper-slide"} key={logo.name}>
                           <div className={"brand-eight-thumb brand-ten-thumb"}>
-                            <img src={logo.src} alt={logo.alt} />
+                            <span className="asas-wordmark">{logo.name}</span>
                           </div>
                         </div>
                       ))}
@@ -586,12 +587,6 @@ export default function FitOutPage() {
               <div className={"col-xl-12 gx-0"}>
                 <div className={"video-bg video-nine-bg text-center position-relative"}>
                   <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/video-ten-bg.jpg"} alt={"Wide view of a completed ASAS fit-out interior"} />
-                  <div className={"video-button video-nine-button position-absolute start-50 translate-middle"}>
-                    <a className={"video-btn open-popup tw-w-28 tw-h-28 lh-1 d-inline-flex align-items-center justify-content-center rounded-circle text-white bg-main-eight-600 tw-text-8 position-relative z-1"} href={"https://www.youtube.com/watch?v=Fvae8nxzVz4"} data-fancybox={"gallery"} data-caption={""} aria-label={"Play video"}>
-                      <i className={"ph-bold ph-play"}></i>
-                      <span className={"ripple"}></span>
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -766,6 +761,8 @@ export default function FitOutPage() {
             </div>
           </div>
         </section>
+        <ServiceExtras slug="fit-out" />
+
         <section className={"contact-area contact-eight-area pb-120"}>
           <div className={"container-fluid"}>
             <div className={"row"}>

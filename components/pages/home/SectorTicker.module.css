@@ -1,0 +1,136 @@
+/* Sector marquee (SectorTicker.jsx) */
+
+.section {
+  padding-block: 100px;
+  background: var(--asas-deep);
+  overflow: hidden;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 39px, rgba(255, 255, 255, 0.04) 39px 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, rgba(255, 255, 255, 0.04) 39px 40px);
+}
+
+.head {
+  max-width: 720px;
+  margin: 0 0 48px;
+}
+
+.title {
+  margin: 0;
+}
+
+.rows {
+  display: grid;
+  gap: 16px;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.row {
+  display: flex;
+  width: max-content;
+  animation: marquee 48s linear infinite;
+}
+
+.reverse {
+  animation-direction: reverse;
+  animation-duration: 56s;
+}
+
+.rows:hover .row {
+  animation-play-state: paused;
+}
+
+.track {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0 16px 0 0;
+  list-style: none;
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 22px 14px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  white-space: nowrap;
+  transition: background-color 250ms, border-color 250ms;
+}
+
+.item:hover {
+  background: rgba(242, 179, 0, 0.12);
+  border-color: var(--asas-gold);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--asas-gold);
+  color: var(--asas-navy);
+  font-size: 1.25rem;
+}
+
+.label {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.count {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding-block: 72px;
+  }
+
+  .item {
+    padding: 10px 16px 10px 10px;
+    gap: 10px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .row {
+    animation: none;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .track + .track,
+  .item[data-dup] {
+    display: none;
+  }
+
+  .track {
+    flex-wrap: wrap;
+    padding-inline: 16px;
+  }
+
+  .rows {
+    mask-image: none;
+  }
+}

@@ -1,6 +1,8 @@
 import PageShell from "@/components/PageShell";
 import { COMPANY, SERVICES, QUOTE_HREF } from "@/components/site";
 import { SERVICE_CONTENT, PROCESS } from "@/components/service-content";
+import FigureBanner from "@/components/hairline/FigureBanner";
+import { ApprovalsStrip } from "@/components/details/Details";
 import QuoteForm from "./QuoteForm";
 import styles from "./InfoPages.module.css";
 
@@ -8,15 +10,18 @@ import styles from "./InfoPages.module.css";
 // shape, tab, slider, counter and animation hook is the template's own; only the
 // words, lists and links are ASAS content (content.md §1.1–1.5, §3.1–3.2).
 // Photos are template placeholders; see design-system/image-manifest/info-pages.md.
+// The cleaning-themed ones are swapped for on-brand MEP stock already in the
+// project (same slot size, cropped with object-fit) until ASAS supplies photos;
+// the banner photo is now the Tower figure (components/hairline).
 
 const service = (slug) => SERVICES.find((s) => s.slug === slug);
 
 // service-two tabs: four core services (template tab ids kept for Bootstrap tabs).
 const SERVICE_TABS = [
-  { slug: "fit-out", tabId: "home", short: "Bare shell to handover", icon: "fit-out-navy.svg", thumb: "service-two-thumb.jpg", alt: "Finished ASAS office fit-out interior in Dubai" },
-  { slug: "electrical", tabId: "profile", short: "DEWA-compliant installations", icon: "electrical-navy.svg", thumb: "service-two-thumb2.jpg", alt: "ASAS electrician installing a distribution board" },
-  { slug: "hvac", tabId: "contact", short: "Installation & commissioning", icon: "hvac-navy.svg", thumb: "service-two-thumb3.jpg", alt: "ASAS technicians installing HVAC ductwork in a fit-out" },
-  { slug: "villa-works", tabId: "house", short: "Extensions & service blocks", icon: "villa-navy.svg", thumb: "service-two-thumb4.jpg", alt: "Villa service block built by ASAS in Dubai" },
+  { slug: "fit-out", tabId: "home", short: "Bare shell to handover", icon: "fit-out-navy.svg", thumb: "project-four-thumb1.jpg", alt: "Joinery being measured and cut for a fit-out" },
+  { slug: "electrical", tabId: "profile", short: "DEWA-compliant installations", icon: "electrical-navy.svg", thumb: "blog-seven-thumb2.jpg", alt: "Electrician working on a distribution board" },
+  { slug: "hvac", tabId: "contact", short: "Installation & commissioning", icon: "hvac-navy.svg", thumb: "banner-three-bg.jpg", alt: "Technicians installing AC outdoor units" },
+  { slug: "villa-works", tabId: "house", short: "Extensions & service blocks", icon: "villa-navy.svg", thumb: "project-six-thumb3.jpg", alt: "Villa with a new roof extension" },
 ].map((t) => ({ ...t, title: service(t.slug).title, summary: SERVICE_CONTENT[t.slug].summary }));
 
 const WHY_ASAS = [
@@ -29,12 +34,12 @@ const WHY_ASAS = [
 // work-two has three illustrated steps; the fourth PROCESS step (handover) is
 // joined to execution so every step keeps its template picture.
 const WORK_STEPS = [
-  { ...PROCESS[0], img: "work-two-thumb1.png", alt: "ASAS engineer on a site visit reviewing a space" },
-  { ...PROCESS[1], img: "work-two-thumb2.png", alt: "ASAS engineer preparing MEP drawings for authority approval" },
+  { ...PROCESS[0], icon: "ph-ruler", alt: "ASAS engineer on a site visit reviewing a space" },
+  { ...PROCESS[1], icon: "ph-compass-tool", alt: "ASAS engineer preparing MEP drawings for authority approval" },
   {
     title: `${PROCESS[2].title} & ${PROCESS[3].title.toLowerCase()}`,
     text: `${PROCESS[2].text} ${PROCESS[3].text}`,
-    img: "work-two-thumb3.png",
+    icon: "ph-key",
     alt: "ASAS team handing over a finished fit-out",
   },
 ];
@@ -165,9 +170,11 @@ export default function AboutPage() {
           </div>
           <div className={"row"}>
             <div className={"col-xl-12"}>
-              <div className={"breadcrumb-thumb"}>
-                <img className={"tw-rounded-2xl"} src={"/assets/images/thumbs/breadcrumb-thumb.jpg"} alt={"ASAS Alenjaz engineers and technicians on a fit-out site in Dubai"} />
-              </div>
+              <FigureBanner
+                figure="tower"
+                label={`Line drawing of a building frame with one floor for each year since ${COMPANY.founded}`}
+                facts={COMPANY.stats.map((s) => ({ value: `${s.value}${s.suffix}`, label: s.label }))}
+              />
             </div>
           </div>
         </div>
@@ -195,7 +202,7 @@ export default function AboutPage() {
           <div className={"row"}>
             <div className={"col-xl-6 col-lg-9 col-md-10"}>
               <div className={"about-two-thumb one"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                <img className={"tw-rounded-xl tw-animation-img-left"} src={"/assets/images/thumbs/about-two-thumb1.jpg"} alt={"ASAS team completing an office fit-out in Dubai"} />
+                <img className={`tw-rounded-xl tw-animation-img-left ${styles.swap}`} style={{ maxWidth: 564, aspectRatio: "564 / 482" }} src={"/assets/images/thumbs/project-three-thumb2.jpg"} alt={"Technicians installing AC outdoor units"} />
               </div>
             </div>
             <div className={"col-xl-6 col-lg-12 col-md-12"}>
@@ -214,7 +221,7 @@ export default function AboutPage() {
                   </div>
                   <div className={"col-xl-6 col-lg-6 col-md-6"}>
                     <div className={"about-two-thumb two"}>
-                      <img className={"tw-rounded-xl tw-animation-img-right"} src={"/assets/images/thumbs/about-two-thumb2.jpg"} alt={"ASAS technician carrying out MEP works"} />
+                      <img className={`tw-rounded-xl tw-animation-img-right ${styles.swap}`} style={{ maxWidth: 312, aspectRatio: "312 / 358" }} src={"/assets/images/thumbs/about-three-thumb4.jpg"} alt={"Technician installing an indoor AC unit"} />
                     </div>
                   </div>
                 </div>
@@ -302,7 +309,7 @@ export default function AboutPage() {
                       <div key={t.slug} className={`tab-pane fade${i === 0 ? " show active" : ""}`} id={t.tabId} role={"tabpanel"} aria-labelledby={`${t.tabId}-tab`}>
                         <div>
                           <div className={"service-two-thumbs position-relative z-1"}>
-                            <img className={"tw-rounded-lg"} src={`/assets/images/thumbs/${t.thumb}`} alt={t.alt} />
+                            <img className={`tw-rounded-lg ${styles.swap}`} style={{ aspectRatio: "809 / 438" }} src={`/assets/images/thumbs/${t.thumb}`} alt={t.alt} />
                             <div className={"service-two-content position-absolute"}>
                               <h3 className={"tw-text-122 text-white tw-mb-3"}>
                                 <a href={`/services/${t.slug}`}>
@@ -340,10 +347,10 @@ export default function AboutPage() {
             <div className={"col-xl-6 col-lg-9"}>
               <div className={"choose-us-two-thumb position-relative z-1 tw-me-10"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
                 <div className={"choose-us-two-thumb-1 text-end position-relative z-2"}>
-                  <img src={"/assets/images/thumbs/choose-us-two-thumb1.jpg"} alt={"ASAS engineer reviewing a finished restaurant fit-out"} />
+                  <img className={styles.swap} style={{ maxWidth: 349, aspectRatio: "349 / 438" }} src={"/assets/images/thumbs/about-three-thumb5.jpg"} alt={"Technician servicing an AC outdoor unit"} />
                 </div>
                 <div className={"choose-us-two-thumb-2"}>
-                  <img src={"/assets/images/thumbs/choose-us-two-thumb2.jpg"} alt={"ASAS foreman briefing technicians on site"} />
+                  <img className={styles.swap} style={{ maxWidth: 329, aspectRatio: "329 / 501" }} src={"/assets/images/thumbs/about-three-thumb3.jpg"} alt={"Technician in a hard hat on site"} />
                 </div>
                 <div>
                   <img className={"choose-us-two-thumb-shape-1 tw-rounded-xl position-absolute z-n1"} src={"/assets/images/shapes/choose-us-two-thumb-shape1.jpg"} alt={""} />
@@ -409,7 +416,9 @@ export default function AboutPage() {
                 {WORK_STEPS.map((step, i) => (
                   <div className={"work-two-item"} key={step.title}>
                     <div className={"work-two-thumb"}>
-                      <img src={`/assets/images/thumbs/${step.img}`} alt={step.alt} />
+                      <span className={styles.stepDisc} role="img" aria-label={step.alt}>
+                        <i className={`ph ${step.icon}`} aria-hidden="true"></i>
+                      </span>
                       <div className={"work-two-icon"}>
                         <span>
                           {String(i + 1).padStart(2, "0")}
@@ -506,6 +515,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+          <ApprovalsStrip className={styles.centerStrip} label="Approved by" />
         </div>
       </section>
 
@@ -632,7 +642,7 @@ export default function AboutPage() {
             <div className={"col-xl-6"}>
               <div className={"contact-two-left"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
                 <div className={"tw-mb-6"}>
-                  <img className={"tw-rounded-lg w-100"} src={"/assets/images/thumbs/contact-two-thumb.jpg"} alt={"ASAS engineer meeting a client for a site visit"} />
+                  <img className={`tw-rounded-lg w-100 ${styles.swap}`} style={{ aspectRatio: "624 / 457" }} src={"/assets/images/thumbs/project-three-thumb1.jpg"} alt={"Engineer reviewing an AC installation with a client"} />
                 </div>
                 <div className={"contact-two-info bg-white tw-rounded-lg tw-py-5 tw-ps-10 tw-pe-6"}>
                   <div>

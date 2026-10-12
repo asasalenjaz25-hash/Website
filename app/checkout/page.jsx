@@ -1,10 +1,12 @@
-import Page_checkout_html from "@/components/generated/Page_checkout_html";
+import { connection } from "next/server";
+import CheckoutPage from "@/components/pages/CheckoutPage";
 
 export const metadata = {
-  title: "Repio - cleaning repair handyman Services  Multipurpose HTML Template",
-  description: "Repio - Services Multipurpose HTML Template, Office cleaning, Carpet cleaning, AC servicing, AC repair, General handyman, Electrical repair, Laptop repair, Desktop repair, Phone repair, Camera repair,  Bootstrap, Responsive HTML Template.",
+  title: "Checkout · ASAS Alenjaz Shop",
+  robots: { index: false },
 };
 
-export default function Page() {
-  return <Page_checkout_html />;
+export default async function Page() {
+  await connection(); // read the payment setting per request, not at build time
+  return <CheckoutPage paymentsReady={Boolean(process.env.STRIPE_SECRET_KEY)} />;
 }

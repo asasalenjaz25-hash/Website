@@ -14,11 +14,8 @@ const RETIRED = {
   "/team": "/about",
   "/team-details": "/about",
   "/pricing": "/appointment",
-  "/shop": "/",
-  "/product": "/",
-  "/product-details": "/",
-  "/cart": "/",
-  "/checkout": "/",
+  "/product": "/shop",
+  "/product-details": "/shop",
   "/blog": "/",
   "/blog-details": "/",
   ...Object.fromEntries(

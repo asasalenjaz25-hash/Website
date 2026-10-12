@@ -10,6 +10,9 @@ import { COMPANY, SERVICES, QUOTE_HREF } from "@/components/site";
 import { SERVICE_CONTENT, PROCESS } from "@/components/service-content";
 import s from "./Services.module.css";
 import h from "./ServicesHub.module.css";
+import FigureBanner from "@/components/hairline/FigureBanner";
+import { ContactRail, NextSteps } from "@/components/details/Details";
+import { SERVICE_PHOTOS } from "@/components/service-photos";
 
 const GROUP_LABEL = {
   "Fit-Out": "Fit-out works",
@@ -34,19 +37,8 @@ const PHOTO = {
 
 // Gallery thumbs (from HomeTemplates / service-pages.json), paired with the
 // ASAS service each template page was mapped to in content.md §3.3.
-const GALLERY_IMG = {
-  "fit-out": "/assets/images/thumbs/home-img10.jpg",
-  civil: "/assets/images/thumbs/home-img6.jpg",
-  joinery: "/assets/images/thumbs/home-img1.jpg",
-  electrical: "/assets/images/thumbs/home-img7.jpg",
-  plumbing: "/assets/images/thumbs/home-img8.jpg",
-  hvac: "/assets/images/thumbs/home-img11.jpg",
-  "fire-fighting": "/assets/images/thumbs/home-img3.jpg",
-  "low-current": "/assets/images/thumbs/home-img5.jpg",
-  "planning-architecture": "/assets/images/thumbs/home-img2.jpg",
-  "villa-works": "/assets/images/thumbs/home-img4.jpg",
-  "ev-chargers": "/assets/images/thumbs/home-img9.jpg",
-};
+// On-brand stand-ins for the template's home-page screenshots (components/service-photos.js).
+const GALLERY_IMG = SERVICE_PHOTOS;
 
 // One ASAS icon per service tab (navy variant: the icon tile is Signal Gold).
 const TAB_ICONS = {
@@ -62,14 +54,6 @@ const TAB_ICONS = {
   "villa-works": "villa",
   "ev-chargers": "ev-charger",
 };
-// The template's 4 tab photos, reused in rotation for 11 tabs.
-const TAB_THUMBS = [
-  "/assets/images/thumbs/service-two-thumb.jpg",
-  "/assets/images/thumbs/service-two-thumb2.jpg",
-  "/assets/images/thumbs/service-two-thumb3.jpg",
-  "/assets/images/thumbs/service-two-thumb4.jpg",
-];
-
 function listJoin(items) {
   return items.length < 2 ? items.join("") : `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`;
 }
@@ -128,9 +112,17 @@ export default function ServicesPage() {
           </div>
           <div className={"row"}>
             <div className={"col-xl-12"}>
-              <div className={"breadcrumb-thumb"}>
-                <img className={"tw-rounded-2xl"} src={"/assets/images/thumbs/breadcrumb-thumb.jpg"} alt={"ASAS Alenjaz engineers and technicians on a fit-out site in Dubai"} />
-              </div>
+              <FigureBanner
+                figure="ceiling"
+                label="Exploded line drawing of a ceiling void with every MEP trade in its own layer"
+                facts={[
+                  { value: SERVICES.length, label: "Services under one contract" },
+                  ...["Fit-Out", "MEP", "Specialist"].map((g) => ({
+                    value: SERVICES.filter((sv) => sv.group === g).length,
+                    label: `${g} ${g === "Specialist" ? "services" : "trades"}`,
+                  })),
+                ]}
+              />
             </div>
           </div>
         </div>
@@ -221,7 +213,7 @@ export default function ServicesPage() {
                         <div key={service.slug} className={`tab-pane fade${i === 0 ? " show active" : ""}`} id={`${service.slug}-pane`} role={"tabpanel"} aria-labelledby={`${service.slug}-tab`}>
                           <div>
                             <div className={"service-two-thumbs position-relative z-1"}>
-                              <img className={"tw-rounded-lg"} src={TAB_THUMBS[i % TAB_THUMBS.length]} alt={PHOTO[service.slug]} />
+                              <img className={`tw-rounded-lg ${h.tabPhoto}`} src={SERVICE_PHOTOS[service.slug]} alt={PHOTO[service.slug]} />
                               <div className={"service-two-content position-absolute"}>
                                 <h3 className={"tw-text-122 text-white tw-mb-3"}>
                                   <a href={href}>
@@ -246,6 +238,10 @@ export default function ServicesPage() {
                       );
                     })}
                   </div>
+                </div>
+                <div className={h.fill}>
+                  <NextSteps title="How every project runs" />
+                  <ContactRail title="Talk to an engineer" text="Tell us about the space and the works you need." />
                 </div>
               </div>
             </div>
