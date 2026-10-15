@@ -213,7 +213,7 @@ export default function VillaWorksPage() {
           <div className={"row"}>
             <div className={"col-xl-6 col-lg-9 col-md-10"}>
               <div className={"about-two-thumb one"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                <img className={"tw-rounded-xl tw-animation-img-left"} src={"/assets/images/thumbs/contact-six-thumb.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "564 / 482", objectFit: "cover" }} alt={"Roofer working on a villa extension roof"} />
+                <img className={"tw-rounded-xl tw-animation-img-left"} src={"/assets/images/asas/villa-exterior.webp"} style={{ width: "100%", height: "auto", aspectRatio: "564 / 482", objectFit: "cover" }} alt={"Villa built by ASAS in Dubai"} />
               </div>
             </div>
             <div className={"col-xl-6 col-lg-12 col-md-12"}>
@@ -232,7 +232,7 @@ export default function VillaWorksPage() {
                   </div>
                   <div className={"col-xl-6 col-lg-6 col-md-6"}>
                     <div className={"about-two-thumb two"}>
-                      <img className={"tw-rounded-xl tw-animation-img-right"} src={"/assets/images/thumbs/banner-six-thumb.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "312 / 358", objectFit: "cover" }} alt={"Technician working on a villa ceiling"} />
+                      <img className={"tw-rounded-xl tw-animation-img-right"} src={"/assets/images/asas/villa-garden-path.webp"} style={{ width: "100%", height: "auto", aspectRatio: "312 / 358", objectFit: "cover" }} alt={"Villa garden path by ASAS"} />
                     </div>
                   </div>
                 </div>
@@ -339,7 +339,7 @@ export default function VillaWorksPage() {
                       <div key={tab.id} className={"tab-pane fade" + (i === 0 ? " show active" : "")} id={tab.id} role={"tabpanel"} aria-labelledby={tab.id + "-tab"}>
                         <div>
                           <div className={"service-two-thumbs position-relative z-1"}>
-                            <img className={"tw-rounded-lg"} src={["/assets/images/thumbs/project-six-thumb3.jpg", "/assets/images/thumbs/contact-six-thumb.jpg", "/assets/images/thumbs/about-ten-thumb.jpg", "/assets/images/thumbs/project-six-thumb1.jpg"][i]} style={{ width: "100%", height: "auto", aspectRatio: "809 / 438", objectFit: "cover" }} alt={tab.alt} />
+                            <img className={"tw-rounded-lg"} src={["/assets/images/asas/villa-arched-entrance.webp", "/assets/images/asas/villa-exterior.webp", "/assets/images/asas/villa-tropical-garden.webp", "/assets/images/asas/courtyard-pergola.webp"][i]} style={{ width: "100%", height: "auto", aspectRatio: "809 / 438", objectFit: "cover" }} alt={tab.alt} />
                             <div className={"service-two-content position-absolute"}>
                               <h3 className={"tw-text-122 text-white tw-mb-3"}>
                                 <a href={"/projects"}>
@@ -378,13 +378,13 @@ export default function VillaWorksPage() {
             <div className={"col-xl-6 col-lg-9"}>
               <div className={"choose-us-two-thumb position-relative z-1 tw-me-10"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
                 <div className={"choose-us-two-thumb-1 text-end position-relative z-2"}>
-                  <img src={"/assets/images/thumbs/service-six-thumb4.png"} style={{ width: "100%", height: "auto", aspectRatio: "349 / 438", objectFit: "cover" }} alt={"Roof works on a villa extension"} />
+                  <img src={"/assets/images/asas/villa-courtyard-sunlit.webp"} style={{ width: "100%", height: "auto", aspectRatio: "349 / 438", objectFit: "cover" }} alt={"Villa courtyard built by ASAS"} />
                 </div>
                 <div className={"choose-us-two-thumb-2"}>
-                  <img src={"/assets/images/thumbs/about-three-thumb1.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "329 / 501", objectFit: "cover" }} alt={"Technician in a hard hat on a villa site"} />
+                  <img src={"/assets/images/asas/villa-backyard.webp"} style={{ width: "100%", height: "auto", aspectRatio: "329 / 501", objectFit: "cover" }} alt={"Villa garden landscaped by ASAS"} />
                 </div>
                 <div>
-                  <img className={"choose-us-two-thumb-shape-1 tw-rounded-xl position-absolute z-n1"} src={"/assets/images/shapes/choose-us-two-thumb-shape1.jpg"} alt={""} />
+                  <img className={"choose-us-two-thumb-shape-1 tw-rounded-xl position-absolute z-n1"} src={"/assets/images/asas/vanity-double-sink.webp"} style={{ width: 171, height: 179, objectFit: "cover" }} alt={""} />
                   <img className={"choose-us-two-thumb-shape-2 tw-rounded-xl position-absolute z-n1"} src={"/assets/images/shapes/choose-us-two-thumb-shape2.png"} alt={""} />
                 </div>
               </div>
@@ -681,7 +681,7 @@ export default function VillaWorksPage() {
             <div className={"col-xl-6"}>
               <div className={"contact-two-left"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
                 <div className={"tw-mb-6"}>
-                  <img className={"tw-rounded-lg w-100"} src={"/assets/images/thumbs/project-six-thumb3.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "624 / 457", objectFit: "cover" }} alt={"Villa with a new extension"} />
+                  <img className={"tw-rounded-lg w-100"} src={"/assets/images/asas/villa-arched-entrance.webp"} style={{ width: "100%", height: "auto", aspectRatio: "624 / 457", objectFit: "cover" }} alt={"Villa with a new extension"} />
                 </div>
                 <div className={"contact-two-info bg-white tw-rounded-lg tw-py-5 tw-ps-10 tw-pe-6"}>
                   <div>

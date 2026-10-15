@@ -1,4 +1,4 @@
-# Interim replacements (2026-10-12)
+# Interim replacements (2026-10-12, updated 2026-10-15)
 
 The template's cleaning, laundry and fake-brand placeholders have been taken off the pages. Until ASAS sends real photos, each slot holds one of two kinds of stand-in:
 
@@ -35,3 +35,12 @@ Other figures: `throw` (Shop capacity CTA, HVAC page, home shop band), `brackets
 
 - **Template YouTube buttons:** play buttons linking to the template's YouTube video were removed on HVAC, Joinery, EV Chargers, Fit-Out and Plumbing. On Joinery, the rotating badge now links to the quote form.
 - **Fake brand logos:** the template's logos ("Shopia", "Green Life", "Exponent Wealth"…) carried alt text naming DEWA, Aramex, Atlas Copco and others. They are replaced by text wordmarks of those names (`.asas-wordmark` in `public/assets/css/brand.css`). Use real logo files only with permission.
+
+## ASAS project photos (2026-10-15)
+
+ASAS supplied 165 photos, all landscape 16:9 (1672 × 941). 103 of them are on the site, as 1440px WebP copies in `public/assets/images/asas/` (about 105 KB each). The full-size PNGs are still loose in `public/`.
+
+- **Portrait and square slots** keep the template's proportions and crop the landscape photo to fit: `object-fit: cover` through `cover()` in `components/asas-photos.js`.
+- **Landscape slots** (project cards, banners, service tiles) show the photo with only a light crop.
+- **Project cards** show a project's own photo where one exists, keyed by serial number in `PROJECT_PHOTOS`. The projects with their own photos are Jan's Noodles, Fishy's, Dubai Heights Academy, Master Polish, Akoya, Desco, Torino, Graffio and Jeeves. These are now the featured projects. Other projects show a photo from the same sector, with alt text saying it is an example.
+- **Still stock:** AC installation photos (HVAC page, HVAC tab and tile) and some hero backgrounds. None of the supplied photos shows an AC unit.

@@ -808,7 +808,7 @@ export default function FireFightingPage() {
                 </div>
               </div>
               <div className={"contact-three-thumb position-absolute end-0 top-0 z-n1 h-100"}>
-                <img className={"object-fit-cover h-100 tw-rounded-xl"} src={"/assets/images/thumbs/contact-three-thumb.jpg"} alt={"ASAS engineer reviewing fire fighting drawings with a client"} />
+                <img className={"object-fit-cover h-100 tw-rounded-xl"} style={{ width: "100%", height: "auto", aspectRatio: "1152 / 632", objectFit: "cover" }} src={"/assets/images/asas/switchgear-room-2.webp"} alt={"Plant room with fire extinguisher, fitted out by ASAS"} />
               </div>
             </div>
           </div>

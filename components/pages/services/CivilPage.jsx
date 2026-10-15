@@ -25,11 +25,11 @@ const HERO_AVATARS = [
 
 // service-six hover list: each item swaps the photo named in `rel`.
 const SCOPE = [
-  { title: "Blockwork & Partitions", href: QUOTE_HREF, img: "/assets/images/thumbs/service-six-thumb1.jpg", ext: "1", alt: "New blockwork partitions built by ASAS in a fit-out" },
-  { title: "Plastering", href: QUOTE_HREF, img: "/assets/images/thumbs/service-six-thumb2.png", ext: "2", alt: "ASAS team plastering and preparing walls" },
-  { title: "Flooring", href: QUOTE_HREF, img: "/assets/images/thumbs/service-six-thumb3.png", ext: "3", alt: "Floor preparation and flooring laid by ASAS" },
-  { title: "Structural Modifications", href: QUOTE_HREF, img: "/assets/images/thumbs/service-six-thumb4.png", ext: "4", alt: "Structural modification to an existing space by ASAS" },
-  { title: "Villa Extensions & Service Blocks", href: "/services/villa-works", img: "/assets/images/thumbs/service-six-thumb5.png", ext: "5", alt: "Villa service block built by ASAS in Dubai" },
+  { title: "Blockwork & Partitions", href: QUOTE_HREF, img: "/assets/images/asas/office-corridor-murals.webp", ext: "1", alt: "Office corridor partitions built by ASAS" },
+  { title: "Plastering", href: QUOTE_HREF, img: "/assets/images/asas/villa-living-room.webp", ext: "2", alt: "Plastered walls and ceilings finished by ASAS" },
+  { title: "Flooring", href: QUOTE_HREF, img: "/assets/images/asas/villa-living-gold.webp", ext: "3", alt: "Patterned flooring laid by ASAS" },
+  { title: "Structural Modifications", href: QUOTE_HREF, img: "/assets/images/asas/office-mezzanine.webp", ext: "4", alt: "Mezzanine floor and steel staircase built by ASAS" },
+  { title: "Villa Extensions & Service Blocks", href: "/services/villa-works", img: "/assets/images/asas/villa-courtyard.webp", ext: "5", alt: "Villa built by ASAS in Dubai" },
 ];
 
 const COUNTER_LINES = [
@@ -42,10 +42,10 @@ const COUNTER_DELAYS = ["200", "300", "400", "500"];
 
 // Real entries from the project list (content.md §1.3), civil-heavy types.
 const PROJECT_CARDS = [
-  { sn: 57, col: "col-xl-7 col-lg-7", delay: "200", img: "/assets/images/thumbs/project-six-thumb1.jpg" },
-  { sn: 59, col: "col-xl-5 col-lg-5", delay: "300", img: "/assets/images/thumbs/project-six-thumb2.jpg" },
-  { sn: 73, col: "col-xl-5 col-lg-5", delay: "200", img: "/assets/images/thumbs/project-six-thumb3.jpg" },
-  { sn: 88, col: "col-xl-7 col-lg-7", delay: "400", img: "/assets/images/thumbs/project-six-thumb4.jpg" },
+  { sn: 57, col: "col-xl-7 col-lg-7", delay: "200", img: "/assets/images/asas/villa-exterior.webp" },
+  { sn: 59, col: "col-xl-5 col-lg-5", delay: "300", img: "/assets/images/asas/villa-backyard.webp" },
+  { sn: 73, col: "col-xl-5 col-lg-5", delay: "200", img: "/assets/images/asas/villa-garden-path.webp" },
+  { sn: 88, col: "col-xl-7 col-lg-7", delay: "400", img: "/assets/images/asas/courtyard-pergola.webp" },
 ].map((card) => ({ ...card, project: PROJECTS.find((p) => p.sn === card.sn) }));
 
 // One icon per PROCESS step, white on the blue circle; width/height = the template icons' size.
@@ -200,7 +200,7 @@ export default function CivilPage() {
               </div>
               <div className={"col-xl-5"}>
                 <div className={"banner-six-thumb h-100"}>
-                  <img className={"object-fit-cover h-100"} src={"/assets/images/thumbs/banner-six-thumb.jpg"} alt={"ASAS team building blockwork partitions on a Dubai site"} />
+                  <img className={"object-fit-cover h-100"} style={{ width: "100%", height: "auto", aspectRatio: "836 / 850", objectFit: "cover" }} src={"/assets/images/asas/villa-arched-entrance.webp"} alt={"Villa built by ASAS in Dubai"} />
                 </div>
               </div>
             </div>
@@ -255,7 +255,7 @@ export default function CivilPage() {
               <div className={"col-xl-12"}>
                 <div className={"gallery-six-thumb-wrap position-relative"}>
                   <div className={"gallery-six-thumb"}>
-                    <img className={"object-fit-cover"} src={"/assets/images/thumbs/gallery-six-thumb.jpg"} alt={"Wide view of a villa extension under construction by ASAS"} />
+                    <img className={"object-fit-cover"} style={{ width: "100%", height: "auto", aspectRatio: "1311 / 650", objectFit: "cover" }} src={"/assets/images/asas/villa-courtyard-sunlit.webp"} alt={"Villa courtyard built by ASAS"} />
                   </div>
                 </div>
               </div>
@@ -268,7 +268,7 @@ export default function CivilPage() {
               <div className={"row align-items-center"}>
                 <div className={"col-xl-6"}>
                   <div className={"contact-six-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                    <img className={"tw-rounded-xl w-100"} src={"/assets/images/thumbs/contact-six-thumb.jpg"} alt={"ASAS engineer measuring a space before civil works"} />
+                    <img className={"tw-rounded-xl w-100"} style={{ width: "100%", height: "auto", aspectRatio: "801 / 556", objectFit: "cover" }} src={"/assets/images/asas/apartment-building.webp"} alt={"Residential building by ASAS"} />
                   </div>
                 </div>
                 <div className={"col-xl-5"}>
@@ -345,7 +345,7 @@ export default function CivilPage() {
                     <div className={"service-six-list-thumb-wrap position-relative"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
                       <div id={"service-six-thumb"} className={"service-six-list-thumb-1"}>
                         {SCOPE.map((s) => (
-                          <img className={`service-six-list-thumb-${s.ext} tw-rounded-xl`} src={s.img} alt={s.alt} key={s.ext} />
+                          <img className={`service-six-list-thumb-${s.ext} tw-rounded-xl`} style={{ width: 485, maxWidth: "100%", height: "auto", aspectRatio: "485 / 567", objectFit: "cover" }} src={s.img} alt={s.alt} key={s.ext} />
                         ))}
                       </div>
                     </div>
@@ -423,7 +423,7 @@ export default function CivilPage() {
                   <div className={"project-six-wrapper tw-mb-122"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={delay}>
                     <div className={"project-six-thumb tw-mb-7"}>
                       <a className={"d-block"} href={"/projects"} tabIndex={"-1"} aria-hidden={"true"}>
-                        <img className={"tw-rounded-xl w-100"} src={img} alt={`${project.name}: ${project.type.toLowerCase()}, ${project.location}`} />
+                        <img className={"tw-rounded-xl w-100"} style={{ width: "100%", height: "auto", objectFit: "cover", aspectRatio: "754 / 468" }} src={img} alt={"Example of a villa built by ASAS"} />
                       </a>
                     </div>
                     <div className={"project-six-content"}>

@@ -136,7 +136,7 @@ export default function JoineryPage() {
                   </div>
                   <div className={"d-flex align-items-center tw-gap-17 tw-ps-20"}>
                     <div>
-                      <img src={"/assets/images/thumbs/about-four-thumb1.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "304 / 324", objectFit: "cover" }} alt={"Measuring timber for a joinery piece"} />
+                      <img src={"/assets/images/asas/joinery-reception-desk.webp"} style={{ width: "100%", height: "auto", aspectRatio: "304 / 324", objectFit: "cover" }} alt={"Wooden reception desk made by ASAS"} />
                     </div>
                     <div>
                       <div className={"banner-circle position-relative lh-1 d-inline-flex justify-content-center align-items-center rounded-circle z-1"}>
@@ -158,7 +158,7 @@ export default function JoineryPage() {
                 </div>
                 <div className={"banner-right"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
                   <div className={"banner-thumb tw-mb-8"}>
-                    <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/project-four-thumb3.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "624 / 717", objectFit: "cover" }} alt={"Joiner finishing a timber panel"} />
+                    <img className={"tw-rounded-lg"} src={"/assets/images/asas/joinery-hieroglyph-cabinets.webp"} style={{ width: "100%", height: "auto", aspectRatio: "624 / 717", objectFit: "cover" }} alt={"Custom joinery cabinets with carved relief panels"} />
                   </div>
                   <div className={"banner-counter-wrap bg-black d-flex tw-gap-30 tw-rounded-lg tw-py-12 tw-px-10"}>
                     <div className={"banner-counter-wrapper"}>
@@ -191,9 +191,9 @@ export default function JoineryPage() {
           <div className={"row align-items-center"}>
             <div className={"col-xl-6 col-lg-9"}>
               <div className={"about-thumb position-relative z-1 w-100 d-inline-block"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/project-four-thumb2.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "564 / 700", objectFit: "cover" }} alt={"Carpenter cutting timber for fitted joinery"} />
+                <img className={"tw-rounded-lg"} src={"/assets/images/asas/joinery-lockers.webp"} style={{ width: "100%", height: "auto", aspectRatio: "564 / 700", objectFit: "cover" }} alt={"Wooden locker joinery fitted by ASAS"} />
                 <div className={"about-thumb-shape position-absolute end-0"}>
-                  <img src={"/assets/images/thumbs/project-four-thumb4.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "354 / 408", objectFit: "cover" }} alt={"Close-up of joinery being assembled"} />
+                  <img src={"/assets/images/asas/salon-wood-wall.webp"} style={{ width: "100%", height: "auto", aspectRatio: "354 / 408", objectFit: "cover" }} alt={"Wooden slat wall joinery in a salon"} />
                 </div>
                 <div className={"banner-circle about-circle bg-white position-relative lh-1 d-inline-flex justify-content-center align-items-center rounded-circle z-1"}>
                   <div className={"banner-circle-wrap"}>
@@ -381,7 +381,7 @@ export default function JoineryPage() {
             ))}
             <div className={"col-xl-6 col-lg-10 col-md-10"}>
               <div className={"position-relative z-1 tw-mb-8"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"400"}>
-                <img className={"tw-rounded-md w-100"} src={"/assets/images/thumbs/service-four-thumb1.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "644 / 499", objectFit: "cover" }} alt={"Timber flooring being laid in a fit-out"} />
+                <img className={"tw-rounded-md w-100"} src={"/assets/images/asas/kitchen-marble-island.webp"} style={{ width: "100%", height: "auto", aspectRatio: "644 / 499", objectFit: "cover" }} alt={"Kitchen joinery with a marble island"} />
                 <div className={"service-thumb-wrap position-absolute bg-main-eight-600 tw-rounded-lg bottom-0 end-0 tw-mb-205 tw-me-205 tw-py-9 tw-px-8"}>
                   <div className={"d-flex justify-content-between tw-mb-8"}>
                     <div>
@@ -448,7 +448,7 @@ export default function JoineryPage() {
             </div>
             <div className={"col-xl-4 col-lg-6"}>
               <div className={"expert-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
-                <img src={"/assets/images/thumbs/testimonial-four-thumb.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "480 / 592", objectFit: "cover" }} alt={"Joiner in a workshop"} />
+                <img src={"/assets/images/asas/retail-boutique-cabinets.webp"} style={{ width: "100%", height: "auto", aspectRatio: "480 / 592", objectFit: "cover" }} alt={"Boutique cabinets made by ASAS"} />
               </div>
             </div>
             <div className={"col-xl-4 col-lg-6"}>
@@ -516,7 +516,7 @@ export default function JoineryPage() {
           <div className={"row justify-content-center"}>
             <div className={"col-xl-12"}>
               <div className={"video-bg text-center position-relative"}>
-                <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/video-ten-bg.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "1720 / 702", objectFit: "cover" }} alt={"Flooring being laid during a fit-out"} />
+                <img className={"tw-rounded-xl"} src={"/assets/images/asas/kitchen-living.webp"} style={{ width: "100%", height: "auto", aspectRatio: "1720 / 702", objectFit: "cover" }} alt={"Kitchen and living room joinery by ASAS"} />
               </div>
             </div>
           </div>
@@ -565,7 +565,7 @@ export default function JoineryPage() {
                         </div>
                       </div>
                     </a>
-                    <div className={"hover__reveal-bg bg-img"} data-background-image={["/assets/images/thumbs/project-four-thumb1.jpg", "/assets/images/thumbs/project-four-thumb4.jpg", "/assets/images/thumbs/project-four-thumb3.jpg", "/assets/images/thumbs/project-four-thumb2.jpg"][i]} role={"img"} aria-label={project.name + " fit-out photo"}></div>
+                    <div className={"hover__reveal-bg bg-img"} data-background-image={["/assets/images/asas/retail-boutique-cabinets.webp", "/assets/images/asas/salon-wood-wall.webp", "/assets/images/asas/joinery-hieroglyph-cabinets.webp", "/assets/images/asas/joinery-lockers.webp"][i]} role={"img"} aria-label={project.name + " fit-out photo"}></div>
                   </div>
                 ))}
                 <span className={"active-bg"}></span>
@@ -612,7 +612,7 @@ export default function JoineryPage() {
             </div>
             <div className={"col-xl-4 d-none d-xl-block"}>
               <div className={"cta-thumb"} data-aos={"fade-down"} data-aos-duration={"1000"} data-aos-delay={"300"}>
-                <img src={"/assets/images/thumbs/about-three-thumb3.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "590 / 723", objectFit: "cover" }} alt={"Technician in a hard hat ready for a site visit"} />
+                <img src={"/assets/images/asas/commercial-kitchen.webp"} style={{ width: "100%", height: "auto", aspectRatio: "590 / 723", objectFit: "cover" }} alt={"Commercial kitchen fitted out by ASAS"} />
               </div>
             </div>
             <div className={"col-xl-3 col-lg-6"}>
@@ -790,7 +790,7 @@ export default function JoineryPage() {
                 <div className={"row align-items-center"}>
                   <div className={"col-xl-4 col-lg-6"}>
                     <div className={"contact-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                      <img className={"tw-rounded-xl w-100"} src={"/assets/images/thumbs/blog-four-thumb2.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "493 / 632", objectFit: "cover" }} alt={"Joiner working in a workshop"} />
+                      <img className={"tw-rounded-xl w-100"} src={"/assets/images/asas/fitout-media-wall.webp"} style={{ width: "100%", height: "auto", aspectRatio: "493 / 632", objectFit: "cover" }} alt={"Media wall joinery by ASAS"} />
                     </div>
                   </div>
                   <div className={"col-xl-4 col-lg-6"}>

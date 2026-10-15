@@ -35,8 +35,8 @@ const WHY = [
     size: [40, 41],
     lead: "Our own MEP engineers, foremen, technicians and helpers carry out the work.",
     text: "The team behind every installation is " + COMPANY.stats[2].value + " people strong: 2 MEP engineers, 2 foremen, 12 technicians and 7 helpers across electrical, plumbing and HVAC. The installation is planned, built and tested by one team.",
-    img: "/assets/images/thumbs/choose-us-five-thumb1.jpg",
-    alt: "ASAS Alenjaz MEP team on a fit-out site",
+    img: "/assets/images/asas/office-lobby.webp",
+    alt: "Office lobby with screens and lighting by ASAS",
   },
   {
     id: "profile",
@@ -45,8 +45,8 @@ const WHY = [
     size: [40, 45],
     lead: "Approved by DEWA, Dubai Municipality, Civil Defence and Trakhees.",
     text: "Design and submissions to the relevant authority are part of our process, alongside the installation itself.",
-    img: "/assets/images/thumbs/choose-us-five-thumb2.png",
-    alt: "ASAS Alenjaz engineer reviewing MEP drawings",
+    img: "/assets/images/asas/office-reception-geometric.webp",
+    alt: "Reception with a display screen wired by ASAS",
   },
   {
     id: "contact",
@@ -55,8 +55,8 @@ const WHY = [
     size: [40, 49],
     lead: "Low current, electrical, HVAC, plumbing and fire fighting under one contract.",
     text: "Because one contractor handles civil, joinery and every MEP discipline, you have one programme, one point of contact and one team accountable for the finished space.",
-    img: "/assets/images/thumbs/choose-us-five-thumb3.png",
-    alt: "Finished office fit-out by ASAS Alenjaz",
+    img: "/assets/images/asas/fitout-media-wall.webp",
+    alt: "Media wall with AV wiring by ASAS",
   },
   {
     id: "house",
@@ -65,8 +65,8 @@ const WHY = [
     size: [40, 40],
     lead: "A Quality Management System built on specifications, schedules and progress reporting.",
     text: "We work to all contractual obligations, specifications, standards and codes of practice, keep a clean working environment, and build environment, health and safety into every business decision.",
-    img: "/assets/images/thumbs/choose-us-five-thumb4.png",
-    alt: "ASAS Alenjaz technician working safely on site",
+    img: "/assets/images/asas/fitout-home-theater.webp",
+    alt: "Home theatre with AV and lighting by ASAS",
   },
 ];
 
@@ -277,7 +277,7 @@ export default function LowCurrentPage() {
             <div className={"col-xl-6 col-lg-6"}>
               <div className={"about-five-right"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
                 <div className={"tw-mb-10"}>
-                  <img className={"tw-rounded-md"} src={"/assets/images/thumbs/about-five-thumb.jpg"} alt={"ASAS Alenjaz technician routing cabling above an office ceiling"} />
+                  <img className={"tw-rounded-md"} style={{ width: "100%", height: "auto", aspectRatio: "456 / 500", objectFit: "cover" }} src={"/assets/images/asas/electrical-control-panel.webp"} alt={"Control panel installed by ASAS"} />
                 </div>
                 <div className={"tw-mb-10"}>
                   <p className={"fw-semibold text-heading font-rurbanist"}>
@@ -439,7 +439,7 @@ export default function LowCurrentPage() {
                       <div className={"row align-items-center gx-0"}>
                         <div className={"col-xl-6"}>
                           <div className={"choose-us-five-thumb"}>
-                            <img className={"tw-rounded-xl w-100"} src={item.img} alt={item.alt} />
+                            <img className={"tw-rounded-xl w-100"} style={{ width: "100%", height: "auto", objectFit: "cover", aspectRatio: "721 / 455" }} src={item.img} alt={item.alt} />
                           </div>
                         </div>
                         <div className={"col-xl-6"}>
@@ -567,14 +567,14 @@ export default function LowCurrentPage() {
               <div className={"col-xl-6 col-lg-6"}>
                 <div className={"work-five-thumb text-end tw-mb-705"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
                   <a href={"/projects"} aria-label={"View our projects"}>
-                    <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/wrok-five-thumb1.jpg"} alt={STEPS[0].alt} />
+                    <img className={"tw-rounded-xl"} style={{ width: "100%", height: "auto", aspectRatio: "560 / 340", objectFit: "cover" }} src={"/assets/images/asas/cctv-monitor.webp"} alt={STEPS[0].alt} />
                   </a>
                 </div>
               </div>
               <div className={"col-xl-6 col-lg-6"}>
                 <div className={"work-five-thumb tw-mb-705"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"400"}>
                   <a href={"/projects"} aria-label={"View our projects"}>
-                    <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/wrok-five-thumb2.jpg"} alt={STEPS[1].alt} />
+                    <img className={"tw-rounded-xl"} style={{ width: "100%", height: "auto", aspectRatio: "560 / 340", objectFit: "cover" }} src={"/assets/images/asas/fitout-home-theater.webp"} alt={STEPS[1].alt} />
                   </a>
                 </div>
               </div>
@@ -615,7 +615,7 @@ export default function LowCurrentPage() {
               <div className={"col-xl-6 col-lg-6"}>
                 <div className={"work-five-thumb text-end tw-mb-705"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"600"}>
                   <a href={"/projects"} aria-label={"View our projects"}>
-                    <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/wrok-five-thumb3.jpg"} alt={STEPS[2].alt} />
+                    <img className={"tw-rounded-xl"} style={{ width: "100%", height: "auto", aspectRatio: "560 / 340", objectFit: "cover" }} src={"/assets/images/asas/electrical-db-wiring.webp"} alt={STEPS[2].alt} />
                   </a>
                 </div>
               </div>

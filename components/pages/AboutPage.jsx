@@ -2,6 +2,7 @@ import PageShell from "@/components/PageShell";
 import { COMPANY, SERVICES, QUOTE_HREF } from "@/components/site";
 import { SERVICE_CONTENT, PROCESS } from "@/components/service-content";
 import FigureBanner from "@/components/hairline/FigureBanner";
+import { asas } from "@/components/asas-photos";
 import { ApprovalsStrip } from "@/components/details/Details";
 import QuoteForm from "./QuoteForm";
 import styles from "./InfoPages.module.css";
@@ -18,10 +19,10 @@ const service = (slug) => SERVICES.find((s) => s.slug === slug);
 
 // service-two tabs: four core services (template tab ids kept for Bootstrap tabs).
 const SERVICE_TABS = [
-  { slug: "fit-out", tabId: "home", short: "Bare shell to handover", icon: "fit-out-navy.svg", thumb: "project-four-thumb1.jpg", alt: "Joinery being measured and cut for a fit-out" },
-  { slug: "electrical", tabId: "profile", short: "DEWA-compliant installations", icon: "electrical-navy.svg", thumb: "blog-seven-thumb2.jpg", alt: "Electrician working on a distribution board" },
-  { slug: "hvac", tabId: "contact", short: "Installation & commissioning", icon: "hvac-navy.svg", thumb: "banner-three-bg.jpg", alt: "Technicians installing AC outdoor units" },
-  { slug: "villa-works", tabId: "house", short: "Extensions & service blocks", icon: "villa-navy.svg", thumb: "project-six-thumb3.jpg", alt: "Villa with a new roof extension" },
+  { slug: "fit-out", tabId: "home", short: "Bare shell to handover", icon: "fit-out-navy.svg", img: asas("fitout-hotel-reception"), alt: "Hotel reception fitted out by ASAS" },
+  { slug: "electrical", tabId: "profile", short: "DEWA-compliant installations", icon: "electrical-navy.svg", img: asas("electrical-switchgear"), alt: "Switchgear panel installed by ASAS" },
+  { slug: "hvac", tabId: "contact", short: "Installation & commissioning", icon: "hvac-navy.svg", img: "/assets/images/thumbs/banner-three-bg.jpg", alt: "Technicians installing AC outdoor units" },
+  { slug: "villa-works", tabId: "house", short: "Extensions & service blocks", icon: "villa-navy.svg", img: asas("villa-arched-entrance"), alt: "Villa built by ASAS in Dubai" },
 ].map((t) => ({ ...t, title: service(t.slug).title, summary: SERVICE_CONTENT[t.slug].summary }));
 
 const WHY_ASAS = [
@@ -202,7 +203,7 @@ export default function AboutPage() {
           <div className={"row"}>
             <div className={"col-xl-6 col-lg-9 col-md-10"}>
               <div className={"about-two-thumb one"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                <img className={`tw-rounded-xl tw-animation-img-left ${styles.swap}`} style={{ maxWidth: 564, aspectRatio: "564 / 482" }} src={"/assets/images/thumbs/project-three-thumb2.jpg"} alt={"Technicians installing AC outdoor units"} />
+                <img className={`tw-rounded-xl tw-animation-img-left ${styles.swap}`} style={{ maxWidth: 564, aspectRatio: "564 / 482" }} src={asas("fitout-lounge")} alt={"Lounge interior fitted out by ASAS"} />
               </div>
             </div>
             <div className={"col-xl-6 col-lg-12 col-md-12"}>
@@ -221,7 +222,7 @@ export default function AboutPage() {
                   </div>
                   <div className={"col-xl-6 col-lg-6 col-md-6"}>
                     <div className={"about-two-thumb two"}>
-                      <img className={`tw-rounded-xl tw-animation-img-right ${styles.swap}`} style={{ maxWidth: 312, aspectRatio: "312 / 358" }} src={"/assets/images/thumbs/about-three-thumb4.jpg"} alt={"Technician installing an indoor AC unit"} />
+                      <img className={`tw-rounded-xl tw-animation-img-right ${styles.swap}`} style={{ maxWidth: 312, aspectRatio: "312 / 358" }} src={asas("electrical-panel")} alt={"Distribution board wired by ASAS"} />
                     </div>
                   </div>
                 </div>
@@ -309,7 +310,7 @@ export default function AboutPage() {
                       <div key={t.slug} className={`tab-pane fade${i === 0 ? " show active" : ""}`} id={t.tabId} role={"tabpanel"} aria-labelledby={`${t.tabId}-tab`}>
                         <div>
                           <div className={"service-two-thumbs position-relative z-1"}>
-                            <img className={`tw-rounded-lg ${styles.swap}`} style={{ aspectRatio: "809 / 438" }} src={`/assets/images/thumbs/${t.thumb}`} alt={t.alt} />
+                            <img className={`tw-rounded-lg ${styles.swap}`} style={{ aspectRatio: "809 / 438" }} src={t.img} alt={t.alt} />
                             <div className={"service-two-content position-absolute"}>
                               <h3 className={"tw-text-122 text-white tw-mb-3"}>
                                 <a href={`/services/${t.slug}`}>
@@ -347,13 +348,13 @@ export default function AboutPage() {
             <div className={"col-xl-6 col-lg-9"}>
               <div className={"choose-us-two-thumb position-relative z-1 tw-me-10"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
                 <div className={"choose-us-two-thumb-1 text-end position-relative z-2"}>
-                  <img className={styles.swap} style={{ maxWidth: 349, aspectRatio: "349 / 438" }} src={"/assets/images/thumbs/about-three-thumb5.jpg"} alt={"Technician servicing an AC outdoor unit"} />
+                  <img className={styles.swap} style={{ maxWidth: 349, aspectRatio: "349 / 438" }} src={asas("joinery-hieroglyph-cabinets")} alt={"Custom joinery cabinets fitted by ASAS"} />
                 </div>
                 <div className={"choose-us-two-thumb-2"}>
-                  <img className={styles.swap} style={{ maxWidth: 329, aspectRatio: "329 / 501" }} src={"/assets/images/thumbs/about-three-thumb3.jpg"} alt={"Technician in a hard hat on site"} />
+                  <img className={styles.swap} style={{ maxWidth: 329, aspectRatio: "329 / 501" }} src={asas("salon-arched-mirrors")} alt={"Salon interior fitted out by ASAS"} />
                 </div>
                 <div>
-                  <img className={"choose-us-two-thumb-shape-1 tw-rounded-xl position-absolute z-n1"} src={"/assets/images/shapes/choose-us-two-thumb-shape1.jpg"} alt={""} />
+                  <img className={"choose-us-two-thumb-shape-1 tw-rounded-xl position-absolute z-n1"} src={"/assets/images/asas/vanity-double-sink.webp"} style={{ width: 171, height: 179, objectFit: "cover" }} alt={""} />
                 </div>
               </div>
             </div>
@@ -642,7 +643,7 @@ export default function AboutPage() {
             <div className={"col-xl-6"}>
               <div className={"contact-two-left"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
                 <div className={"tw-mb-6"}>
-                  <img className={`tw-rounded-lg w-100 ${styles.swap}`} style={{ aspectRatio: "624 / 457" }} src={"/assets/images/thumbs/project-three-thumb1.jpg"} alt={"Engineer reviewing an AC installation with a client"} />
+                  <img className={`tw-rounded-lg w-100 ${styles.swap}`} style={{ aspectRatio: "624 / 457" }} src={asas("office-conference")} alt={"Meeting room fitted out by ASAS"} />
                 </div>
                 <div className={"contact-two-info bg-white tw-rounded-lg tw-py-5 tw-ps-10 tw-pe-6"}>
                   <div>

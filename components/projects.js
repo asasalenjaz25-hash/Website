@@ -138,8 +138,9 @@ export const PROJECTS = RAW.map(([sn, name, type, sector, location]) => ({
   location,
 }));
 
-// Recognisable commercial projects, in display order (by SN).
-export const FEATURED = [9, 17, 11, 95, 103, 52, 37, 102];
+// Featured projects, in display order (by SN): the ones ASAS supplied photos
+// for (components/asas-photos.js). The home page shows the first six.
+export const FEATURED = [1, 5, 26, 52, 19, 34, 2, 13];
 
 export const featuredProjects = () =>
   FEATURED.map((sn) => PROJECTS.find((p) => p.sn === sn)).filter(Boolean);

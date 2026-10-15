@@ -7,6 +7,7 @@ import BuildSequence from "@/components/pages/home/BuildSequence";
 import ServiceMotionGrid from "@/components/pages/home/ServiceMotionGrid";
 import SectorTicker from "@/components/pages/home/SectorTicker";
 import { HomeSectors, HomeShopBand, HomeTrustBand } from "@/components/details/HomeExtras";
+import { asas, cover, projectPhoto } from "@/components/asas-photos";
 import styles from "./HomePage.module.css";
 
 // Home page: the template's index-11 page (components/generated/Page_index_11_html.jsx)
@@ -79,9 +80,9 @@ const BUILD_STEPS = [
 
 // blog-seven cards, repurposed as service highlights.
 const HIGHLIGHTS = [
-  { slug: "fit-out", img: "/assets/images/thumbs/blog-seven-thumb1.jpg", alt: "Finished office or restaurant fit-out by ASAS" },
-  { slug: "villa-works", img: "/assets/images/thumbs/blog-seven-thumb2.jpg", alt: "Villa extension or service block built by ASAS" },
-  { slug: "ev-chargers", img: "/assets/images/thumbs/blog-seven-thumb3.jpg", alt: "EV charger installed by ASAS in a residential car park" },
+  { slug: "fit-out", img: asas("lounge-cafe-warm"), alt: "Café lounge fitted out by ASAS" },
+  { slug: "villa-works", img: asas("villa-courtyard-sunlit"), alt: "Villa built by ASAS in Dubai" },
+  { slug: "ev-chargers", img: asas("ev-charging-bays"), alt: "EV charging bays installed by ASAS" },
 ];
 
 // Same markup as the template's tw-primary-btn, so the theme's hover still works.
@@ -156,7 +157,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className={"about-seven-left-thumb"}>
-                  <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/about-seven-thumb1.jpg"} alt={"ASAS engineer on a fit-out site in Dubai"} />
+                  <img className={"tw-rounded-lg"} src={asas("electrical-db-wiring")} style={{ ...cover("418 / 560"), maxWidth: 418 }} alt={"Distribution board wired by ASAS"} />
                 </div>
               </div>
             </div>
@@ -188,7 +189,7 @@ export default function HomePage() {
             </div>
             <div className={"col-xl-3"}>
               <div className={"about-seven-right-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"400"}>
-                <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/about-seven-thumb2.jpg"} alt={"ASAS technicians installing MEP services in a commercial fit-out"} />
+                <img className={"tw-rounded-lg"} src={asas("fitout-chandelier-room")} style={{ ...cover("418 / 560"), maxWidth: 418 }} alt={"Lounge interior fitted out by ASAS"} />
               </div>
             </div>
           </div>
@@ -218,7 +219,7 @@ export default function HomePage() {
             <div className={"col-xl-5 col-lg-5"}>
               <div className={"work-seven-left"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
                 <div className={"work-seven-thumb tw-mb-13"}>
-                  <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/work-seven-thumb.jpg"} alt={"ASAS team walking a client through a site visit"} />
+                  <img className={"tw-rounded-lg"} src={asas("office-open-plan")} style={{ ...cover("536 / 403"), maxWidth: 536 }} alt={"Open-plan office fitted out by ASAS"} />
                 </div>
                 <div className={"section-six-wrapper tw-mb-8"}>
                   <div className={"section-seven-subtitle section-three-subtitle section-six-subtitle font-heading tw-text-base fw-medium tw-rounded-2xl fw-medium text-uppercase text-heading tw-mb-4 d-inline-block position-relative z-1"}>
@@ -322,7 +323,7 @@ export default function HomePage() {
             <div className={"col-xl-8 col-lg-8"}>
               <div className={"section-six-wrapper"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
                 <h2 className={"section-seven-title tw-text-122 tw-mb-14 tw-char-animation"}>
-                  Offices, Warehouses, Cafés And Towers Across The UAE
+                  Restaurants, Schools, Shops And Salons Across The UAE
                 </h2>
               </div>
             </div>
@@ -333,7 +334,7 @@ export default function HomePage() {
                 <div className={`project-seven-wrapper ${PROJECT_CARDS[i]} tw-mb-705`} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={PROJECT_DELAYS[i]}>
                   <div className={"project-seven-thumb tw-mb-5"}>
                     <a className={"d-block"} href={"/projects"} tabIndex={-1} aria-hidden="true">
-                      <img className={"tw-rounded-lg"} src={`/assets/images/thumbs/project-seven-thumb${i + 1}.jpg`} alt={`${p.name}, ${p.type.toLowerCase()} project by ASAS in ${p.location}`} />
+                      <img className={"tw-rounded-lg"} src={projectPhoto(p).src} style={cover(i % 2 ? "424 / 627" : "424 / 438")} alt={projectPhoto(p).alt} />
                     </a>
                   </div>
                   <div className={"project-seven-content"}>
@@ -385,7 +386,7 @@ export default function HomePage() {
             <div className={"row align-items-center gx-0"}>
               <div className={"col-xl-5 col-lg-5"}>
                 <div className={"cta-seven-thumb"}>
-                  <img src={"/assets/images/thumbs/cta-seven-thumb.jpg"} alt={"ASAS engineer on the phone arranging a site visit"} />
+                  <img src={asas("office-reception")} style={{ ...cover("536 / 525"), maxWidth: 536 }} alt={"Office reception fitted out by ASAS"} />
                 </div>
               </div>
               <div className={"col-xl-7 col-lg-7"}>
@@ -494,7 +495,7 @@ export default function HomePage() {
             </div>
             <div className={"col-xl-6 col-lg-6"}>
               <div className={"choose-seven-thumb text-lg-end"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
-                <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/choose-seven-thumb.jpg"} alt={"ASAS engineer inspecting completed MEP installation for handover"} />
+                <img className={"tw-rounded-lg"} src={asas("switchgear-room")} style={{ ...cover("579 / 658"), maxWidth: 579 }} alt={"Switchgear room installed by ASAS"} />
               </div>
             </div>
           </div>
@@ -539,8 +540,8 @@ export default function HomePage() {
                       </h3>
                     </div>
                     <div className={"blog-main-thumb position-relative overflow-hidden tw-rounded-2xl tw-mb-6"}>
-                      <img className={"w-img w-100 tw-rounded-xl tw-transition-5"} src={h.img} alt={h.alt} />
-                      <img className={"w-img w-100 tw-rounded-xl tw-transition-5"} src={h.img} alt={""} />
+                      <img className={"w-img w-100 tw-rounded-xl tw-transition-5"} style={cover("404 / 250")} src={h.img} alt={h.alt} />
+                      <img className={"w-img w-100 tw-rounded-xl tw-transition-5"} style={cover("404 / 250")} src={h.img} alt={""} />
                       <a className={"blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"} href={href} tabIndex={-1} aria-hidden="true"></a>
                     </div>
                     <div className={"tw-mb-4"}>

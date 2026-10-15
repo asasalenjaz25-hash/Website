@@ -6,7 +6,8 @@
     "dev": "node scripts/next-free-port.mjs dev",
     "build": "next build",
     "brand": "node scripts/brand-theme.mjs && node scripts/brand.mjs",
-    "start": "node scripts/next-free-port.mjs start"
+    "start": "node scripts/next-free-port.mjs start",
+    "stripe:check": "node scripts/stripe-check.mjs"
   },
   "dependencies": {
     "next": "^16.3.7",

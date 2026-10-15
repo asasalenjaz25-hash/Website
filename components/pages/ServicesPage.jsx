@@ -22,17 +22,17 @@ const GROUP_LABEL = {
 
 // Alt text describes the ASAS photo each placeholder should become.
 const PHOTO = {
-  "fit-out": "Completed office interior fit-out by ASAS Alenjaz",
-  civil: "Blockwork and plastering in progress on an ASAS fit-out site",
-  joinery: "Custom joinery fitted in a finished ASAS interior",
-  electrical: "ASAS electrician wiring a distribution board",
-  plumbing: "ASAS technician installing plumbing pipework",
-  hvac: "HVAC ducting and indoor units installed above a ceiling",
-  "fire-fighting": "Fire sprinkler pipework installed in a fit-out",
-  "low-current": "Structured cabling and network rack installed by ASAS",
-  "planning-architecture": "Engineer reviewing architectural fit-out drawings",
-  "villa-works": "Villa service block under construction in Dubai",
-  "ev-chargers": "EV charger installed at a residential parking bay",
+  "fit-out": "Lounge interior fitted out by ASAS Alenjaz",
+  civil: "Mezzanine floor and steel staircase built in an ASAS office fit-out",
+  joinery: "Custom joinery cabinets with carved relief panels, fitted by ASAS",
+  electrical: "Distribution board wired by ASAS",
+  plumbing: "Water supply valves and pipework installed by ASAS",
+  hvac: "Technicians installing AC outdoor units",
+  "fire-fighting": "Sprinkler alarm valve installed by ASAS",
+  "low-current": "CCTV monitoring screen installed by ASAS",
+  "planning-architecture": "Open-plan office designed and fitted out by ASAS",
+  "villa-works": "Villa built by ASAS in Dubai",
+  "ev-chargers": "EV charging station at Akoya, installed by ASAS",
 };
 
 // Gallery thumbs (from HomeTemplates / service-pages.json), paired with the

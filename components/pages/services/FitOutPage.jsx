@@ -61,8 +61,8 @@ const TRADES = [
     href: "/services/civil",
     text: SERVICE_CONTENT.civil.summary,
     list: ["Blockwork & partitions", "Plastering & flooring", "Structural modifications"],
-    img: "/assets/images/thumbs/service-ten-thumb1.jpg",
-    alt: "Blockwork partitions going up in an ASAS fit-out",
+    img: "/assets/images/asas/office-corridor-murals.webp",
+    alt: "Office corridor finished by ASAS",
     icon: "/assets/images/icons/asas/civil-white.svg",
     delay: "200",
   },
@@ -71,8 +71,8 @@ const TRADES = [
     href: "/services/joinery",
     text: SERVICE_CONTENT.joinery.summary,
     list: ["Made to the approved design", "Measured on site first", "Coordinated with MEP"],
-    img: "/assets/images/thumbs/service-ten-thumb2.jpg",
-    alt: "Joinery installed by ASAS in a retail fit-out",
+    img: "/assets/images/asas/retail-boutique-cabinets.webp",
+    alt: "Boutique joinery fitted by ASAS",
     icon: "/assets/images/icons/asas/joinery-white.svg",
     delay: "300",
   },
@@ -81,8 +81,8 @@ const TRADES = [
     href: "/services",
     text: "Electrical, HVAC, plumbing, fire fighting and low current systems, installed by our own MEP team.",
     list: ["DEWA-approved electrical", "HVAC & plumbing", "Fire fighting & low current"],
-    img: "/assets/images/thumbs/service-ten-thumb3.jpg",
-    alt: "ASAS MEP team installing services above a fit-out ceiling",
+    img: "/assets/images/asas/office-cafeteria.webp",
+    alt: "Office cafeteria with services above the ceiling, by ASAS",
     icon: "/assets/images/icons/asas/mep-white.svg",
     delay: "400",
   },
@@ -91,8 +91,8 @@ const TRADES = [
     href: "/services/planning-architecture",
     text: SERVICE_CONTENT["planning-architecture"].summary,
     list: ["Space planning & layouts", "Architectural drawings", "MEP design coordination"],
-    img: "/assets/images/thumbs/service-ten-thumb4.jpg",
-    alt: "ASAS engineers reviewing fit-out layout drawings",
+    img: "/assets/images/asas/office-open-plan.webp",
+    alt: "Open-plan office fitted out by ASAS",
     icon: "/assets/images/icons/asas/planning-white.svg",
     delay: "500",
   },
@@ -252,7 +252,7 @@ export default function FitOutPage() {
               </div>
               <div className={"col-xl-7"}>
                 <div className={"banner-ten-thumb position-relative z-1"}>
-                  <img src={"/assets/images/thumbs/banner-ten-thumb.png"} alt={"Completed office fit-out by ASAS Alenjaz"} />
+                  <img style={{ width: "100%", height: "auto", aspectRatio: "691 / 640", objectFit: "cover" }} src={"/assets/images/asas/fitout-lounge.webp"} alt={"Lounge interior fitted out by ASAS"} />
                   <div className={"banner-circle banner-ten-circle position-absolute lh-1 d-inline-flex justify-content-center align-items-center rounded-circle z-1 top-0 start-0"}>
                     <div className={"banner-circle-wrap"}>
                       <TextRing className="banner-rotate-content banner-ten-rotate-content" label="FIT-OUT & MEP" />
@@ -297,7 +297,7 @@ export default function FitOutPage() {
             <div className={"row align-items-center"}>
               <div className={"col-xl-5 col-lg-5"}>
                 <div className={"about-ten-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                  <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/about-ten-thumb.jpg"} alt={"ASAS team handing over a finished restaurant fit-out"} />
+                  <img className={"tw-rounded-xl"} style={{ width: "100%", height: "auto", aspectRatio: "536 / 636", objectFit: "cover" }} src={"/assets/images/asas/jans-noodles-interior.webp"} alt={"Jan's Noodles restaurant in Deira, fitted out by ASAS"} />
                 </div>
               </div>
               <div className={"col-xl-7 col-lg-7"}>
@@ -407,7 +407,7 @@ export default function FitOutPage() {
                   <div className={"service-ten-wrapper bg-white tw-rounded-xl tw-mb-705 animation-item"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={t.delay}>
                     <div className={"service-ten-thumb position-relative z-1 tw-mb-4 overflow-hidden tw-rounded-xl"}>
                       <a className={"d-block"} href={t.href} tabIndex={"-1"} aria-hidden={"true"}>
-                        <img className={"tw-rounded-xl tw-transition-4"} src={t.img} alt={t.alt} />
+                        <img className={"tw-rounded-xl tw-transition-4"} style={{ width: "100%", height: "auto", objectFit: "cover", aspectRatio: "384 / 259" }} src={t.img} alt={t.alt} />
                       </a>
                       <div className={"service-ten-icon position-absolute top-0 start-0 tw-mt-205 tw-ms-205"}>
                         <span className={"tw-w-170 tw-h-170 lh-1 d-inline-flex align-items-center justify-content-center bg-main-eight-600 tw-rounded-xl"}>
@@ -499,7 +499,7 @@ export default function FitOutPage() {
             <div className={"row align-items-center"}>
               <div className={"col-xl-6 col-lg-10"}>
                 <div className={"about-eight-thumb position-relative z-1"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                  <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/expert-ten-thumb.jpg"} alt={"ASAS foreman and technicians on a fit-out site"} />
+                  <img className={"tw-rounded-xl"} style={{ width: "100%", height: "auto", aspectRatio: "600 / 684", objectFit: "cover" }} src={"/assets/images/asas/fitout-amber-lounge.webp"} alt={"Lounge interior fitted out by ASAS"} />
                   <div className={"about-eight-thumb-count bg-main-eight-600 tw-rounded-2xl position-absolute top-0 end-0 tw-mt-505"}>
                     <div className={"d-flex align-items-center tw-gap-4"}>
                       <p className={"tw-text-14 fw-medium font-heading text-white mb-0 lh-1"}>
@@ -586,7 +586,7 @@ export default function FitOutPage() {
             <div className={"row justify-content-center gx-0"}>
               <div className={"col-xl-12 gx-0"}>
                 <div className={"video-bg video-nine-bg text-center position-relative"}>
-                  <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/video-ten-bg.jpg"} alt={"Wide view of a completed ASAS fit-out interior"} />
+                  <img className={"tw-rounded-xl"} style={{ width: "100%", height: "auto", aspectRatio: "1720 / 702", objectFit: "cover" }} src={"/assets/images/asas/fitout-lounge-2.webp"} alt={"Lounge interior fitted out by ASAS"} />
                 </div>
               </div>
             </div>
@@ -771,7 +771,7 @@ export default function FitOutPage() {
                   <div className={"row align-items-center"}>
                     <div className={"col-xl-4 col-lg-6"}>
                       <div className={"contact-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                        <img className={"tw-rounded-xl w-100"} src={"/assets/images/thumbs/contact-eight-thumb.jpg"} alt={"ASAS engineer meeting a client on site"} />
+                        <img className={"tw-rounded-xl w-100"} style={{ width: "100%", height: "auto", aspectRatio: "573 / 632", objectFit: "cover" }} src={"/assets/images/asas/office-reception.webp"} alt={"Office reception fitted out by ASAS"} />
                       </div>
                     </div>
                     <div className={"col-xl-4 col-lg-6"}>

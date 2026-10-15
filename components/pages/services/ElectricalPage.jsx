@@ -27,8 +27,8 @@ const SCOPE_SLIDES = [
   {
     title: "Power & Lighting",
     text: "Power and lighting installation for fit-outs, modifications and new buildings.",
-    img: "/assets/images/thumbs/service-four-thumb1.jpg",
-    alt: "ASAS electrician installing lighting in an office fit-out",
+    img: "/assets/images/asas/office-lobby.webp",
+    alt: "Office lobby lighting installed by ASAS",
     icon: "/assets/images/icons/asas/lighting.svg",
     iconW: "60",
     iconH: "61",
@@ -38,8 +38,8 @@ const SCOPE_SLIDES = [
   {
     title: "Distribution Boards",
     text: "Distribution boards and final connections, installed by our own team and tested before handover.",
-    img: "/assets/images/thumbs/service-four-thumb2.jpg",
-    alt: "Distribution board wired and labelled by the ASAS electrical team",
+    img: "/assets/images/asas/electrical-panel.webp",
+    alt: "Distribution board wired by ASAS",
     icon: "/assets/images/icons/asas/power-plug.svg",
     iconW: "62",
     iconH: "61",
@@ -49,8 +49,8 @@ const SCOPE_SLIDES = [
   {
     title: "EV Charger Power Supply",
     text: "Electrical supply works for EV chargers in residential communities and private villas.",
-    img: "/assets/images/thumbs/service-four-thumb3.jpg",
-    alt: "EV charger power supply installed by ASAS in a residential community",
+    img: "/assets/images/asas/ev-charging-bays.webp",
+    alt: "EV charging bays powered by ASAS",
     icon: "/assets/images/icons/asas/ev-charger.svg",
     iconW: "60",
     iconH: "61",
@@ -103,10 +103,10 @@ const TEAM = [
 ];
 
 const PROJECT_IMGS = [
-  { img: "/assets/images/thumbs/project-four-thumb1.jpg" },
-  { img: "/assets/images/thumbs/project-four-thumb2.jpg" },
-  { img: "/assets/images/thumbs/project-four-thumb3.jpg" },
-  { img: "/assets/images/thumbs/project-four-thumb4.jpg" },
+  { img: "/assets/images/asas/electrical-db-wiring.webp" },
+  { img: "/assets/images/asas/electrical-switchgear.webp" },
+  { img: "/assets/images/asas/switchgear-room.webp" },
+  { img: "/assets/images/asas/electrical-panel-industrial.webp" },
 ];
 
 // Commitments (content.md §1.2) paired with COMPANY.stats; replaces client reviews.
@@ -142,10 +142,10 @@ const AVATARS = [
 ];
 
 const WORK_IMGS = [
-  { img: "/assets/images/thumbs/work-four-thumb1.jpg", alt: "ASAS engineer on a site visit reviewing the space", delay: "200" },
-  { img: "/assets/images/thumbs/work-four-thumb2.jpg", alt: "Electrical drawings prepared for authority submission", delay: "300" },
-  { img: "/assets/images/thumbs/work-four-thumb3.jpg", alt: "ASAS technicians installing cabling on site", delay: "400" },
-  { img: "/assets/images/thumbs/work-four-thumb4.jpg", alt: "Electrical installation being tested before handover", delay: "500" },
+  { img: "/assets/images/asas/office-open-plan.webp", alt: "Open-plan office fitted out by ASAS", delay: "200" },
+  { img: "/assets/images/asas/electrical-control-panel.webp", alt: "Control panel installed by ASAS", delay: "300" },
+  { img: "/assets/images/asas/cable-spool.webp", alt: "Cable drum on an ASAS site", delay: "400" },
+  { img: "/assets/images/asas/electrical-breakers.webp", alt: "Breaker panel wired by ASAS", delay: "500" },
 ];
 
 // Pricing section → scope cards, no prices.
@@ -179,9 +179,9 @@ const SCOPE_CARDS = [
 ];
 
 const RELATED_IMGS = [
-  { img: "/assets/images/thumbs/blog-four-thumb1.jpg" },
-  { img: "/assets/images/thumbs/blog-four-thumb2.jpg" },
-  { img: "/assets/images/thumbs/blog-four-thumb3.jpg" },
+  { img: "/assets/images/asas/switchgear-room-2.webp" },
+  { img: "/assets/images/asas/office-reception-geometric.webp" },
+  { img: "/assets/images/asas/retail-showroom.webp" },
 ];
 const RELATED_ALTS = {
   plumbing: "ASAS plumbing installation in a commercial kitchen",
@@ -261,7 +261,7 @@ export default function ElectricalPage() {
                   <div className={"about-four-wrap align-items-center"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
                     <div className={"about-four-item"}>
                       <div className={"about-four-thumb"}>
-                        <img className={"tw-rounded-2xl"} src={"/assets/images/thumbs/about-four-thumb1.jpg"} alt={"ASAS electrician working on a distribution board"} />
+                        <img className={"tw-rounded-2xl"} style={{ width: "100%", height: "auto", aspectRatio: "361 / 321", objectFit: "cover" }} src={"/assets/images/asas/electrical-breakers.webp"} alt={"Breaker panel wired by ASAS"} />
                       </div>
                     </div>
                     <div className={"about-four-item bg-main-four-600 tw-rounded-2xl tw-py-6 tw-ps-505 tw-pe-7"}>
@@ -305,7 +305,7 @@ export default function ElectricalPage() {
                     </div>
                     <div className={"about-four-item"}>
                       <div className={"about-four-thumb"}>
-                        <img className={"tw-rounded-2xl"} src={"/assets/images/thumbs/about-four-thumb1.jpg"} alt={"Lighting installed by ASAS in a completed fit-out"} />
+                        <img className={"tw-rounded-2xl"} style={{ width: "100%", height: "auto", aspectRatio: "361 / 321", objectFit: "cover" }} src={"/assets/images/asas/electrical-breakers.webp"} alt={"Breaker panel wired by ASAS"} />
                       </div>
                     </div>
                     <div className={"about-four-item bg-black tw-rounded-2xl tw-py-6 tw-ps-505 tw-pe-7"}>
@@ -409,7 +409,7 @@ export default function ElectricalPage() {
                         <div className={"service-four-wrapper position-relative z-1 tw-rounded-xl overflow-hidden swiper-slide animation-item"} key={s.title}>
                           <div className={"service-four-thumb"}>
                             <a className={"d-block"} href={s.href} tabIndex={"-1"} aria-hidden={"true"}>
-                              <img className={"tw-h-282-px w-100"} src={s.img} alt={s.alt} />
+                              <img className={"tw-h-282-px w-100 object-fit-cover"} src={s.img} alt={s.alt} />
                             </a>
                           </div>
                           <div className={"service-four-content tw-transition-3"}>
@@ -470,7 +470,7 @@ export default function ElectricalPage() {
             <div className={"row align-items-center"}>
               <div className={"col-xl-5"}>
                 <div className={"choose-us-four-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                  <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/choose-us-four-thumb.jpg"} alt={"ASAS electrical foreman checking an installation"} />
+                  <img className={"tw-rounded-lg"} style={{ width: "100%", height: "auto", aspectRatio: "495 / 529", objectFit: "cover" }} src={"/assets/images/asas/switchgear-room-2.webp"} alt={"Switchgear room installed by ASAS"} />
                 </div>
               </div>
               <div className={"col-xl-7"}>
@@ -589,7 +589,7 @@ export default function ElectricalPage() {
                           <div className={"project-four-wrapper tw-mb-8 swiper-slide"} key={p.name}>
                             <div className={"project-four-thumb position-relative z-1 overflow-hidden"}>
                               <a href={"/projects"} tabIndex={"-1"} aria-hidden={"true"}>
-                                <img className={"tw-rounded-xl"} src={PROJECT_IMGS[i % PROJECT_IMGS.length].img} alt={`${p.name}: ${type.toLowerCase()} by ASAS Alenjaz, ${place}`} />
+                                <img className={"tw-rounded-xl"} style={{ width: "100%", height: "auto", objectFit: "cover", aspectRatio: i % 2 ? "462 / 556" : "462 / 450" }} src={PROJECT_IMGS[i % PROJECT_IMGS.length].img} alt={"Electrical installation by ASAS"} />
                               </a>
                               <div className={"project-four-wrap position-absolute"}>
                                 <h3 className={"project-four-subtitle fw-bold text-uppercase font-rethink bg-main-four-600 tw-py-2 tw-px-6 tw-mb-4 text-white d-inline-block"}>
@@ -732,7 +732,7 @@ export default function ElectricalPage() {
                     <div className={"work-four-item"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={WORK_IMGS[i].delay} key={step.title}>
                       <div className={"work-four-thumb"}>
                         <span className={"d-block"}>
-                          <img className={"tw-rounded-md"} src={WORK_IMGS[i].img} alt={WORK_IMGS[i].alt} />
+                          <img className={"tw-rounded-md"} style={{ width: "100%", height: "auto", objectFit: "cover", aspectRatio: "235 / 209" }} src={WORK_IMGS[i].img} alt={WORK_IMGS[i].alt} />
                         </span>
                       </div>
                       <div className={"text-center"}>
@@ -838,8 +838,8 @@ export default function ElectricalPage() {
                   <div className={"col-xl-4 col-lg-6 col-md-6"} key={s.slug}>
                     <div className={"blog-wrapper tw-me-4 tw-mb-8"}>
                       <div className={"blog-main-thumb position-relative overflow-hidden tw-rounded-2xl"}>
-                        <img className={"w-img w-100 tw-rounded-xl tw-transition-5 tw-h-410-px"} src={img} alt={RELATED_ALTS[s.slug]} />
-                        <img className={"w-img w-100 tw-rounded-xl tw-transition-5 tw-h-410-px"} src={img} alt={""} />
+                        <img className={"w-img w-100 tw-rounded-xl tw-transition-5 tw-h-410-px object-fit-cover"} src={img} alt={RELATED_ALTS[s.slug]} />
+                        <img className={"w-img w-100 tw-rounded-xl tw-transition-5 tw-h-410-px object-fit-cover"} src={img} alt={""} />
                         <a className={"blog-card-image-link d-flex align-items-center justify-content-center w-100 h-100 position-absolute z-1 top-0 start-0"} href={href} tabIndex={"-1"} aria-hidden={"true"}></a>
                       </div>
                       <div className={"blog-four-wrap"}>

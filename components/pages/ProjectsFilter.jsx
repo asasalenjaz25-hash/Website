@@ -3,33 +3,27 @@
 import { useState } from "react";
 import { SECTORS, PROJECTS, FEATURED, featuredProjects, sectorCounts } from "@/components/projects";
 import { QUOTE_HREF } from "@/components/site";
+import { projectPhoto } from "@/components/asas-photos";
 import styles from "./ProjectsPage.module.css";
 
 const INITIAL_VISIBLE = 12;
-
-// The four photos of the template's project-three slider, in template order.
-// They are placeholders until ASAS supplies real project photos
-// (see design-system/image-manifest/projects.md).
-export const PROJECT_IMAGES = [
-  "/assets/images/thumbs/project-three-thumb1.jpg",
-  "/assets/images/thumbs/project-three-thumb2.jpg",
-  "/assets/images/thumbs/project-three-thumb3.jpg",
-  "/assets/images/thumbs/project-three-thumb4.jpg",
-];
 
 // Template card markup from project-three-area (Page_project_html.jsx),
 // with ASAS content. The thumb and title were links to the retired
 // /project-details page, so they are plain now; the round arrow button
 // links to the quote form.
+// The photo is the project's own when ASAS supplied one, otherwise an ASAS
+// photo from the same sector (components/asas-photos.js).
 export function ProjectCard({ project, index, className = "" }) {
   const p = project;
+  const photo = projectPhoto(p, index);
   return (
     <div className={`project-three-wrapper bg-white tw-rounded-lg tw-p-5 ${className}`}>
       <div className={"project-three-thumb tw-mb-10"}>
         <img
           className={`tw-rounded-xl ${styles.thumbImg}`}
-          src={PROJECT_IMAGES[index % PROJECT_IMAGES.length]}
-          alt={`${p.name}: ${p.type}, ${p.location}`}
+          src={photo.src}
+          alt={photo.alt}
           loading="lazy"
           width={610}
           height={400}

@@ -66,7 +66,7 @@ export default function EvChargersPage() {
             <div className={"swiper-wrapper"}>
               <div className={"swiper-slide"}>
                 <div className={"banner-nine-height"}>
-                  <div className={"banner-nine-bg bg-img"} data-background-image={"/assets/images/thumbs/banner-seven-bg.jpg"} role={"img"} aria-label={"EV charger installed by ASAS Alenjaz at a residential community"}></div>
+                  <div className={"banner-nine-bg bg-img"} data-background-image={"/assets/images/asas/ev-charging-bays.webp"} role={"img"} aria-label={"EV charger installed by ASAS Alenjaz at a residential community"}></div>
                   <div className={"container tw-container-1750-px"}>
                     <div className={"row"}>
                       <div className={"col-xl-6"}>
@@ -130,7 +130,7 @@ export default function EvChargersPage() {
               </div>
               <div className={"swiper-slide"}>
                 <div className={"banner-nine-height"}>
-                  <div className={"banner-nine-bg bg-img"} data-background-image={"/assets/images/thumbs/banner-three-bg.jpg"} role={"img"} aria-label={"Villa EV charger installed by ASAS Alenjaz"}></div>
+                  <div className={"banner-nine-bg bg-img"} data-background-image={"/assets/images/asas/akoya-ev-charging.webp"} role={"img"} aria-label={"Villa EV charger installed by ASAS Alenjaz"}></div>
                   <div className={"container tw-container-1750-px"}>
                     <div className={"row"}>
                       <div className={"col-xl-7"}>
@@ -214,7 +214,7 @@ export default function EvChargersPage() {
           <div className={"row align-items-center"}>
             <div className={"col-xl-5 col-lg-5"}>
               <div className={"about-nine-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/project-seven-thumb5.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "562 / 559", objectFit: "cover" }} alt={"Electrician wiring a power installation"} />
+                <img className={"tw-rounded-xl"} src={"/assets/images/asas/akoya-ev-charging.webp"} style={{ width: "100%", height: "auto", aspectRatio: "562 / 559", objectFit: "cover" }} alt={"EV charging station at Akoya, installed by ASAS"} />
               </div>
             </div>
             <div className={"col-xl-7 col-lg-7"}>
@@ -327,7 +327,7 @@ export default function EvChargersPage() {
             </div>
             <div className={"col-xl-7 col-lg-7"}>
               <div className={"about-nine-thumb-two"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
-                <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/contact-three-thumb.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "765 / 378", objectFit: "cover" }} alt={"Engineer planning an electrical installation"} />
+                <img className={"tw-rounded-xl"} src={"/assets/images/asas/ev-charging-bays.webp"} style={{ width: "100%", height: "auto", aspectRatio: "765 / 378", objectFit: "cover" }} alt={"EV charging bays installed by ASAS"} />
               </div>
             </div>
           </div>
@@ -628,7 +628,7 @@ export default function EvChargersPage() {
           <div className={"row justify-content-center gx-0"}>
             <div className={"col-xl-12 gx-0"}>
               <div className={"video-bg video-nine-bg text-center position-relative"}>
-                <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/banner-five-bg.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "1880 / 759", objectFit: "cover" }} alt={"Technician working on electrical equipment"} />
+                <img className={"tw-rounded-xl"} src={"/assets/images/asas/ev-charger-kiosk.webp"} style={{ width: "100%", height: "auto", aspectRatio: "1880 / 759", objectFit: "cover" }} alt={"EV charger installed by ASAS"} />
               </div>
             </div>
           </div>
@@ -654,7 +654,7 @@ export default function EvChargersPage() {
                 <div key={project.sn} className={"row project-nine-panel" + (i > 0 ? " mt-30" : "")}>
                   <div className={"col"}>
                     <div className={"project-nine-thumb position-relative z-1"}>
-                      <img className={"tw-rounded-2xl"} src={["/assets/images/thumbs/banner-seven-bg.jpg", "/assets/images/thumbs/banner-eleven-bg.jpg", "/assets/images/thumbs/banner-three-bg.jpg"][i % 3]} style={{ width: "100%", height: "auto", aspectRatio: "1715 / 472", objectFit: "cover" }} alt={"EV chargers at " + project.name + ", " + project.location} />
+                      <img className={"tw-rounded-2xl"} src={["/assets/images/asas/ev-charging-bays.webp", "/assets/images/asas/ev-charger-kiosk.webp", "/assets/images/asas/akoya-ev-charging.webp"][i % 3]} style={{ width: "100%", height: "auto", aspectRatio: "1715 / 472", objectFit: "cover" }} alt={"EV chargers at " + project.name + ", " + project.location} />
                       <div className={"project-nine-content position-absolute bottom-0 start-0 tw-mb-705 tw-ms-705 bg-white tw-rounded-xl tw-px-11 tw-pt-15 tw-pb-13"}>
                         <span className={"text-main-eight-600 tw-mb-4"}>
                           #EV charging · {project.location}

@@ -85,7 +85,7 @@ export default function PlanningPage() {
             <div className={"col-xl-8"}>
               <div className={"service-details-wrapper"}>
                 <div className={"tw-mb-11"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                  <img className={"tw-rounded-2xl w-100"} src={"/assets/images/thumbs/service-four-thumb3.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "873 / 501", objectFit: "cover" }} alt={"Engineer in a hard hat reviewing plans on site"} />
+                  <img className={"tw-rounded-2xl w-100"} src={"/assets/images/asas/office-open-plan.webp"} style={{ width: "100%", height: "auto", aspectRatio: "873 / 501", objectFit: "cover" }} alt={"Open-plan office designed and fitted out by ASAS"} />
                 </div>
                 <div className={`tw-ps-9 tw-pe-5 tw-pb-13 ${s.body}`}>
                   <div className={"tw-mb-10"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
@@ -127,10 +127,10 @@ export default function PlanningPage() {
                       </ul>
                     </div>
                     <div data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                      <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/project-four-thumb1.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "243 / 240", objectFit: "cover" }} alt={"Measuring a space for a fit-out layout"} />
+                      <img className={"tw-rounded-lg"} src={"/assets/images/asas/office-reception-geometric.webp"} style={{ width: "100%", height: "auto", aspectRatio: "243 / 240", objectFit: "cover" }} alt={"Reception area planned by ASAS"} />
                     </div>
                     <div data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
-                      <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/contact-three-thumb.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "243 / 240", objectFit: "cover" }} alt={"Engineer preparing drawings on a laptop"} />
+                      <img className={"tw-rounded-lg"} src={"/assets/images/asas/fitout-cream-lounge.webp"} style={{ width: "100%", height: "auto", aspectRatio: "243 / 240", objectFit: "cover" }} alt={"Lounge layout designed by ASAS"} />
                     </div>
                   </div>
                   <div className={"tw-mb-4"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
@@ -231,7 +231,7 @@ export default function PlanningPage() {
                   </div>
                 </div>
                 <div className={"service-details-sideber-thumb position-relative z-1"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"400"}>
-                  <img className={"tw-rounded-lg"} src={"/assets/images/thumbs/about-three-thumb2.jpg"} style={{ width: "100%", height: "auto", aspectRatio: "425 / 270", objectFit: "cover" }} alt={"Engineer in a hard hat on a fit-out site"} />
+                  <img className={"tw-rounded-lg"} src={"/assets/images/asas/villa-living-room.webp"} style={{ width: "100%", height: "auto", aspectRatio: "425 / 270", objectFit: "cover" }} alt={"Villa living room designed by ASAS"} />
                   <div className={"position-absolute start-0 bottom-0 tw-mb-705 tw-ms-705"}>
                     <div className={"tw-mb-8"}>
                       <h2 className={"text-white tw-text-6 fw-medium"}>

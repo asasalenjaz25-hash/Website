@@ -97,6 +97,10 @@ export async function POST(request) {
   try {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
+      // Ask for cards explicitly instead of relying on the Dashboard's automatic
+      // payment-method settings (which can leave AED with no method at all).
+      // Apple Pay and Google Pay still appear: Checkout offers them as card wallets.
+      payment_method_types: ["card"],
       line_items: lineItems,
       customer_email: customer.email,
       client_reference_id: ref,

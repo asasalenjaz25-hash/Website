@@ -141,7 +141,7 @@ export default function PlumbingPage() {
                     </div>
                     <div className={"banner-eight-wrap d-flex align-items-center tw-gap-5 tw-p-2 tw-rounded-3xl bg-img position-relative z-1"} data-background-image={"/assets/images/shapes/banner-eight-bg.png"}>
                       <div>
-                        <img className={"tw-rounded-3xl"} src={"/assets/images/thumbs/banner-eight-thumb.jpg"} alt={"ASAS plumbing installation in a commercial kitchen"} />
+                        <img className={"tw-rounded-3xl"} style={{ width: "100%", height: "auto", aspectRatio: "165 / 174", objectFit: "cover" }} src={"/assets/images/asas/commercial-kitchen.webp"} alt={"Commercial kitchen plumbing by ASAS"} />
                       </div>
                       <div>
                         <div className={"tw-mb-2"}>
@@ -242,7 +242,7 @@ export default function PlumbingPage() {
             <div className={"row align-items-center"}>
               <div className={"col-xl-6 col-lg-10"}>
                 <div className={"about-eight-thumb position-relative z-1"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                  <img className={"tw-rounded-xl"} src={"/assets/images/thumbs/about-eight-thumb.jpg"} alt={"ASAS technician installing water supply pipework"} />
+                  <img className={"tw-rounded-xl"} style={{ width: "100%", height: "auto", aspectRatio: "600 / 684", objectFit: "cover" }} src={"/assets/images/asas/plumbing-valves.webp"} alt={"Water supply valves and pipework installed by ASAS"} />
                   <div className={"about-eight-thumb-count bg-main-eight-600 tw-rounded-2xl position-absolute top-0 end-0 tw-mt-505"}>
                     <div className={"d-flex align-items-center tw-gap-4"}>
                       <h2 className={"tw-text-14 fw-medium font-heading text-white mb-0 lh-1"}>
@@ -493,7 +493,7 @@ export default function PlumbingPage() {
               </div>
               <div className={"col-xl-4 col-lg-6"}>
                 <div className={"expert-thumb expert-eight-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"300"}>
-                  <img src={"/assets/images/thumbs/expert-eight-thumb.png"} alt={"ASAS plumbing technician with tools"} />
+                  <img style={{ width: "100%", height: "auto", aspectRatio: "518 / 518", objectFit: "cover" }} src={"/assets/images/asas/bathroom-shower.webp"} alt={"Bathroom plumbing finished by ASAS"} />
                 </div>
               </div>
               <div className={"col-xl-4 col-lg-6"}>
@@ -785,7 +785,7 @@ export default function PlumbingPage() {
                   <div className={"row align-items-center"}>
                     <div className={"col-xl-4 col-lg-6"}>
                       <div className={"contact-thumb"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={"200"}>
-                        <img className={"tw-rounded-xl w-100"} src={"/assets/images/thumbs/contact-eight-thumb.jpg"} alt={"ASAS engineer meeting a client on site"} />
+                        <img className={"tw-rounded-xl w-100"} style={{ width: "100%", height: "auto", aspectRatio: "573 / 632", objectFit: "cover" }} src={"/assets/images/asas/bathroom-gold.webp"} alt={"Bathroom fitted out by ASAS"} />
                       </div>
                     </div>
                     <div className={"col-xl-4 col-lg-6"}>
